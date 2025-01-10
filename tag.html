@@ -1,0 +1,124 @@
+---
+layout: default
+title: Tag Posts
+permalink: /tag/
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+{% else %}
+<header class="masthead">
+{% endif %}
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1 id="tag-title"></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto" id="post-list">
+      <!-- 포스트 목록이 여기에 동적으로 추가됨 -->
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tag = urlParams.get('tag');
+    
+    if (tag) {
+        document.getElementById('tag-title').textContent = `Posts tagged with "${tag}"`;
+        showTagPosts(tag);
+    } else {
+        window.location.href = '/tags/';
+    }
+});
+
+function showTagPosts(tag) {
+    const posts = [
+        {% for tag in site.tags %}
+            {% assign tag_name = tag | first %}
+            {% assign tag_posts = tag | last %}
+            {% if tag_posts.size > 0 %}
+                {
+                    tag: "{{ tag_name }}",
+                    posts: [
+                        {% for post in tag_posts %}
+                            {
+                                title: "{{ post.title | escape }}",
+                                url: "{{ post.url | relative_url }}",
+                                subtitle: "{{ post.subtitle | escape }}",
+                                excerpt: "{{ post.excerpt | strip_html | truncatewords: 15 | escape }}",
+                                author: "{{ post.author | default: site.author }}",
+                                date: "{{ post.date | date: '%B %d, %Y' }}",
+                                background: "{{ post.background }}",
+                                content: {{ post.content | jsonify }},
+                                tags: {{ post.tags | jsonify }}
+                            }{% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    ]
+                }{% unless forloop.last %},{% endunless %}
+            {% endif %}
+        {% endfor %}
+    ];
+
+    const tagData = posts.find(p => p.tag === tag);
+    const postList = document.getElementById('post-list');
+    
+    if (tagData) {
+        const postElements = tagData.posts.map(post => `
+            <div class="post-item">
+                <article class="post-preview">
+                    <a href="${post.url}">
+                        <h2 class="post-title">${post.title}</h2>
+                        ${post.subtitle ? 
+                            `<h3 class="post-subtitle">${post.subtitle}</h3>` :
+                            `<h3 class="post-subtitle">${post.excerpt}</h3>`
+                        }
+                    </a>
+                    <p class="post-meta">Posted by
+                        ${post.author}
+                        on
+                        ${post.date} &middot; ${calculateReadTime(post.content)}
+                    </p>
+                    ${post.tags && post.tags.length > 0 ? `
+                        <p class="post-tags">
+                            Tags:
+                            ${post.tags.map(tag => `
+                                <a href="/tags/${tag.toLowerCase()}" class="tag">${tag}</a>
+                            `).join(' ')}
+                        </p>
+                    ` : ''}
+                </article>
+
+                <div class="post-thumbnail">
+                    <a href="${post.url}">
+                        <img src="${post.background}" alt="Post Thumbnail" />
+                    </a>
+                </div>
+            </div>
+            <hr>
+        `).join('');
+        
+        postList.innerHTML = postElements;
+    } else {
+        postList.innerHTML = '<p>No posts found with this tag.</p>';
+    }
+}
+
+function calculateReadTime(content) {
+    const wordsPerMinute = 200;
+    const wordCount = content.trim().split(/\s+/).length;
+    const readTime = Math.ceil(wordCount / wordsPerMinute);
+    return `${readTime} min read`;
+}
+</script>

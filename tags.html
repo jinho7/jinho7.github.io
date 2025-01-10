@@ -1,0 +1,51 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+{% else %}
+<header class="masthead">
+{% endif %}
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>{{ site.title }}</h1>
+          {% if site.description %}
+            <span class="subheading">{{ site.description }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <!-- 태그 목록 -->
+      <div class="tag-list">
+        <div class="tag-header">
+          <h3>All Tags</h3>
+        </div>
+        <ul>
+          {% assign tags = site.tags | sort %}
+          {% for tag in tags %}
+            {% assign tag_name = tag | first %}
+            {% assign posts = tag | last %}
+            <li>
+              <a href="/tag/?tag={{ tag_name | url_encode }}" class="tag">
+                {{ tag_name }} ({{ posts | size }})
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

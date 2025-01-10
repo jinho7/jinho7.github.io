@@ -1,0 +1,25 @@
+title: Jinho's Tech Blog
+email: jh7524jh7524@gmail.com
+description: 개발에 대한 이야기를 담아내다
+author: Jinho
+baseurl: ""
+url: "https://jinho7.github.io"
+
+# Social Profiles
+twitter_username:  
+github_username:    jinho7
+facebook_username:  
+instagram_username:  
+linkedin_username:
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap

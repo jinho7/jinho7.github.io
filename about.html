@@ -1,0 +1,113 @@
+---
+layout: page
+title: About Me
+description: 나에 대하여
+background: '/img/bg-about.jpg'
+---
+
+<div class="about-container nexon-font">
+    <p class="intro-text">
+        안녕하세요! 코딩을 사랑하는 개발자입니다<br>
+    </p>
+    
+    <p class="detail-text">
+        가끔 밤새 코드와 씨름하다가 키보드에 얼굴을 묻은 채 잠들기도 하지만,<br>
+        그래도 <span class="highlight">매일 아침 새로운 도전을 향해</span> 즐겁게 달려가고 있답니다. ☀️<br><br>
+        제 노트북에는 항상 수십 개의 탭이 열려있습니다.<br>
+        "이거 나중에 꼭 읽어봐야지" 하고 기술 문서들을 북마크 폴더안에 수집하는 것이 취미입니다.<br>
+        <span class="subtle">(몇 개는 먼지만 쌓이고 있지만...)</span><br>
+        언젠가는 다 읽을 거예요! (진짜로...)
+    </p>
+            
+    <p class="philosophy-text mb-5">
+        저는 <span class="emphasis">'불가능'</span>이란 단어를 <span class="emphasis">'아직 시도해보지 않은 것'</span>으로 해석하는 걸 좋아합니다.<br><br>
+        사실 게임도 참 좋아하는데요.<br>
+        코딩을 하다보면 새로운 기술을 배우는 게 레벨업처럼 신나고,<br>
+        복잡한 문제를 해결할 때는 마치 티어를 올리는 것 만큼 즐거워요.<br><br>
+        가끔 옛날의 제 코드를 보면서 <span class="quote">"나는 대체 무슨 생각이었을까?😅 "</span> 하고<br>
+        고개를 절레절레 흔들기도 하지만, 그래도 그런 모습조차 성장의 한 과정이라고 생각합니다~<br>  
+    </p>
+ </div>
+
+<style>
+.about-container {
+    max-width: 1800px;  /* 훨씬 더 넓은 최대 폭 */
+    width: 150%;       /* 기본 컨테이너보다 50% 더 넓게 */
+    margin-left: -25%; /* 왼쪽으로 당겨서 중앙 정렬 */
+    font-size: 1.25rem;
+    line-height: 1.8;
+    padding: 1rem 3rem;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* 모바일 환경을 위한 반응형 처리 */
+@media (max-width: 768px) {
+    .about-container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem;
+    }
+}
+
+.intro-text {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+}
+
+.detail-text {
+    color: #34495e;
+    margin-bottom: 2rem;
+}
+
+.philosophy-text {
+    color: #2c3e50;
+    padding: 1.5rem;
+    background-color: rgba(52, 152, 219, 0.05);
+    border-radius: 10px;
+}
+
+.highlight {
+    background: linear-gradient(120deg, rgba(52, 152, 219, 0.2) 0%, rgba(52, 152, 219, 0.1) 100%);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+.emphasis {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.quote {
+    color: #e74c3c;
+    font-style: italic;
+}
+
+.subtle {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* 호버 효과 */
+.about-container p:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+/* 이모지 애니메이션 */
+.philosophy-text:hover 🚀 {
+    display: inline-block;
+    animation: rocket 1s infinite;
+}
+
+@keyframes rocket {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+</style>
