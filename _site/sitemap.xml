@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2020/01/27/dinosaurs.html</loc>
-<lastmod>2020-01-27T12:45:13+09:00</lastmod>
+<loc>http://localhost:4000/web%20development/2020/01/26/dinosaurs.html</loc>
+<lastmod>2020-01-26T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2020/01/31/man-must-explore.html</loc>

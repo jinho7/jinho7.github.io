@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    최신 게시글 - Jinho&#39;s Tech Blog
+    Jekyll과 Bootstrap SCSS 스타일 문제 해결하기 - Jinho&#39;s Tech Blog
     
   </title>
 
-  <meta name="description" content="Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth...">
+  <meta name="description" content="Jekyll과 Bootstrap SCSS 스타일 문제">
 
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -19,7 +19,7 @@
   <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/2020/01/31/man-must-explore.html">
+  <link rel="canonical" href="http://localhost:4000/web%20development/2020/01/26/dinosaurs.html">
   <link rel="alternate" type="application/rss+xml" title="Jinho&#39;s Tech Blog" href="/feed.xml">
 
 </head>
@@ -64,15 +64,15 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading">
-                <h1>최신 게시글</h1>
+                <h1>Jekyll과 Bootstrap SCSS 스타일 문제 해결하기</h1>
                 
-                <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+                <h2 class="subheading">GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법</h2>
                 
                 <span class="meta">Posted by
                   <a href="#">Jinho</a>
-                  on January 31, 2020 &middot; <span class="reading-time" title="Estimated read time">
+                  on January 26, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
-   4 mins  read </span>
+   1 min  read </span>
 
                 </span>
                 
@@ -81,7 +81,13 @@
                     font-weight: 300;
                     font-style: italic;">Tags:</span>
                     
-                        <li><a href="/tag/?tag=test" class="tag">test</a></li>
+                        <li><a href="/tag/?tag=jekyll" class="tag">jekyll</a></li>
+                    
+                        <li><a href="/tag/?tag=bootstrap" class="tag">bootstrap</a></li>
+                    
+                        <li><a href="/tag/?tag=scss" class="tag">scss</a></li>
+                    
+                        <li><a href="/tag/?tag=github-pages" class="tag">github-pages</a></li>
                     
                 </spans>
                 
@@ -94,52 +100,61 @@
   <div class="container ">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto post-content nexon-font">
-        <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+        <h1 id="jekyll과-bootstrap-scss-스타일-문제">Jekyll과 Bootstrap SCSS 스타일 문제</h1>
 
-<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>
 
-<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+<h2 id="문제-상황">문제 상황</h2>
 
-<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>
 
-<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+<h3 id="1-폰트-크기-오버라이드-문제">1. 폰트 크기 오버라이드 문제</h3>
 
-<h2 class="section-heading">The Final Frontier</h2>
+<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<h3 id="2-여백과-정렬-문제">2. 여백과 정렬 문제</h3>
 
-<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>
 
-<blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+<h2 id="해결-방법">해결 방법</h2>
 
-<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+<h3 id="1-bootstrap-mixin-활용하기">1. Bootstrap Mixin 활용하기</h3>
 
-<h2 class="section-heading">Reaching for the Stars</h2>
+<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>
 
-<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+<h3 id="2-스타일-우선순위-조정">2. 스타일 우선순위 조정</h3>
 
-<img class="img-fluid" src="https://source.unsplash.com/Mn9Fa_wQH-M/800x450" alt="Demo Image">
-<span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>
 
-<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+<h2 id="구현-예시">구현 예시</h2>
 
-<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>
 
-<p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://unsplash.com/">Unsplash</a>.</p>
+<h3 id="scss-파일-구조">SCSS 파일 구조</h3>
+
+<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>
+
+<h3 id="변수-설정">변수 설정</h3>
+
+<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>
+
+<h2 id="마무리">마무리</h2>
+
+<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>
 
         <hr>
 
         <div class="clearfix">
           
-          <a class="btn btn-primary float-left" href="/web%20development/2020/01/26/dinosaurs.html" data-toggle="tooltip" data-placement="top" title="Jekyll과 Bootstrap SCSS 스타일 문제 해결하기">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
           
+          <a class="btn btn-primary float-right" href="/2020/01/31/man-must-explore.html" data-toggle="tooltip" data-placement="top" title="최신 게시글">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
           
         </div>
       </div>
       <div class="toc">
         <div class="toc-heading">In This Article</div>
-        <ul><li>The Final Frontier</li><li>Reaching for the Stars</li></ul>
+        <ul><li><a href="#jekyll과-bootstrap-scss-스타일-문제">Jekyll과 Bootstrap SCSS 스타일 문제</a><ul><li><a href="#문제-상황">문제 상황</a><ul><li><a href="#1-폰트-크기-오버라이드-문제">1. 폰트 크기 오버라이드 문제</a></li><li><a href="#2-여백과-정렬-문제">2. 여백과 정렬 문제</a></li></ul></li><li><a href="#해결-방법">해결 방법</a><ul><li><a href="#1-bootstrap-mixin-활용하기">1. Bootstrap Mixin 활용하기</a></li><li><a href="#2-스타일-우선순위-조정">2. 스타일 우선순위 조정</a></li></ul></li><li><a href="#구현-예시">구현 예시</a><ul><li><a href="#scss-파일-구조">SCSS 파일 구조</a></li><li><a href="#변수-설정">변수 설정</a></li></ul></li><li><a href="#마무리">마무리</a></li></ul></li></ul>
 
       </div>
       <div class="scroll-to-top">

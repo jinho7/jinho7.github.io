@@ -23,3 +23,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+
+# TOC 설정
+markdown: kramdown
+kramdown:
+  toc_levels: 1..3   # TOC에 표시할 헤딩 레벨 (h1..h3)
