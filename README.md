@@ -18,8 +18,7 @@
 
 ## 링크
 
-- [블로그 방문하기](http://username.github.io)
-- [GitHub 저장소](https://github.com/username/username.github.io)
+- [블로그 방문하기](https://jinho7.github.io/)
 
 ## 저작권
 
