@@ -1,34 +1,41 @@
 // Global styling for this template
 .container .post-content {
+    font-family: 'NexonLight', sans-serif;
     font-size: 0.85em; // 본문 전체 크기를 85%로 축소
 
     h1, h2, h3, h4, h5, h6,
     p, blockquote {
+        font-family: 'NexonLight', sans-serif;
         font-size: inherit; // 부모의 font-size 비율을 따름
         line-height: 1.6;  // 적절한 줄 간격 설정 (필요 시 조정)
         margin: 30px 0;
     }
 
     a {
+        font-family: 'NexonLight', sans-serif;
         text-decoration: underline;
         font-size: inherit; // 링크도 동일한 비율로 축소
     }
 
     .section-heading {
+        font-family: 'NexonLight', sans-serif;
         font-size: 1.5em; // 섹션 제목 크기 재조정
     }
 
     .caption {
+        font-family: 'NexonLight', sans-serif;
         font-size: 0.9em; // 캡션 크기 재조정
     }
 }
 
 body {
+    font-family: 'NexonLight', sans-serif;
     font-size: 20px;
     color: $gray-900;
 }
 
 p {
+    font-family: 'NexonLight', sans-serif;
     line-height: 1.6;
     margin: 10px 0;
 
@@ -43,10 +50,12 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'NexonLight', sans-serif;
     font-weight: 800;
 }
 
 a {
+    font-family: 'NexonLight', sans-serif;
     color: $gray-900;
 
     &:focus,

@@ -15,7 +15,7 @@ permalink: /tag/
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="page-heading">
-          <h1 id="tag-title"></h1>
+          <h1 id="tag-title" style="font-size: 50px;"></h1>
         </div>
       </div>
     </div>
@@ -91,12 +91,12 @@ function showTagPosts(tag) {
                         ${post.date} &middot; ${calculateReadTime(post.content)}
                     </p>
                     ${post.tags && post.tags.length > 0 ? `
-                        <p class="post-tags">
-                            Tags:
+                        <ul class="post-tags">
+                            <li class="tags-label">Tags:</li>
                             ${post.tags.map(tag => `
-                                <a href="/tags/${tag.toLowerCase()}" class="tag">${tag}</a>
+                                <a href="/tag/?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>
                             `).join(' ')}
-                        </p>
+                        </ul>
                     ` : ''}
                 </article>
 

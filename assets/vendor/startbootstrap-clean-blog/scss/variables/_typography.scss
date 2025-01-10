@@ -1,9 +1,10 @@
 // Override Bootstrap typography variables
 
+// NexonLight 폰트 import
 @font-face {
-    font-family: 'NEXONLv1GothicLight';
-    src: url('/assets/fonts/NEXONLv1GothicLight.woff2') format('woff2'),
-         url('/assets/fonts/NEXONLv1GothicLight.woff') format('woff');
+    font-family: 'NexonLight';
+    src: url('/fonts/NEXON-Light.woff2') format('woff2'),
+         url('/fonts/NEXON-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
