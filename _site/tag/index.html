@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tag = urlParams.get('tag');
     
     if (tag) {
-        document.getElementById('tag-title').textContent = `Posts tagged with "${tag}"`;
+        document.getElementById('tag-title').textContent = `Posts tagged with "${decodeURIComponent(tag)}"`;
         showTagPosts(tag);
     } else {
         window.location.href = '/tags/';
@@ -93,134 +93,95 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showTagPosts(tag) {
-    const posts = [
+    const postsData = {
         
-            
-            
-            
-                {
-                    tag: "jekyll",
-                    posts: [
-                        
-                            {
-                                title: "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
-                                url: "/web%20development/2020/01/26/dinosaurs.html",
-                                subtitle: "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
-                                excerpt: "Jekyll과 Bootstrap SCSS 스타일 문제
-",
-                                author: "Jinho",
-                                date: "January 26, 2020",
-                                background: "/img/posts/06.jpg",
-                                content: "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
-                                tags: ["jekyll","bootstrap","scss","github-pages"]
-                            }
-                        
-                    ]
-                },
-            
+            "jekyll": [
+                
+                    {
+                        "title": "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
+                        "url": "/web%20development/2020/01/26/dinosaurs.html",
+                        "subtitle": "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
+                        "excerpt": "Jekyll과 Bootstrap SCSS 스타일 문제\n",
+                        "author": "Jinho",
+                        "date": "January 26, 2020",
+                        "background": "/img/posts/06.jpg",
+                        "content": "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
+                        "tags": ["jekyll","bootstrap","scss","github-pages"]
+                    }
+                
+            ],
         
-            
-            
-            
-                {
-                    tag: "bootstrap",
-                    posts: [
-                        
-                            {
-                                title: "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
-                                url: "/web%20development/2020/01/26/dinosaurs.html",
-                                subtitle: "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
-                                excerpt: "Jekyll과 Bootstrap SCSS 스타일 문제
-",
-                                author: "Jinho",
-                                date: "January 26, 2020",
-                                background: "/img/posts/06.jpg",
-                                content: "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
-                                tags: ["jekyll","bootstrap","scss","github-pages"]
-                            }
-                        
-                    ]
-                },
-            
+            "bootstrap": [
+                
+                    {
+                        "title": "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
+                        "url": "/web%20development/2020/01/26/dinosaurs.html",
+                        "subtitle": "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
+                        "excerpt": "Jekyll과 Bootstrap SCSS 스타일 문제\n",
+                        "author": "Jinho",
+                        "date": "January 26, 2020",
+                        "background": "/img/posts/06.jpg",
+                        "content": "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
+                        "tags": ["jekyll","bootstrap","scss","github-pages"]
+                    }
+                
+            ],
         
-            
-            
-            
-                {
-                    tag: "scss",
-                    posts: [
-                        
-                            {
-                                title: "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
-                                url: "/web%20development/2020/01/26/dinosaurs.html",
-                                subtitle: "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
-                                excerpt: "Jekyll과 Bootstrap SCSS 스타일 문제
-",
-                                author: "Jinho",
-                                date: "January 26, 2020",
-                                background: "/img/posts/06.jpg",
-                                content: "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
-                                tags: ["jekyll","bootstrap","scss","github-pages"]
-                            }
-                        
-                    ]
-                },
-            
+            "scss": [
+                
+                    {
+                        "title": "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
+                        "url": "/web%20development/2020/01/26/dinosaurs.html",
+                        "subtitle": "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
+                        "excerpt": "Jekyll과 Bootstrap SCSS 스타일 문제\n",
+                        "author": "Jinho",
+                        "date": "January 26, 2020",
+                        "background": "/img/posts/06.jpg",
+                        "content": "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
+                        "tags": ["jekyll","bootstrap","scss","github-pages"]
+                    }
+                
+            ],
         
-            
-            
-            
-                {
-                    tag: "github-pages",
-                    posts: [
-                        
-                            {
-                                title: "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
-                                url: "/web%20development/2020/01/26/dinosaurs.html",
-                                subtitle: "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
-                                excerpt: "Jekyll과 Bootstrap SCSS 스타일 문제
-",
-                                author: "Jinho",
-                                date: "January 26, 2020",
-                                background: "/img/posts/06.jpg",
-                                content: "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
-                                tags: ["jekyll","bootstrap","scss","github-pages"]
-                            }
-                        
-                    ]
-                },
-            
+            "github-pages": [
+                
+                    {
+                        "title": "Jekyll과 Bootstrap SCSS 스타일 문제 해결하기",
+                        "url": "/web%20development/2020/01/26/dinosaurs.html",
+                        "subtitle": "GitHub Pages 배포 시 발생하는 스타일 충돌 해결 방법",
+                        "excerpt": "Jekyll과 Bootstrap SCSS 스타일 문제\n",
+                        "author": "Jinho",
+                        "date": "January 26, 2020",
+                        "background": "/img/posts/06.jpg",
+                        "content": "<h1 id=\"jekyll과-bootstrap-scss-스타일-문제\">Jekyll과 Bootstrap SCSS 스타일 문제</h1>\n\n<p>로컬 환경에서 Jekyll 블로그를 개발하다 보면 가끔 스타일링 관련 문제가 발생합니다. 특히 Bootstrap SCSS를 사용할 때 이런 문제가 두드러지게 나타납니다.</p>\n\n<h2 id=\"문제-상황\">문제 상황</h2>\n\n<p>일반적으로 발생하는 문제들은 다음과 같습니다:</p>\n\n<h3 id=\"1-폰트-크기-오버라이드-문제\">1. 폰트 크기 오버라이드 문제</h3>\n\n<p>Bootstrap의 기본 폰트 크기가 우리가 설정한 스타일을 덮어쓰는 경우가 있습니다.</p>\n\n<h3 id=\"2-여백과-정렬-문제\">2. 여백과 정렬 문제</h3>\n\n<p>마진과 패딩이 로컬 환경과 다르게 적용되는 현상이 발생합니다.</p>\n\n<h2 id=\"해결-방법\">해결 방법</h2>\n\n<h3 id=\"1-bootstrap-mixin-활용하기\">1. Bootstrap Mixin 활용하기</h3>\n\n<p>Bootstrap의 mixin을 활용하면 이런 문제를 해결할 수 있습니다.</p>\n\n<h3 id=\"2-스타일-우선순위-조정\">2. 스타일 우선순위 조정</h3>\n\n<p>CSS 선택자의 우선순위를 조정하여 문제를 해결할 수 있습니다.</p>\n\n<h2 id=\"구현-예시\">구현 예시</h2>\n\n<p>실제 코드로 구현하는 방법을 알아보겠습니다.</p>\n\n<h3 id=\"scss-파일-구조\">SCSS 파일 구조</h3>\n\n<p>프로젝트의 SCSS 파일 구조를 올바르게 설정하는 것이 중요합니다.</p>\n\n<h3 id=\"변수-설정\">변수 설정</h3>\n\n<p>Bootstrap 변수를 오버라이드하는 방법을 알아봅시다.</p>\n\n<h2 id=\"마무리\">마무리</h2>\n\n<p>이러한 방식으로 스타일 충돌 문제를 해결할 수 있습니다.</p>\n",
+                        "tags": ["jekyll","bootstrap","scss","github-pages"]
+                    }
+                
+            ],
         
-            
-            
-            
-                {
-                    tag: "test",
-                    posts: [
-                        
-                            {
-                                title: "최신 게시글",
-                                url: "/2020/01/31/man-must-explore.html",
-                                subtitle: "Problems look mighty small from 150 miles up",
-                                excerpt: "Never in all their history have men been able truly to conceive of the world...",
-                                author: "Jinho",
-                                date: "January 31, 2020",
-                                background: "/img/posts/06.jpg",
-                                content: "<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>\n\n<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>\n\n<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>\n\n<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>\n\n<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>\n\n<h2 class=\"section-heading\">The Final Frontier</h2>\n\n<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>\n\n<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>\n\n<blockquote class=\"blockquote\">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>\n\n<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>\n\n<h2 class=\"section-heading\">Reaching for the Stars</h2>\n\n<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>\n\n<img class=\"img-fluid\" src=\"https://source.unsplash.com/Mn9Fa_wQH-M/800x450\" alt=\"Demo Image\">\n<span class=\"caption text-muted\">To go places and do things that have never been done before – that’s what living is all about.</span>\n\n<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>\n\n<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>\n\n<p>Placeholder text by <a href=\"http://spaceipsum.com/\">Space Ipsum</a>. Photographs by <a href=\"https://unsplash.com/\">Unsplash</a>.</p>\n",
-                                tags: ["test"]
-                            }
-                        
-                    ]
-                }
-            
+            "test": [
+                
+                    {
+                        "title": "최신 게시글",
+                        "url": "/2020/01/31/man-must-explore.html",
+                        "subtitle": "Problems look mighty small from 150 miles up",
+                        "excerpt": "Never in all their history have men been able truly to conceive of the world...",
+                        "author": "Jinho",
+                        "date": "January 31, 2020",
+                        "background": "/img/posts/06.jpg",
+                        "content": "<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>\n\n<p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>\n\n<p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>\n\n<p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>\n\n<p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>\n\n<h2 class=\"section-heading\">The Final Frontier</h2>\n\n<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>\n\n<p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>\n\n<blockquote class=\"blockquote\">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>\n\n<p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>\n\n<h2 class=\"section-heading\">Reaching for the Stars</h2>\n\n<p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>\n\n<img class=\"img-fluid\" src=\"https://source.unsplash.com/Mn9Fa_wQH-M/800x450\" alt=\"Demo Image\">\n<span class=\"caption text-muted\">To go places and do things that have never been done before – that’s what living is all about.</span>\n\n<p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>\n\n<p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>\n\n<p>Placeholder text by <a href=\"http://spaceipsum.com/\">Space Ipsum</a>. Photographs by <a href=\"https://unsplash.com/\">Unsplash</a>.</p>\n",
+                        "tags": ["test"]
+                    }
+                
+            ]
         
-    ];
+    };
 
-    const tagData = posts.find(p => p.tag === tag);
+    const posts = postsData[decodeURIComponent(tag)] || [];
     const postList = document.getElementById('post-list');
     
-    if (tagData) {
-        const postElements = tagData.posts.map(post => `
+    if (posts.length > 0) {
+        const postElements = posts.map(post => `
             <div class="post-item">
                 <article class="post-preview">
                     <a href="${post.url}">
@@ -238,18 +199,20 @@ function showTagPosts(tag) {
                     ${post.tags && post.tags.length > 0 ? `
                         <ul class="post-tags">
                             <li class="tags-label">Tags:</li>
-                            ${post.tags.map(tag => `
-                                <a href="/tag/?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>
+                            ${post.tags.map(t => `
+                                <a href="/tag/?tag=${encodeURIComponent(t)}" class="tag">${t}</a>
                             `).join(' ')}
                         </ul>
                     ` : ''}
                 </article>
 
-                <div class="post-thumbnail">
-                    <a href="${post.url}">
-                        <img src="${post.background}" alt="Post Thumbnail" />
-                    </a>
-                </div>
+                ${post.background ? `
+                    <div class="post-thumbnail">
+                        <a href="${post.url}">
+                            <img src="${post.background}" alt="Post Thumbnail" />
+                        </a>
+                    </div>
+                ` : ''}
             </div>
             <hr>
         `).join('');

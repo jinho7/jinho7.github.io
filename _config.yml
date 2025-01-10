@@ -23,7 +23,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-
+  - jemoji
+  
 # TOC 설정
 markdown: kramdown
 kramdown:

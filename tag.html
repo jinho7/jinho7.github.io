@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tag = urlParams.get('tag');
     
     if (tag) {
-        document.getElementById('tag-title').textContent = `Posts tagged with "${tag}"`;
+        document.getElementById('tag-title').textContent = `Posts tagged with "${decodeURIComponent(tag)}"`;
         showTagPosts(tag);
     } else {
         window.location.href = '/tags/';
@@ -44,38 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showTagPosts(tag) {
-    const posts = [
+    const postsData = {
         {% for tag in site.tags %}
-            {% assign tag_name = tag | first %}
-            {% assign tag_posts = tag | last %}
-            {% if tag_posts.size > 0 %}
-                {
-                    tag: "{{ tag_name }}",
-                    posts: [
-                        {% for post in tag_posts %}
-                            {
-                                title: "{{ post.title | escape }}",
-                                url: "{{ post.url | relative_url }}",
-                                subtitle: "{{ post.subtitle | escape }}",
-                                excerpt: "{{ post.excerpt | strip_html | truncatewords: 15 | escape }}",
-                                author: "{{ post.author | default: site.author }}",
-                                date: "{{ post.date | date: '%B %d, %Y' }}",
-                                background: "{{ post.background }}",
-                                content: {{ post.content | jsonify }},
-                                tags: {{ post.tags | jsonify }}
-                            }{% unless forloop.last %},{% endunless %}
-                        {% endfor %}
-                    ]
-                }{% unless forloop.last %},{% endunless %}
-            {% endif %}
+            "{{ tag[0] | escape }}": [
+                {% for post in tag[1] %}
+                    {
+                        "title": {{ post.title | jsonify }},
+                        "url": {{ post.url | relative_url | jsonify }},
+                        "subtitle": {{ post.subtitle | jsonify }},
+                        "excerpt": {{ post.excerpt | strip_html | truncatewords: 15 | jsonify }},
+                        "author": {{ post.author | default: site.author | jsonify }},
+                        "date": "{{ post.date | date: '%B %d, %Y' }}",
+                        "background": {{ post.background | jsonify }},
+                        "content": {{ post.content | jsonify }},
+                        "tags": {{ post.tags | jsonify }}
+                    }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ]{% unless forloop.last %},{% endunless %}
         {% endfor %}
-    ];
+    };
 
-    const tagData = posts.find(p => p.tag === tag);
+    const posts = postsData[decodeURIComponent(tag)] || [];
     const postList = document.getElementById('post-list');
     
-    if (tagData) {
-        const postElements = tagData.posts.map(post => `
+    if (posts.length > 0) {
+        const postElements = posts.map(post => `
             <div class="post-item">
                 <article class="post-preview">
                     <a href="${post.url}">
@@ -93,18 +86,20 @@ function showTagPosts(tag) {
                     ${post.tags && post.tags.length > 0 ? `
                         <ul class="post-tags">
                             <li class="tags-label">Tags:</li>
-                            ${post.tags.map(tag => `
-                                <a href="/tag/?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>
+                            ${post.tags.map(t => `
+                                <a href="/tag/?tag=${encodeURIComponent(t)}" class="tag">${t}</a>
                             `).join(' ')}
                         </ul>
                     ` : ''}
                 </article>
 
-                <div class="post-thumbnail">
-                    <a href="${post.url}">
-                        <img src="${post.background}" alt="Post Thumbnail" />
-                    </a>
-                </div>
+                ${post.background ? `
+                    <div class="post-thumbnail">
+                        <a href="${post.url}">
+                            <img src="${post.background}" alt="Post Thumbnail" />
+                        </a>
+                    </div>
+                ` : ''}
             </div>
             <hr>
         `).join('');
