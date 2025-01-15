@@ -83,7 +83,7 @@ const TOC = {
         const contentRect = content.getBoundingClientRect();
         const rightEdge = contentRect.right;
         // 원하는 간격(px)을 여기서 설정
-        const offset = 80; 
+        const offset = 60; 
 
         if (isFixed) {
             Object.assign(toc.style, {

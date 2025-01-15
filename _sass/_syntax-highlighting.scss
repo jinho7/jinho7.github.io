@@ -1,0 +1,83 @@
+.highlight {
+  pre { margin: 0; }
+  color: #a9b7c6;  // IntelliJ 기본 텍스트 색상
+
+  // Comments
+  .c, .ch, .cm, .cp, .cpf, .c1, .cs {
+    color: #808080;
+    font-style: italic;
+  }
+
+  // Keywords
+  .k, .kc, .kd, .kn, .kp, .kr, .kt {
+    color: #cc7832;  // 주황색 키워드
+    font-weight: bold;
+  }
+
+  // Operators
+  .o, .ow {
+    color: #a9b7c6;  // 기본 텍스트 색상
+  }
+
+  // Numbers
+  .m, .mb, .mf, .mh, .mi, .mo, .mx, .il {
+    color: #6897bb;  // 파란색 숫자
+  }
+
+  // Strings
+  .s, .sa, .sb, .sc, .dl, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #6a8759;  // 초록색 문자열
+  }
+
+  // Names
+  .na {
+    color: #a9b7c6;  // 변수명
+  }
+  
+  .nb {
+    color: #cc7832;  // 내장 함수
+  }
+
+  .nc {
+    color: #ffc66d;  // 클래스명 - 노란색
+    font-weight: bold;
+  }
+
+  .nf, .fm {
+    color: #ffc66d;  // 함수명 - 노란색
+  }
+
+  // Variable names
+  .nv, .vc, .vg, .vi, .vm {
+    color: #a9b7c6;  // 기본 변수색
+  }
+
+  // Special cases
+  .nt {
+    color: #e8bf6a;  // HTML/XML 태그
+  }
+
+  .nl {
+    color: #a9b7c6;
+  }
+
+  // Annotations
+  .nd {
+    color: #bbb529;  // 어노테이션 색상
+  }
+
+  // Errors and warnings
+  .err {
+    color: #ff0000;
+    background-color: transparent;
+  }
+
+  // Generic
+  .ge {
+    font-style: italic;
+  }
+
+  .gs {
+    font-weight: bold;
+  }
+}

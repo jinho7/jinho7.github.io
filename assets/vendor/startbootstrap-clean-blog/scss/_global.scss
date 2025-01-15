@@ -1,30 +1,59 @@
-// Global styling for this template
 .container .post-content {
     font-family: 'NexonLight', sans-serif;
-    font-size: 0.85em; // 본문 전체 크기를 85%로 축소
-
-    h1, h2, h3, h4, h5, h6,
-    p, blockquote {
-        font-family: 'NexonLight', sans-serif;
-        font-size: inherit; // 부모의 font-size 비율을 따름
-        line-height: 1.6;  // 적절한 줄 간격 설정 (필요 시 조정)
-        margin: 30px 0;
+    font-size: 16px;  // GitHub 기본 사이즈
+    line-height: 1.5;
+    
+    h1 {
+        font-size: 2em;      // 32px
+        font-weight: 600;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #eaecef;
+        margin: 24px 0 16px;
+    }
+    
+    h2 {
+        font-size: 1.5em;    // 24px
+        font-weight: 600;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #eaecef;
+        margin: 24px 0 16px;
+    }
+    
+    h3 {
+        font-size: 1.25em;   // 20px
+        font-weight: 600;
+        margin: 24px 0 16px;
+    }
+    
+    h4 {
+        font-size: 1em;      // 16px
+        font-weight: 600;
+        margin: 24px 0 16px;
+    }
+    
+    h5 {
+        font-size: 0.875em;  // 14px
+        font-weight: 600;
+        margin: 24px 0 16px;
+    }
+    
+    h6 {
+        font-size: 0.85em;   // 13.6px
+        font-weight: 600;
+        margin: 24px 0 16px;
     }
 
-    a {
-        font-family: 'NexonLight', sans-serif;
-        text-decoration: underline;
-        font-size: inherit; // 링크도 동일한 비율로 축소
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0 0 16px;
     }
-
-    .section-heading {
-        font-family: 'NexonLight', sans-serif;
-        font-size: 1.5em; // 섹션 제목 크기 재조정
-    }
-
-    .caption {
-        font-family: 'NexonLight', sans-serif;
-        font-size: 0.9em; // 캡션 크기 재조정
+    
+    blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px;
     }
 }
 
@@ -65,8 +94,7 @@ a {
 }
 
 blockquote {
-    font-style: italic;
-    color: $gray-600;
+    color: #292929
 }
 
 .section-heading {

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/web%20development/2020/01/26/dinosaurs.html</loc>
-<lastmod>2020-01-26T00:00:00+09:00</lastmod>
+<loc>http://localhost:4000/2025/01/12/understanding-sync-async-blocking-non-blocking.html</loc>
+<lastmod>2025-01-12T12:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2020/01/31/man-must-explore.html</loc>
-<lastmod>2020-01-31T23:45:13+09:00</lastmod>
+<loc>http://localhost:4000/2025/01/15/asynchronous-processing-in-java-spring.html</loc>
+<lastmod>2025-01-15T12:43:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about.html</loc>
