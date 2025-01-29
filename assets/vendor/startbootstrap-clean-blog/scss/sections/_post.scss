@@ -1,5 +1,17 @@
 // Styling for the post page
 
+// 글자 꾸미기
+.post-highlight {
+    color: rgba(255, 69, 58, 1); /* 밝은 붉은 계열 색상 */
+    font-weight: 700; /* 강조된 텍스트 느낌 */
+    background: rgba(255, 236, 227, 1); /* 부드러운 붉은 계열 배경 */
+    padding: 0.1em 0.2em; /* 약간의 패딩 추가 */
+    border-radius: 4px; /* 둥근 모서리 */
+    word-wrap: break-word;
+    isolation: auto;
+}
+
+
 // 코드블록 관련
 // 코드 블록 컨테이너
 .highlighter-rouge {
@@ -51,7 +63,7 @@
       }
     }
   }
-  .highlight {
+  .highlighter-rouge .highlight {
     background-color: #282c34 !important;
     border-radius: 0 0 8px 8px;
   

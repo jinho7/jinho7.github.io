@@ -9579,6 +9579,16 @@ header.masthead .post-heading .meta a {
   }
 }
 
+.post-highlight {
+  color: rgb(255, 69, 58); /* 밝은 붉은 계열 색상 */
+  font-weight: 700; /* 강조된 텍스트 느낌 */
+  background: rgb(255, 236, 227); /* 부드러운 붉은 계열 배경 */
+  padding: 0.1em 0.2em; /* 약간의 패딩 추가 */
+  border-radius: 4px; /* 둥근 모서리 */
+  word-wrap: break-word;
+  isolation: auto;
+}
+
 .highlighter-rouge {
   position: relative;
   margin: 1rem 0;
@@ -9628,11 +9638,11 @@ header.masthead .post-heading .meta a {
   background-color: #555152;
 }
 
-.highlight {
+.highlighter-rouge .highlight {
   background-color: #282c34 !important;
   border-radius: 0 0 8px 8px;
 }
-.highlight .code-language {
+.highlighter-rouge .highlight .code-language {
   position: absolute;
   bottom: 12px;
   right: 12px;
@@ -9643,7 +9653,7 @@ header.masthead .post-heading .meta a {
   border-radius: 4px;
   z-index: 2;
 }
-.highlight pre {
+.highlighter-rouge .highlight pre {
   position: relative;
   margin: 0;
   padding: 32px 8px;
@@ -9652,25 +9662,25 @@ header.masthead .post-heading .meta a {
   max-height: 500px;
   overflow-y: auto;
 }
-.highlight pre::-webkit-scrollbar {
+.highlighter-rouge .highlight pre::-webkit-scrollbar {
   width: 14px;
   height: 14px;
 }
-.highlight pre::-webkit-scrollbar-thumb {
+.highlighter-rouge .highlight pre::-webkit-scrollbar-thumb {
   background-color: rgba(10, 10, 10, 0.8);
   border-radius: 4px;
 }
-.highlight pre::-webkit-scrollbar-track {
+.highlighter-rouge .highlight pre::-webkit-scrollbar-track {
   background: #282c34;
 }
-.highlight pre::-webkit-scrollbar-corner {
+.highlighter-rouge .highlight pre::-webkit-scrollbar-corner {
   background-color: #282c34;
 }
-.highlight pre code .line {
+.highlighter-rouge .highlight pre code .line {
   counter-increment: line;
   line-height: 1.5;
 }
-.highlight pre code .line::before {
+.highlighter-rouge .highlight pre code .line::before {
   content: counter(line);
   width: 24px;
   display: inline-block;
@@ -10011,62 +10021,62 @@ header.masthead .post-heading .meta a {
     margin-bottom: 15px;
   }
 }
-.highlight {
+.language-java .highlight {
   color: #a9b7c6;
 }
-.highlight pre {
+.language-java .highlight pre {
   margin: 0;
 }
-.highlight .c, .highlight .ch, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+.language-java .highlight .c, .language-java .highlight .ch, .language-java .highlight .cm, .language-java .highlight .cp, .language-java .highlight .cpf, .language-java .highlight .c1, .language-java .highlight .cs {
   color: #808080;
   font-style: italic;
 }
-.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt {
+.language-java .highlight .k, .language-java .highlight .kc, .language-java .highlight .kd, .language-java .highlight .kn, .language-java .highlight .kp, .language-java .highlight .kr, .language-java .highlight .kt {
   color: #cc7832;
   font-weight: bold;
 }
-.highlight .o, .highlight .ow {
+.language-java .highlight .o, .language-java .highlight .ow {
   color: #a9b7c6;
 }
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .mx, .highlight .il {
+.language-java .highlight .m, .language-java .highlight .mb, .language-java .highlight .mf, .language-java .highlight .mh, .language-java .highlight .mi, .language-java .highlight .mo, .language-java .highlight .mx, .language-java .highlight .il {
   color: #6897bb;
 }
-.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+.language-java .highlight .s, .language-java .highlight .sa, .language-java .highlight .sb, .language-java .highlight .sc, .language-java .highlight .dl, .language-java .highlight .sd, .language-java .highlight .s2, .language-java .highlight .se, .language-java .highlight .sh, .language-java .highlight .si, .language-java .highlight .sx, .language-java .highlight .sr, .language-java .highlight .s1, .language-java .highlight .ss {
   color: #6a8759;
 }
-.highlight .na {
+.language-java .highlight .na {
   color: #a9b7c6;
 }
-.highlight .nb {
+.language-java .highlight .nb {
   color: #cc7832;
 }
-.highlight .nc {
+.language-java .highlight .nc {
   color: #ffc66d;
   font-weight: bold;
 }
-.highlight .nf, .highlight .fm {
+.language-java .highlight .nf, .language-java .highlight .fm {
   color: #ffc66d;
 }
-.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+.language-java .highlight .nv, .language-java .highlight .vc, .language-java .highlight .vg, .language-java .highlight .vi, .language-java .highlight .vm {
   color: #a9b7c6;
 }
-.highlight .nt {
+.language-java .highlight .nt {
   color: #e8bf6a;
 }
-.highlight .nl {
+.language-java .highlight .nl {
   color: #a9b7c6;
 }
-.highlight .nd {
+.language-java .highlight .nd {
   color: #bbb529;
 }
-.highlight .err {
+.language-java .highlight .err {
   color: #ff0000;
   background-color: transparent;
 }
-.highlight .ge {
+.language-java .highlight .ge {
   font-style: italic;
 }
-.highlight .gs {
+.language-java .highlight .gs {
   font-weight: bold;
 }
 
