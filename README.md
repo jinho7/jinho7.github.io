@@ -15,6 +15,11 @@
 
 - [블로그 방문하기](https://jinho7.github.io/)
 
+<br>
+
+*참고 : 자잘한 개발 이야기는 아래에 post 하였습니다.*
+- [Tistory 블로그](https://jinhos-devlog.tistory.com/)
+
 ## 블로그 미리보기
 ![image](https://github.com/user-attachments/assets/452ee7bc-d319-4cfb-82bb-78aadffcca0f)
 
