@@ -1,24 +1,22 @@
-# Jinho's Dev Blog
+# Jinho's Dev Blog
 
-이 블로그는 [Start Bootstrap의 Clean Blog Jekyll 테마](https://startbootstrap.com/themes/clean-blog-jekyll/)를 기반으로 제작되었습니다. 블로그에서는 주로 개발 관련 학습 내용과 경험을 공유합니다.
+이 블로그는 [Start Bootstrap의 Clean Blog Jekyll 테마](https://startbootstrap.com/themes/clean-blog-jekyll/)를 기반으로 제작되었습니다.
 
-## 주요 기능
+블로그에서는 주로 개발 관련 학습 내용과 경험을 공유합니다.
+
+## 직접 추가 구현한 기능
 
 - **태그 시스템**: 포스트를 주제별로 쉽게 찾아볼 수 있는 태그 기능
 - **반응형 디자인**: 모바일과 데스크톱 모두에서 최적화된 보기 제공
+- **우츨 toc**: 포스트의 목차를 보기 쉽게 stick 해놓았습니다.
 - **읽기 시간 표시**: 각 포스트의 예상 읽기 시간 자동 계산
-
-## 기술 스택
-
-- Jekyll
-- Bootstrap 4
-- HTML/CSS
-- JavaScript
-- Liquid Template
-
+  
 ## 링크
 
 - [블로그 방문하기](https://jinho7.github.io/)
+
+## 블로그 미리보기
+![Uploading 스크린샷 2025-02-04 오후 11.33.06.png…]()
 
 ## 저작권
 
