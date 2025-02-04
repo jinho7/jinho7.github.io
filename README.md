@@ -16,7 +16,7 @@
 - [블로그 방문하기](https://jinho7.github.io/)
 
 ## 블로그 미리보기
-![Uploading 스크린샷 2025-02-04 오후 11.33.06.png…]()
+![image](https://github.com/user-attachments/assets/452ee7bc-d319-4cfb-82bb-78aadffcca0f)
 
 ## 저작권
 
