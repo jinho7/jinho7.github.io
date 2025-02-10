@@ -2,7 +2,7 @@
 layout: post
 title: "Packet Tracer로 네트워크 이해하기"
 subtitle: "LAN 토폴로지, 스위치, 라우터, 방화벽"
-date: 2025-02-11 14:30:00 +0900
+date: 2025-02-08 14:30:00 +0900
 background: '/img/posts/network_topology.jpeg'
 tags: [Network, PacketTracer, LAN, Switch, Router, Firewall, VLAN, Topology]
 toc: true
