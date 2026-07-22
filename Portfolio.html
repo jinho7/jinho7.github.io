@@ -22,6 +22,7 @@ a:hover { color: #115e59; text-decoration: underline; }
   [style*="grid-template-columns: repeat(4"] { grid-template-columns: 1fr 1fr !important; }
   [style*="grid-template-columns: 1fr 340px"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -87,98 +88,82 @@ a:hover { color: #115e59; text-decoration: underline; }
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">02</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Featured Projects</h2>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 64px">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
 
-      <!-- 힘전소 -->
-      <article style="display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: start">
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-            <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>힘전소</span></h3>
-            <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums">2024.07 – 2025.02</span>
+      <!-- 힘전소 카드 -->
+      <a href="projects/himjeonso.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; position: relative; overflow: hidden" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+        <img src="img/screenshots/himjeonso-card.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.09; pointer-events: none" alt="">
+        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; flex: 1">
+          <div>
+            <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">힘전소</h3>
+            <span style="font-size: 13px; color: #a8a29e">2024.07 – 2025.02</span>
           </div>
-          <p style="font-size: 16px; color: #78716c; margin: 0; line-height: 1.6">휠체어 사용자를 위한 전동보장구 충전소 정보 · 커뮤니티 서비스</p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap">
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Boot 3.2</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">MySQL</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Redis</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">AWS S3</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Docker</span>
+          <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">휠체어 사용자를 위한 전동보장구 충전소 정보 및 커뮤니티 서비스</p>
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">7,545ms → 1,212ms</span>
+              <span style="font-size: 12px; color: #57534e">파일 업로드 응답 (6배 단축)</span>
+            </div>
+            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">171초 → 1.3초</span>
+              <span style="font-size: 12px; color: #57534e">50명 동시 업로드 (130배 단축)</span>
+            </div>
           </div>
-          <ul style="margin: 4px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #44403c">
-            <li>이미지·게시글 API 분리와 S3 Presigned URL 적용으로 서버 I/O 부하 감소</li>
-            <li>CloudWatch Event + Lambda 기반 고아 이미지 자동 정리로 스토리지 낭비 방지</li>
-            <li>Offset → Cursor 페이지네이션 전환으로 무한 스크롤 성능 향상, 복합 커서로 정렬 모호성 제거</li>
-            <li>CQRS 패턴 · Enum 기반 에러 코드 · @RestControllerAdvice 전역 예외 처리로 코드 구조 개선</li>
-          </ul>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap">
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Boot 3.2</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Redis</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS S3</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Docker</span>
+          </div>
+          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 4px">
-            <span style="font-size: 26px; font-weight: 800; color: #0f766e; letter-spacing: -0.01em">7,545ms → 1,212ms</span>
-            <span style="font-size: 14px; color: #57534e">파일 업로드 평균 응답 (약 6배 단축)</span>
-          </div>
-          <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 4px">
-            <span style="font-size: 26px; font-weight: 800; color: #0f766e; letter-spacing: -0.01em">171초 → 1.3초</span>
-            <span style="font-size: 14px; color: #57534e">50명 동시 업로드 평균 (약 130배 단축)</span>
-          </div>
-          <img id="himjeonso-arch" src="img/arch-himjeonso.svg" style="width:100%;height:170px;object-fit:contain;border-radius:12px;background:#f8fffe;" alt="힘전소 아키텍처">
-        </div>
-      </article>
+      </a>
 
-      <!-- Waither -->
-      <article style="display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: start">
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-            <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>Waither</span></h3>
-            <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums">2024.03 – 2024.11</span>
+      <!-- Waither 카드 -->
+      <a href="projects/waither.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; position: relative; overflow: hidden" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+        <img src="img/screenshots/waither-card.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.09; pointer-events: none" alt="">
+        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; flex: 1">
+          <div>
+            <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Waither</h3>
+            <span style="font-size: 13px; color: #a8a29e">2024.03 – 2024.11</span>
           </div>
-          <p style="font-size: 16px; color: #78716c; margin: 0; line-height: 1.6">사용자 개인 맞춤 날씨 정보 알림 서비스 — MSA 구조 설계·구현</p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap">
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Cloud (MSA)</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Kafka</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Security · JWT</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Redis</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">AWS</span>
+          <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">사용자 맞춤 날씨 알림 서비스, MSA 구조로 설계 및 구현</p>
+          <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+            <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">3 MSA 서비스</span>
+            <span style="font-size: 12px; color: #57534e">User / Weather / Notification 독립 분리</span>
           </div>
-          <ul style="margin: 4px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #44403c">
-            <li>User · Weather · Notification 서비스를 MSA로 분리해 기능별 독립성 확보</li>
-            <li>Eureka 서비스 디스커버리 적용 — 서버 간 동적 라우팅 및 설정 통합 관리</li>
-            <li>API Gateway에 JWT 블랙리스트 방식 도입, 중앙 집중식 인증·인가 구현</li>
-            <li>REST 통신의 데이터 누락·병목을 Kafka 메시지 큐 기반 동기화로 해결 — 데이터 일관성 확보</li>
-          </ul>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap">
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kafka</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Security</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS</span>
+          </div>
+          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
-        <img id="waither-arch" src="img/arch-waither.svg" style="width:100%;height:280px;object-fit:contain;border-radius:12px;background:#f8fffe;" alt="Waither MSA 아키텍처">
-      </article>
+      </a>
 
-      <!-- Looper -->
-      <article style="display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: start">
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-            <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>Looper</span></h3>
-            <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums">2025.04 – 2025.08</span>
+      <!-- Looper 카드 -->
+      <a href="projects/looper.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; position: relative; overflow: hidden" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+        <img src="img/screenshots/looper-card.jpg" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.09; pointer-events: none" alt="">
+        <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; flex: 1">
+          <div>
+            <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Looper</h3>
+            <span style="font-size: 13px; color: #a8a29e">2025.04 – 2025.08</span>
           </div>
-          <p style="font-size: 16px; color: #78716c; margin: 0; line-height: 1.6">AI 기반 일정 관리 플랫폼 · 카카오테크 부트캠프 — 멀티클라우드 인프라 담당</p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap">
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">FastAPI</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Kubernetes</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Terraform</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">GCP + AWS</span>
-            <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">OpenTelemetry · Grafana</span>
+          <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">AI 기반 일정 관리 플랫폼, 멀티클라우드 인프라 담당</p>
+          <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+            <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">장애 분석 60% 단축</span>
+            <span style="font-size: 12px; color: #57534e">통합 관측으로 장애 분석 시간 단축</span>
           </div>
-          <ul style="margin: 4px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #44403c">
-            <li>GCP(AI)와 AWS(Web)를 분리한 멀티클라우드 구성 — kubeadm 기반 K8s 클러스터, VXLAN으로 Pod 간 통신</li>
-            <li>Cloud DNS Health Check 기반 Failover 라우팅 설계, FastAPI 비동기 호출로 추론 I/O 대기시간 개선</li>
-            <li>Terraform IaC + GitHub Actions CI/CD 파이프라인 구성</li>
-            <li>OpenTelemetry · Prometheus · Loki · Tempo · Grafana 통합 APM 구축 → <strong style="color: #0f766e">장애 분석 시간 약 60% 단축</strong></li>
-          </ul>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap">
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kubernetes</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Terraform</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">GCP + AWS</span>
+            <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Grafana</span>
+          </div>
+          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 12px">
-          <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 4px">
-            <span style="font-size: 26px; font-weight: 800; color: #0f766e; letter-spacing: -0.01em">-60%</span>
-            <span style="font-size: 14px; color: #57534e">통합 관측으로 장애 원인 분석 시간 단축</span>
-          </div>
-          <img id="looper-arch" src="img/arch-looper.svg" style="width:100%;height:200px;object-fit:contain;border-radius:12px;background:#f8fffe;" alt="Looper 멀티클라우드 아키텍처">
-        </div>
-      </article>
+      </a>
 
     </div>
   </section>
@@ -190,16 +175,22 @@ a:hover { color: #115e59; text-decoration: underline; }
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">More Projects</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; display: flex; flex-direction: column; gap: 8px">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Biz_News</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">해커톤 2등</span></div>
-        <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">최신 뉴스 요약 서비스. FastAPI로 뉴스 수집–요약–추천 파이프라인 구성, LangChain + OpenAI 요약·벡터 임베딩, Neo4j 기업 연관도 그래프 시각화</p>
-        <span style="font-size: 13px; color: #a8a29e">Spring Boot · FastAPI · Neo4j · Redis · Docker</span>
-      </div>
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; display: flex; flex-direction: column; gap: 8px">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SMUNITY</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">10만+ 방문</span></div>
-        <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 졸업요건 검사 사이트. 컴퓨터과학과 19학번이 모여 만든 프로젝트로 누적 방문자 10만 명 이상 달성</p>
-        <span style="font-size: 13px; color: #a8a29e">Python · Django · NGINX · Docker · AWS</span>
-      </div>
+      <a href="projects/biznews.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+        <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Biz_News</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">해커톤 2등</span></div>
+          <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">최신 뉴스 요약 서비스. FastAPI로 뉴스 수집–요약–추천 파이프라인 구성, LangChain + OpenAI 요약·벡터 임베딩, Neo4j 기업 연관도 그래프 시각화</p>
+          <span style="font-size: 13px; color: #a8a29e">Spring Boot · FastAPI · Neo4j · Redis · Docker</span>
+          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+        </div>
+      </a>
+      <a href="projects/smunity.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+        <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SMUNITY</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">10만+ 방문</span></div>
+          <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 졸업요건 검사 사이트. 컴퓨터과학과 19학번이 모여 만든 프로젝트로 누적 방문자 10만 명 이상 달성</p>
+          <span style="font-size: 13px; color: #a8a29e">Python · Django · NGINX · Docker · AWS</span>
+          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+        </div>
+      </a>
       <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; display: flex; flex-direction: column; gap: 8px">
         <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SmuPool</h3><span style="font-size: 13px; color: #a8a29e">2024.05 – 06</span></div>
         <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 학우를 위한 택시 카풀 서비스. WebSocket / STOMP 기반 실시간 채팅 파트 구현</p>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>힘전소 — 김진호 포트폴리오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #fafaf9; color: #1c1917; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #0f766e; text-decoration: none; }
+a:hover { color: #115e59; text-decoration: underline; }
+::selection { background: #ccfbf1; }
+</style>
+</head>
+<body>
+
+<!-- Back nav -->
+<nav style="position: sticky; top: 0; z-index: 100; background: #134e4a; padding: 0 32px; height: 52px; display: flex; align-items: center">
+  <a href="../Portfolio.html" style="color: #5eead4; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px">
+    <span style="font-size: 18px; line-height: 1">←</span> 포트폴리오로 돌아가기
+  </a>
+</nav>
+
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 32px 96px">
+
+  <!-- Header -->
+  <div style="margin-bottom: 48px">
+    <h1 style="font-size: 42px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.02em">힘전소</h1>
+    <span style="font-size: 16px; color: #a8a29e">2024.07 – 2025.02</span>
+    <p style="font-size: 18px; color: #44403c; line-height: 1.7; margin: 16px 0 0">휠체어 사용자를 위한 전동보장구 충전소 정보 · 커뮤니티 서비스</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px">
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Boot 3.2</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">MySQL</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Redis</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">AWS S3</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Docker</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">CloudWatch · Lambda</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">JPA · QueryDSL</span>
+    </div>
+  </div>
+
+  <!-- 핵심 성과 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">핵심 성과</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 28px 30px">
+        <span style="font-size: 36px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">7,545ms → 1,212ms</span>
+        <span style="font-size: 15px; color: #57534e; margin-top: 8px; display: block">파일 업로드 평균 응답 시간 — 약 6배 단축</span>
+        <span style="font-size: 13px; color: #a8a29e; margin-top: 4px; display: block">S3 Presigned URL + 이미지 API 분리</span>
+      </div>
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 28px 30px">
+        <span style="font-size: 36px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">171초 → 1.3초</span>
+        <span style="font-size: 15px; color: #57534e; margin-top: 8px; display: block">50명 동시 업로드 평균 시간 — 약 130배 단축</span>
+        <span style="font-size: 13px; color: #a8a29e; margin-top: 4px; display: block">서버 I/O 제거로 동시성 병목 해소</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 아키텍처 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">아키텍처</h2>
+    <div style="background: #f8fffe; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px; text-align: center">
+      <img src="../img/arch-himjeonso.svg" style="max-width: 800px; width: 100%; height: auto;" alt="힘전소 아키텍처 다이어그램">
+    </div>
+  </section>
+
+  <!-- 주요 구현 내용 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">주요 구현 내용</h2>
+    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 32px 36px">
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.7; color: #44403c">
+        <li><strong>S3 Presigned URL 도입</strong> — 이미지·게시글 API 분리 후 클라이언트가 S3에 직접 업로드하도록 변경해 서버 I/O 부하를 근본 제거. 파일 업로드 평균 응답 7,545ms → 1,212ms (약 6배 단축)</li>
+        <li><strong>동시 업로드 병목 해소</strong> — 50명 동시 업로드 시 서버 I/O 경합이 사라져 평균 응답 171초 → 1.3초 (약 130배 단축)</li>
+        <li><strong>고아 이미지 자동 정리</strong> — CloudWatch Events + Lambda 스케줄러로 DB에 없는 S3 객체를 주기적으로 삭제, 스토리지 비용 낭비 방지</li>
+        <li><strong>Cursor 페이지네이션 전환</strong> — Offset → Cursor 방식으로 무한 스크롤 성능 향상, 복합 커서(created_at + id)로 정렬 모호성 제거</li>
+        <li><strong>CQRS 패턴 적용</strong> — 조회/쓰기 책임 분리로 QueryDSL 기반 복잡 조회 최적화</li>
+        <li><strong>전역 예외 처리 통합</strong> — Enum 기반 에러 코드 체계 + @RestControllerAdvice로 일관된 에러 응답 보장</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GitHub -->
+  <section>
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px">GitHub</h2>
+    <a href="https://github.com/jinho7/FIll_Energer_BackEnd_Server" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #134e4a; color: #5eead4; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 8px; text-decoration: none">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      jinho7/FIll_Energer_BackEnd_Server
+    </a>
+  </section>
+
+</div>
+</body>
+</html>

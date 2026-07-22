@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waither — 김진호 포트폴리오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #fafaf9; color: #1c1917; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #0f766e; text-decoration: none; }
+a:hover { color: #115e59; text-decoration: underline; }
+::selection { background: #ccfbf1; }
+</style>
+</head>
+<body>
+
+<!-- Back nav -->
+<nav style="position: sticky; top: 0; z-index: 100; background: #134e4a; padding: 0 32px; height: 52px; display: flex; align-items: center">
+  <a href="../Portfolio.html" style="color: #5eead4; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px">
+    <span style="font-size: 18px; line-height: 1">←</span> 포트폴리오로 돌아가기
+  </a>
+</nav>
+
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 32px 96px">
+
+  <!-- Header -->
+  <div style="margin-bottom: 48px">
+    <h1 style="font-size: 42px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.02em">Waither</h1>
+    <span style="font-size: 16px; color: #a8a29e">2024.03 – 2024.11</span>
+    <p style="font-size: 18px; color: #44403c; line-height: 1.7; margin: 16px 0 0">사용자 개인 맞춤 날씨 정보 알림 서비스 — MSA 구조 설계·구현</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px">
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Cloud (MSA)</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Kafka</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Security · JWT</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Redis</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">AWS</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Eureka</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">API Gateway</span>
+    </div>
+  </div>
+
+  <!-- 핵심 성과 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">핵심 성과</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px">
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px 26px">
+        <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">3</span>
+        <span style="font-size: 14px; color: #57534e; margin-top: 8px; display: block">독립 MSA 서비스</span>
+        <span style="font-size: 12px; color: #a8a29e; margin-top: 4px; display: block">User · Weather · Notification</span>
+      </div>
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px 26px">
+        <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">JWT</span>
+        <span style="font-size: 14px; color: #57534e; margin-top: 8px; display: block">중앙 집중식 인증·인가</span>
+        <span style="font-size: 12px; color: #a8a29e; margin-top: 4px; display: block">블랙리스트 방식 · API Gateway 처리</span>
+      </div>
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px 26px">
+        <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">Kafka</span>
+        <span style="font-size: 14px; color: #57534e; margin-top: 8px; display: block">데이터 일관성 확보</span>
+        <span style="font-size: 12px; color: #a8a29e; margin-top: 4px; display: block">REST 병목·누락 → 메시지 큐 전환</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MSA 서비스 구조 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">MSA 서비스 구조</h2>
+    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 28px 32px; display: flex; flex-direction: column; gap: 12px">
+      <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; align-items: center; font-size: 15px; border-bottom: 1px solid #f5f5f4; padding-bottom: 12px">
+        <span style="font-weight: 700; color: #1c1917">User Service</span>
+        <span style="color: #44403c; line-height: 1.6">회원가입·로그인·프로필 관리. JWT 발급 및 Redis 기반 토큰 블랙리스트</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; align-items: center; font-size: 15px; border-bottom: 1px solid #f5f5f4; padding-bottom: 12px">
+        <span style="font-weight: 700; color: #1c1917">Weather Service</span>
+        <span style="color: #44403c; line-height: 1.6">기상청 API 수집·파싱·캐싱. 사용자 위치 기반 날씨 데이터 제공</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; align-items: center; font-size: 15px; border-bottom: 1px solid #f5f5f4; padding-bottom: 12px">
+        <span style="font-weight: 700; color: #1c1917">Notification Service</span>
+        <span style="color: #44403c; line-height: 1.6">Kafka 이벤트 소비 후 FCM 푸시 알림 발송. 알림 이력 관리</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; align-items: center; font-size: 15px; border-bottom: 1px solid #f5f5f4; padding-bottom: 12px">
+        <span style="font-weight: 700; color: #1c1917">API Gateway</span>
+        <span style="color: #44403c; line-height: 1.6">Spring Cloud Gateway. 라우팅·JWT 검증·로드밸런싱 중앙 처리</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 140px 1fr; gap: 12px 20px; align-items: center; font-size: 15px">
+        <span style="font-weight: 700; color: #1c1917">Eureka</span>
+        <span style="color: #44403c; line-height: 1.6">서비스 디스커버리. 인스턴스 자동 등록·해제, 동적 라우팅</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 아키텍처 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">아키텍처</h2>
+    <div style="background: #f8fffe; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px; text-align: center">
+      <img src="../img/arch-waither.svg" style="max-width: 800px; width: 100%; height: auto;" alt="Waither MSA 아키텍처 다이어그램">
+    </div>
+  </section>
+
+  <!-- 주요 구현 내용 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">주요 구현 내용</h2>
+    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 32px 36px">
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.7; color: #44403c">
+        <li><strong>MSA 분리</strong> — User · Weather · Notification 3개 서비스로 독립 분리. 각 서비스별 DB 스키마 분리로 결합도 최소화</li>
+        <li><strong>Eureka 서비스 디스커버리</strong> — 서버 간 동적 라우팅 및 설정 통합 관리. 인스턴스 추가·제거 시 자동 반영</li>
+        <li><strong>API Gateway + JWT 블랙리스트</strong> — 로그아웃 시 토큰을 Redis 블랙리스트에 등록, Gateway에서 모든 요청의 인증·인가 중앙 처리</li>
+        <li><strong>Kafka 메시지 큐 도입</strong> — 서비스 간 REST 동기 통신의 데이터 누락·병목을 비동기 이벤트 방식으로 전환해 데이터 일관성 확보</li>
+        <li><strong>날씨 API 캐싱</strong> — Redis TTL 기반 날씨 데이터 캐싱으로 외부 API 호출 빈도 감소 및 응답속도 개선</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GitHub -->
+  <section>
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px">GitHub</h2>
+    <a href="https://github.com/WaitherTeam/Waither-BE" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #134e4a; color: #5eead4; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 8px; text-decoration: none">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      WaitherTeam/Waither-BE
+    </a>
+  </section>
+
+</div>
+</body>
+</html>

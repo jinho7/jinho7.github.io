@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="'Pretendard Variable',Pretendard,system-ui,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#5eead4"/>
+    </marker>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#c8c5c2"/>
+    </marker>
+  </defs>
+
+  <rect width="520" height="200" fill="#f8fffe" rx="10"/>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">SMUNITY · WEB ARCHITECTURE</text>
+
+  <!-- AWS EC2 zone -->
+  <rect x="12" y="22" width="496" height="116" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="22" y="36" font-size="8.5" font-weight="700" fill="#c2410c">AWS EC2</text>
+
+  <!-- Docker Compose inner zone -->
+  <rect x="22" y="40" width="476" height="90" rx="6" fill="white" stroke="#e7e5e4" stroke-dasharray="3,2"/>
+  <text x="32" y="54" font-size="7.5" font-weight="600" fill="#78716c">Docker Compose</text>
+
+  <!-- NGINX -->
+  <rect x="32" y="58" width="90" height="58" rx="5" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="77" y="74" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">NGINX</text>
+  <text x="77" y="86" text-anchor="middle" font-size="7.5" fill="#0f766e">리버스 프록시</text>
+  <text x="77" y="98" text-anchor="middle" font-size="7.5" fill="#0f766e">정적 파일 서빙</text>
+
+  <!-- NGINX → Django -->
+  <line x1="123" y1="87" x2="147" y2="87" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Django -->
+  <rect x="148" y="50" width="185" height="72" rx="5" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="240" y="65" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">Django 3.x</text>
+
+  <!-- Django inner: 판정 로직 box -->
+  <rect x="158" y="70" width="152" height="22" rx="4" fill="white" stroke="#99f6e4"/>
+  <text x="234" y="81" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">졸업요건 판정 로직</text>
+  <text x="234" y="90" text-anchor="middle" font-size="7" fill="#78716c">학점 · 과목 · 영어인증</text>
+
+  <!-- Django annotation -->
+  <text x="240" y="110" text-anchor="middle" font-size="7" fill="#0f766e">학과 규정 코드화 · 이수 현황 조회</text>
+
+  <!-- Django → PostgreSQL -->
+  <line x1="334" y1="87" x2="348" y2="87" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
+
+  <!-- PostgreSQL -->
+  <rect x="350" y="55" width="138" height="64" rx="5" fill="white" stroke="#e7e5e4"/>
+  <text x="419" y="73" text-anchor="middle" font-size="8.5" font-weight="700" fill="#44403c">PostgreSQL</text>
+  <text x="419" y="86" text-anchor="middle" font-size="7.5" fill="#78716c">커리큘럼 DB</text>
+  <text x="419" y="98" text-anchor="middle" font-size="7.5" fill="#78716c">졸업 이수 현황</text>
+  <text x="419" y="110" text-anchor="middle" font-size="7" fill="#a8a29e">SQLite (dev) / PG (prod)</text>
+
+  <!-- Client (outside AWS zone) -->
+  <rect x="32" y="152" width="90" height="36" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="77" y="169" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">Client</text>
+  <text x="77" y="181" text-anchor="middle" font-size="7.5" fill="#78716c">Browser</text>
+
+  <!-- Client → NGINX arrow (HTTPS) -->
+  <line x1="77" y1="151" x2="77" y2="117" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="84" y="145" font-size="7.5" fill="#78716c">HTTPS</text>
+</svg>

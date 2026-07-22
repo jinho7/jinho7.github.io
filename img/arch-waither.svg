@@ -20,7 +20,7 @@
   <text x="230" y="45" text-anchor="middle" font-size="7.5" fill="#78716c">Spring Cloud Config</text>
 
   <!-- dashed lines from config to services -->
-  <line x1="230" y1="50" x2="230" y2="68" stroke="#c8c5c2" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="230" y1="50" x2="295" y2="70" stroke="#c8c5c2" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#b)"/>
 
   <!-- Client -->
   <rect x="12" y="70" width="62" height="46" rx="6" fill="white" stroke="#e7e5e4"/>
@@ -55,7 +55,7 @@
   <!-- User Service -->
   <rect x="392" y="40" width="116" height="36" rx="6" fill="white" stroke="#e7e5e4"/>
   <text x="450" y="55" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">User Service</text>
-  <text x="450" y="68" text-anchor="middle" font-size="7.5" fill="#78716c">Spring Security · JWT · Redis</text>
+  <text x="450" y="68" text-anchor="middle" font-size="7.5" fill="#78716c">Security · JWT · Redis</text>
 
   <!-- Weather Service -->
   <rect x="392" y="76" width="116" height="36" rx="6" fill="white" stroke="#e7e5e4"/>

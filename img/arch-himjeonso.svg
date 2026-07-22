@@ -65,7 +65,8 @@
   <text x="244" y="110" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">CQRS · JWT</text>
   <text x="244" y="120" text-anchor="middle" font-size="7" fill="#78716c">Redis Cache</text>
 
-  <text x="205" y="148" text-anchor="middle" font-size="7" fill="#0f766e">@RestControllerAdvice · Enum ErrorCode · Cursor Paging</text>
+  <text x="205" y="144" text-anchor="middle" font-size="7" fill="#0f766e">@RestControllerAdvice · Enum ErrorCode</text>
+  <text x="205" y="154" text-anchor="middle" font-size="7" fill="#0f766e">CQRS · Cursor Paging</text>
 
   <!-- Spring Boot → MySQL -->
   <line x1="180" y1="159" x2="160" y2="190" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
@@ -104,9 +105,7 @@
   <path d="M290 105 Q303 98 317 110" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#a)" stroke-dasharray="4,2"/>
   <text x="302" y="98" text-anchor="middle" font-size="7" fill="#0f766e">Presigned</text>
 
-  <!-- Client → S3 direct -->
-  <path d="M43 90 Q43 60 358 60 Q358 78 358 99" stroke="#5eead4" stroke-width="1" fill="none" marker-end="url(#a)" stroke-dasharray="3,2"/>
-  <text x="200" y="57" text-anchor="middle" font-size="7.5" fill="#0f766e">Client Direct Upload (Presigned URL)</text>
+  <!-- Client → S3 direct (via Presigned URL obtained from server) -->
 
   <!-- Lambda → S3 cleanup -->
   <path d="M440 121 Q415 121 400 121" stroke="#c8c5c2" stroke-width="1" fill="none" marker-end="url(#b)"/>
