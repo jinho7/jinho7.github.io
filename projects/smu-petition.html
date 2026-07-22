@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>상명대 청원 플랫폼 — 김진호 포트폴리오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #fafaf9; color: #1c1917; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #0f766e; text-decoration: none; }
+a:hover { color: #115e59; text-decoration: underline; }
+::selection { background: #ccfbf1; }
+</style>
+</head>
+<body>
+
+<!-- Back nav -->
+<nav style="position: sticky; top: 0; z-index: 100; background: #134e4a; padding: 0 32px; height: 52px; display: flex; align-items: center">
+  <a href="../Portfolio.html" style="color: #5eead4; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px">
+    <span style="font-size: 18px; line-height: 1">←</span> 포트폴리오로 돌아가기
+  </a>
+</nav>
+
+<div style="max-width: 860px; margin: 0 auto; padding: 64px 32px 96px">
+
+  <!-- Header -->
+  <div style="margin-bottom: 48px">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px">
+      <h1 style="font-size: 42px; font-weight: 800; margin: 0; letter-spacing: -0.02em">상명대 청원 플랫폼</h1>
+      <span style="font-size: 14px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 4px 12px">실서비스 운영</span>
+    </div>
+    <span style="font-size: 16px; color: #a8a29e">2022 – 2024 · SMUNITY 활동</span>
+    <p style="font-size: 18px; color: #44403c; line-height: 1.7; margin: 16px 0 0">상명대 학생들이 학교에 직접 청원을 올리고 동의를 모을 수 있는 플랫폼 — 총학생회 연계 운영</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px">
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Python</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Django</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">NGINX</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Docker</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">AWS EC2</span>
+      <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">PostgreSQL</span>
+    </div>
+  </div>
+
+  <!-- 핵심 성과 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">핵심 성과</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 28px 30px">
+        <span style="font-size: 36px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">실서비스</span>
+        <span style="font-size: 15px; color: #57534e; margin-top: 8px; display: block">smu-petition.site 운영 중</span>
+        <span style="font-size: 13px; color: #a8a29e; margin-top: 4px; display: block">총학생회 공식 연계 플랫폼</span>
+      </div>
+      <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 28px 30px">
+        <span style="font-size: 36px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">청원 자동화</span>
+        <span style="font-size: 15px; color: #57534e; margin-top: 8px; display: block">동의 임계값 달성 시 자동 상태 전환</span>
+        <span style="font-size: 13px; color: #a8a29e; margin-top: 4px; display: block">진행 → 답변 대기 → 완료 파이프라인</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 아키텍처 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">아키텍처</h2>
+    <div style="background: #f8fffe; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px; text-align: center">
+      <img src="../img/arch-smu-petition.svg" style="max-width: 800px; width: 100%; height: auto;" alt="상명대 청원 플랫폼 아키텍처 다이어그램">
+    </div>
+  </section>
+
+  <!-- 주요 구현 내용 -->
+  <section style="margin-bottom: 56px">
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">주요 구현 내용</h2>
+    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 32px 36px">
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.7; color: #44403c">
+        <li><strong>청원 CRUD 및 상태 관리</strong> — 청원 작성·수정·삭제 기능 구현. 진행 중 / 답변 대기 / 답변 완료 / 만료 / 반려 등 다단계 상태 정의 및 전환 로직 설계</li>
+        <li><strong>동의 임계값 자동 상태 전환</strong> — 청원이 설정된 동의 수에 도달하면 자동으로 총학생회 답변 대기 상태로 전환. 수동 처리 없이 파이프라인 자동화</li>
+        <li><strong>정렬 및 필터링</strong> — 최신순, 동의순, 만료임박순 정렬 지원. 상태별(진행 중 / 완료 / 만료·반려) 필터링으로 청원 탐색 편의성 제공</li>
+        <li><strong>학생 인증 및 권한 분리</strong> — 상명대 학생 인증 후 청원 참여 가능. 총학생회 관리자 계정으로 청원 답변 등록 및 상태 업데이트 권한 분리</li>
+        <li><strong>NGINX + Docker Compose 배포</strong> — NGINX 리버스 프록시 및 정적 파일 서빙, Docker Compose로 전체 서비스 컨테이너화하여 AWS EC2에 배포</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 링크 -->
+  <section>
+    <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 16px">링크</h2>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap">
+      <a href="https://smu-petition.site/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #134e4a; color: #5eead4; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 8px; text-decoration: none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        smu-petition.site
+      </a>
+      <a href="https://github.com/smu-nity/SMU-Petition" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #ffffff; border: 1px solid #e7e5e4; color: #44403c; font-size: 15px; font-weight: 700; padding: 12px 22px; border-radius: 8px; text-decoration: none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        smu-nity/SMU-Petition
+      </a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
