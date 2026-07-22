@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" font-family="'Pretendard Variable',Pretendard,system-ui,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#5eead4"/>
+    </marker>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#c8c5c2"/>
+    </marker>
+  </defs>
+
+  <!-- BG -->
+  <rect width="520" height="240" fill="#f8fffe" rx="10"/>
+
+  <!-- Section label -->
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">힘전소 · ARCHITECTURE</text>
+
+  <!-- ── CI/CD bar (top) ── -->
+  <rect x="12" y="24" width="496" height="36" rx="6" fill="white" stroke="#e7e5e4" stroke-width="1"/>
+  <text x="20" y="37" font-size="8" fill="#a8a29e" font-weight="600">CI / CD</text>
+
+  <!-- GitHub Actions -->
+  <rect x="60" y="29" width="80" height="24" rx="4" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="100" y="40" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">GitHub Actions</text>
+  <text x="100" y="50" text-anchor="middle" font-size="7.5" fill="#78716c">push: develop</text>
+
+  <line x1="141" y1="41" x2="157" y2="41" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- DockerHub -->
+  <rect x="158" y="29" width="70" height="24" rx="4" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="193" y="40" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">DockerHub</text>
+  <text x="193" y="50" text-anchor="middle" font-size="7.5" fill="#78716c">Image Push</text>
+
+  <line x1="229" y1="41" x2="245" y2="41" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- EC2 deploy label -->
+  <text x="260" y="38" font-size="8" font-weight="600" fill="#0f766e">docker pull &amp; run</text>
+  <line x1="336" y1="41" x2="352" y2="41" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- EC2 box label -->
+  <rect x="353" y="29" width="88" height="24" rx="4" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="397" y="40" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">EC2 (Docker)</text>
+  <text x="397" y="50" text-anchor="middle" font-size="7.5" fill="#0f766e">Spring Boot :8080</text>
+
+  <!-- ── Main flow ── -->
+  <!-- Client -->
+  <rect x="12" y="90" width="62" height="46" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="43" y="108" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">Client</text>
+  <text x="43" y="121" text-anchor="middle" font-size="7.5" fill="#78716c">Mobile /</text>
+  <text x="43" y="131" text-anchor="middle" font-size="7.5" fill="#78716c">Web</text>
+
+  <!-- Client → API -->
+  <line x1="75" y1="113" x2="118" y2="113" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="97" y="108" text-anchor="middle" font-size="7.5" fill="#78716c">HTTPS</text>
+
+  <!-- Spring Boot block -->
+  <rect x="120" y="78" width="170" height="80" rx="6" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="205" y="93" text-anchor="middle" font-size="8" font-weight="700" fill="#0f766e">Spring Boot 3.2</text>
+
+  <!-- Internal boxes -->
+  <rect x="130" y="98" width="68" height="22" rx="4" fill="white" stroke="#99f6e4"/>
+  <text x="164" y="110" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">Member / Board</text>
+  <text x="164" y="120" text-anchor="middle" font-size="7" fill="#78716c">Station / Review</text>
+
+  <rect x="208" y="98" width="72" height="22" rx="4" fill="white" stroke="#99f6e4"/>
+  <text x="244" y="110" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">CQRS · JWT</text>
+  <text x="244" y="120" text-anchor="middle" font-size="7" fill="#78716c">Redis Cache</text>
+
+  <text x="205" y="148" text-anchor="middle" font-size="7" fill="#0f766e">@RestControllerAdvice · Enum ErrorCode · Cursor Paging</text>
+
+  <!-- Spring Boot → MySQL -->
+  <line x1="180" y1="159" x2="160" y2="190" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
+
+  <!-- Spring Boot → Redis -->
+  <line x1="230" y1="159" x2="250" y2="190" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
+
+  <!-- MySQL -->
+  <rect x="110" y="190" width="80" height="34" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="150" y="205" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">MySQL 8.0</text>
+  <text x="150" y="218" text-anchor="middle" font-size="7.5" fill="#78716c">Primary Store</text>
+
+  <!-- Redis -->
+  <rect x="200" y="190" width="80" height="34" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="240" y="205" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">Redis</text>
+  <text x="240" y="218" text-anchor="middle" font-size="7.5" fill="#78716c">JWT / Cache</text>
+
+  <!-- ── S3 Zone (right) ── -->
+  <rect x="302" y="78" width="206" height="80" rx="6" fill="white" stroke="#e7e5e4" stroke-dasharray="4,3"/>
+  <text x="405" y="93" text-anchor="middle" font-size="8" font-weight="700" fill="#44403c">AWS</text>
+
+  <!-- S3 -->
+  <rect x="318" y="100" width="80" height="42" rx="6" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="358" y="116" text-anchor="middle" font-size="9" font-weight="700" fill="#0f766e">S3 Bucket</text>
+  <text x="358" y="129" text-anchor="middle" font-size="7.5" fill="#0f766e">Image Store</text>
+  <text x="358" y="139" text-anchor="middle" font-size="7" fill="#78716c">Presigned URL</text>
+
+  <!-- CloudWatch + Lambda -->
+  <rect x="410" y="100" width="88" height="42" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="454" y="114" text-anchor="middle" font-size="8" font-weight="600" fill="#44403c">CloudWatch</text>
+  <text x="454" y="125" text-anchor="middle" font-size="7.5" fill="#78716c">Event Bridge</text>
+  <line x1="454" y1="126" x2="454" y2="130" stroke="#c8c5c2" stroke-width="1"/>
+  <text x="454" y="138" text-anchor="middle" font-size="7.5" fill="#78716c">→ Lambda</text>
+
+  <!-- Spring Boot → S3 (Presigned) -->
+  <path d="M290 105 Q303 98 317 110" stroke="#5eead4" stroke-width="1.5" fill="none" marker-end="url(#a)" stroke-dasharray="4,2"/>
+  <text x="302" y="98" text-anchor="middle" font-size="7" fill="#0f766e">Presigned</text>
+
+  <!-- Client → S3 direct -->
+  <path d="M43 90 Q43 60 358 60 Q358 78 358 99" stroke="#5eead4" stroke-width="1" fill="none" marker-end="url(#a)" stroke-dasharray="3,2"/>
+  <text x="200" y="57" text-anchor="middle" font-size="7.5" fill="#0f766e">Client Direct Upload (Presigned URL)</text>
+
+  <!-- Lambda → S3 cleanup -->
+  <path d="M440 121 Q415 121 400 121" stroke="#c8c5c2" stroke-width="1" fill="none" marker-end="url(#b)"/>
+
+  <!-- EC2 vertical connect to Spring Boot block -->
+  <line x1="397" y1="53" x2="205" y2="78" stroke="#5eead4" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- S3 → cleanup label -->
+  <text x="415" y="155" text-anchor="middle" font-size="7.5" fill="#78716c">Auto Image Cleanup</text>
+
+</svg>

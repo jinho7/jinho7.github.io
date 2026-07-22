@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" font-family="'Pretendard Variable',Pretendard,system-ui,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#5eead4"/>
+    </marker>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#c8c5c2"/>
+    </marker>
+    <marker id="k" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <rect width="520" height="300" fill="#f8fffe" rx="10"/>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Waither · MSA ARCHITECTURE</text>
+
+  <!-- Config Service (top center) -->
+  <rect x="180" y="22" width="100" height="28" rx="5" fill="white" stroke="#e7e5e4"/>
+  <text x="230" y="34" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Config Service</text>
+  <text x="230" y="45" text-anchor="middle" font-size="7.5" fill="#78716c">Spring Cloud Config</text>
+
+  <!-- dashed lines from config to services -->
+  <line x1="230" y1="50" x2="230" y2="68" stroke="#c8c5c2" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Client -->
+  <rect x="12" y="70" width="62" height="46" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="43" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">Client</text>
+  <text x="43" y="101" text-anchor="middle" font-size="7.5" fill="#78716c">Mobile /</text>
+  <text x="43" y="111" text-anchor="middle" font-size="7.5" fill="#78716c">Web</text>
+
+  <!-- Client → Gateway -->
+  <line x1="75" y1="93" x2="116" y2="93" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="97" y="88" text-anchor="middle" font-size="7" fill="#78716c">HTTPS</text>
+
+  <!-- API Gateway -->
+  <rect x="118" y="70" width="90" height="46" rx="6" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="163" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="#0f766e">API Gateway</text>
+  <text x="163" y="100" text-anchor="middle" font-size="7.5" fill="#0f766e">JWT Blacklist</text>
+  <text x="163" y="111" text-anchor="middle" font-size="7.5" fill="#0f766e">Rate Limiting</text>
+
+  <!-- Gateway → Eureka -->
+  <line x1="209" y1="93" x2="248" y2="93" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- Eureka -->
+  <rect x="250" y="70" width="90" height="46" rx="6" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="295" y="88" text-anchor="middle" font-size="9" font-weight="700" fill="#0f766e">Eureka</text>
+  <text x="295" y="100" text-anchor="middle" font-size="7.5" fill="#0f766e">Service Discovery</text>
+  <text x="295" y="111" text-anchor="middle" font-size="7.5" fill="#0f766e">Dynamic Routing</text>
+
+  <!-- Eureka → Services -->
+  <line x1="340" y1="80" x2="390" y2="60" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="340" y1="93" x2="390" y2="93" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <line x1="340" y1="106" x2="390" y2="130" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- User Service -->
+  <rect x="392" y="40" width="116" height="36" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="450" y="55" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">User Service</text>
+  <text x="450" y="68" text-anchor="middle" font-size="7.5" fill="#78716c">Spring Security · JWT · Redis</text>
+
+  <!-- Weather Service -->
+  <rect x="392" y="76" width="116" height="36" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="450" y="91" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Weather Service</text>
+  <text x="450" y="104" text-anchor="middle" font-size="7.5" fill="#78716c">기상청 API · 공공데이터</text>
+
+  <!-- Notification Service -->
+  <rect x="392" y="114" width="116" height="36" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="450" y="129" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Notification Service</text>
+  <text x="450" y="142" text-anchor="middle" font-size="7.5" fill="#78716c">FCM Push · 알림 스케줄링</text>
+
+  <!-- External APIs box -->
+  <rect x="392" y="160" width="116" height="28" rx="5" fill="#fef9c3" stroke="#fde047" stroke-width="1"/>
+  <text x="450" y="172" text-anchor="middle" font-size="8" font-weight="600" fill="#854d0e">기상청 / 대기오염</text>
+  <text x="450" y="183" text-anchor="middle" font-size="7.5" fill="#92400e">공공 Open API</text>
+  <line x1="450" y1="160" x2="450" y2="151" stroke="#fde047" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#k)"/>
+
+  <!-- ── Kafka zone ── -->
+  <rect x="12" y="170" width="366" height="60" rx="6" fill="white" stroke="#e7e5e4" stroke-dasharray="4,3"/>
+  <text x="18" y="185" font-size="8" font-weight="700" fill="#f59e0b">Kafka Message Bus</text>
+  <text x="18" y="197" font-size="7.5" fill="#78716c">비동기 메시지 큐 · 서비스 간 데이터 일관성 보장</text>
+
+  <!-- Kafka topics -->
+  <rect x="22" y="200" width="80" height="22" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="62" y="211" text-anchor="middle" font-size="7.5" font-weight="600" fill="#92400e">weather.data</text>
+  <text x="62" y="220" text-anchor="middle" font-size="7" fill="#a16207">weather → noti</text>
+
+  <rect x="114" y="200" width="80" height="22" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="154" y="211" text-anchor="middle" font-size="7.5" font-weight="600" fill="#92400e">user.settings</text>
+  <text x="154" y="220" text-anchor="middle" font-size="7" fill="#a16207">user → weather</text>
+
+  <rect x="206" y="200" width="80" height="22" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="246" y="211" text-anchor="middle" font-size="7.5" font-weight="600" fill="#92400e">noti.push</text>
+  <text x="246" y="220" text-anchor="middle" font-size="7" fill="#a16207">noti → FCM</text>
+
+  <!-- services → kafka arrows -->
+  <line x1="420" y1="151" x2="300" y2="169" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#k)"/>
+  <line x1="450" y1="151" x2="200" y2="169" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#k)"/>
+  <line x1="480" y1="151" x2="100" y2="169" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#k)"/>
+
+  <!-- ── DB zone ── -->
+  <rect x="12" y="242" width="366" height="46" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="18" y="257" font-size="8" font-weight="700" fill="#44403c">Data Layer</text>
+
+  <rect x="20" y="260" width="80" height="22" rx="4" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="60" y="274" text-anchor="middle" font-size="8" font-weight="600" fill="#44403c">MySQL</text>
+
+  <rect x="112" y="260" width="80" height="22" rx="4" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="152" y="274" text-anchor="middle" font-size="8" font-weight="600" fill="#44403c">Redis</text>
+
+  <rect x="204" y="260" width="96" height="22" rx="4" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="252" y="274" text-anchor="middle" font-size="8" font-weight="600" fill="#44403c">AWS EC2 × 3</text>
+
+  <rect x="312" y="260" width="56" height="22" rx="4" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="340" y="274" text-anchor="middle" font-size="8" font-weight="600" fill="#0f766e">Route53</text>
+
+  <!-- bottom line from kafka to dbs -->
+  <line x1="60" y1="231" x2="60" y2="259" stroke="#c8c5c2" stroke-width="1" marker-end="url(#b)"/>
+  <line x1="152" y1="231" x2="152" y2="259" stroke="#c8c5c2" stroke-width="1" marker-end="url(#b)"/>
+</svg>

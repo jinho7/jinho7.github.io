@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 310" font-family="'Pretendard Variable',Pretendard,system-ui,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#5eead4"/>
+    </marker>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#c8c5c2"/>
+    </marker>
+    <marker id="o" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L7,3.5 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <rect width="540" height="310" fill="#f8fffe" rx="10"/>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Looper · MULTI-CLOUD ARCHITECTURE</text>
+
+  <!-- Users -->
+  <rect x="216" y="22" width="108" height="28" rx="5" fill="white" stroke="#e7e5e4"/>
+  <text x="270" y="36" text-anchor="middle" font-size="9" font-weight="700" fill="#44403c">Users</text>
+  <text x="270" y="46" text-anchor="middle" font-size="7.5" fill="#78716c">looper.my</text>
+
+  <!-- Cloud DNS Failover -->
+  <rect x="170" y="60" width="200" height="30" rx="5" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="270" y="73" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">Cloud DNS · Failover Routing</text>
+  <text x="270" y="84" text-anchor="middle" font-size="7.5" fill="#0f766e">Health Check 기반 자동 전환</text>
+
+  <!-- Users → DNS -->
+  <line x1="270" y1="50" x2="270" y2="59" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- DNS → GCP -->
+  <line x1="200" y1="90" x2="152" y2="112" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+  <!-- DNS → AWS -->
+  <line x1="340" y1="90" x2="392" y2="112" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
+
+  <!-- ─── GCP Zone ─── -->
+  <rect x="12" y="110" width="250" height="138" rx="8" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="22" y="126" font-size="8.5" font-weight="700" fill="#0369a1">GCP · AI Cluster</text>
+  <text x="22" y="137" font-size="7.5" fill="#0369a1">34.54.115.33</text>
+
+  <!-- K8s cluster box -->
+  <rect x="20" y="142" width="234" height="98" rx="6" fill="white" stroke="#bae6fd" stroke-width="1"/>
+  <text x="36" y="156" font-size="8" font-weight="700" fill="#0369a1">Kubernetes Cluster (kubeadm)</text>
+  <text x="36" y="166" font-size="7" fill="#64748b">VXLAN Pod 통신</text>
+
+  <!-- FastAPI pod -->
+  <rect x="28" y="172" width="90" height="30" rx="5" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="73" y="184" text-anchor="middle" font-size="8" font-weight="600" fill="#0f766e">FastAPI (AI)</text>
+  <text x="73" y="195" text-anchor="middle" font-size="7.5" fill="#0f766e">비동기 추론</text>
+  <text x="73" y="204" text-anchor="middle" font-size="7" fill="#78716c">Async I/O</text>
+
+  <!-- Spring Boot pod -->
+  <rect x="130" y="172" width="116" height="30" rx="5" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="188" y="184" text-anchor="middle" font-size="8" font-weight="600" fill="#0f766e">Spring Boot</text>
+  <text x="188" y="195" text-anchor="middle" font-size="7.5" fill="#0f766e">AI Gateway</text>
+  <text x="188" y="204" text-anchor="middle" font-size="7" fill="#78716c">Scheduler</text>
+
+  <!-- pod to pod arrow -->
+  <line x1="119" y1="186" x2="129" y2="186" stroke="#5eead4" stroke-width="1" marker-end="url(#a)"/>
+
+  <!-- OTel collector in k8s -->
+  <rect x="28" y="210" width="216" height="22" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="136" y="221" text-anchor="middle" font-size="7.5" font-weight="600" fill="#c2410c">OpenTelemetry Collector</text>
+  <text x="136" y="230" text-anchor="middle" font-size="7" fill="#ea580c">Traces · Metrics · Logs</text>
+
+  <!-- ─── AWS Zone ─── -->
+  <rect x="278" y="110" width="250" height="138" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="288" y="126" font-size="8.5" font-weight="700" fill="#c2410c">AWS · Web Tier</text>
+  <text x="288" y="137" font-size="7.5" fill="#c2410c">ap-northeast-2</text>
+
+  <!-- ALB -->
+  <rect x="286" y="142" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
+  <text x="403" y="153" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Application Load Balancer</text>
+  <text x="403" y="163" text-anchor="middle" font-size="7.5" fill="#78716c">SSL 종료 · HTTPS 리다이렉션</text>
+
+  <!-- ALB → ASG -->
+  <line x1="403" y1="169" x2="403" y2="181" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
+
+  <!-- ASG -->
+  <rect x="286" y="182" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
+  <text x="403" y="193" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Auto Scaling Group (EC2)</text>
+  <text x="403" y="204" text-anchor="middle" font-size="7.5" fill="#78716c">t3.small · 2~6대 · React + Nginx</text>
+
+  <!-- ASG → RDS -->
+  <line x1="403" y1="209" x2="403" y2="221" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
+
+  <!-- RDS -->
+  <rect x="286" y="222" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
+  <text x="403" y="233" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">RDS PostgreSQL</text>
+  <text x="403" y="244" text-anchor="middle" font-size="7.5" fill="#78716c">Multi-AZ · 자동 백업</text>
+
+  <!-- ─── Bottom bar: IaC + Observability ─── -->
+  <rect x="12" y="260" width="516" height="40" rx="6" fill="white" stroke="#e7e5e4"/>
+  <text x="18" y="274" font-size="8" font-weight="700" fill="#44403c">IaC &amp; Observability</text>
+
+  <!-- Terraform -->
+  <rect x="20" y="278" width="70" height="16" rx="3" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="55" y="289" text-anchor="middle" font-size="7.5" font-weight="600" fill="#7c3aed">Terraform IaC</text>
+
+  <!-- GitHub Actions -->
+  <rect x="96" y="278" width="80" height="16" rx="3" fill="#f5f5f4" stroke="#e7e5e4"/>
+  <text x="136" y="289" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">GitHub Actions CI/CD</text>
+
+  <!-- Prometheus -->
+  <rect x="182" y="278" width="64" height="16" rx="3" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="214" y="289" text-anchor="middle" font-size="7.5" font-weight="600" fill="#c2410c">Prometheus</text>
+
+  <!-- Loki -->
+  <rect x="252" y="278" width="44" height="16" rx="3" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="274" y="289" text-anchor="middle" font-size="7.5" font-weight="600" fill="#c2410c">Loki</text>
+
+  <!-- Tempo -->
+  <rect x="302" y="278" width="44" height="16" rx="3" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="324" y="289" text-anchor="middle" font-size="7.5" font-weight="600" fill="#c2410c">Tempo</text>
+
+  <!-- Grafana -->
+  <rect x="352" y="278" width="56" height="16" rx="3" fill="#f0fdfa" stroke="#5eead4"/>
+  <text x="380" y="289" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0f766e">Grafana</text>
+
+  <!-- effect label -->
+  <text x="420" y="286" font-size="7.5" fill="#0f766e" font-weight="600">→ 장애 분석 60% 단축</text>
+
+  <!-- OTel → observability arrow -->
+  <line x1="136" y1="260" x2="230" y2="260" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#o)"/>
+
+  <!-- GCP OTel → bottom bar -->
+  <line x1="136" y1="232" x2="136" y2="259" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#o)"/>
+
+  <!-- Terraform arrows -->
+  <line x1="55" y1="278" x2="55" y2="260" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- cross-cloud link (GCP AI ↔ AWS Web) -->
+  <line x1="262" y1="186" x2="285" y2="186" stroke="#5eead4" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#a)"/>
+  <text x="274" y="180" text-anchor="middle" font-size="7" fill="#0f766e">AI Call</text>
+</svg>
