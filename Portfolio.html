@@ -17,6 +17,9 @@ a:hover { color: #115e59; text-decoration: underline; }
 .hero-btn-primary:hover { background: #99f6e4; text-decoration: none; color: #134e4a; }
 .hero-btn-secondary { color: #ccfbf1; border: 1px solid rgba(45,212,191,0.4); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
 .hero-btn-secondary:hover { border-color: #5eead4; text-decoration: none; color: #f0fdfa; }
+.flip-card { perspective: 1000px; }
+.flip-inner { display: block; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1); }
+.flip-card:hover .flip-inner { transform: rotateY(180deg); }
 @media (max-width: 700px) {
   [style*="grid-template-columns: 1fr 180px"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns: repeat(4"] { grid-template-columns: 1fr 1fr !important; }
@@ -91,8 +94,8 @@ a:hover { color: #115e59; text-decoration: underline; }
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
 
       <!-- 힘전소 카드 -->
-      <div style="perspective: 1000px">
-        <a href="projects/himjeonso.html" style="display: block; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1)" onmouseover="this.style.transform='rotateY(180deg)'" onmouseout="this.style.transform='rotateY(0deg)'">
+      <div class="flip-card">
+        <a href="projects/himjeonso.html" class="flip-inner">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
@@ -129,8 +132,8 @@ a:hover { color: #115e59; text-decoration: underline; }
       </div>
 
       <!-- Waither 카드 -->
-      <div style="perspective: 1000px">
-        <a href="projects/waither.html" style="display: block; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1)" onmouseover="this.style.transform='rotateY(180deg)'" onmouseout="this.style.transform='rotateY(0deg)'">
+      <div class="flip-card">
+        <a href="projects/waither.html" class="flip-inner">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
@@ -161,8 +164,8 @@ a:hover { color: #115e59; text-decoration: underline; }
       </div>
 
       <!-- Looper 카드 -->
-      <div style="perspective: 1000px">
-        <a href="projects/looper.html" style="display: block; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1)" onmouseover="this.style.transform='rotateY(180deg)'" onmouseout="this.style.transform='rotateY(0deg)'">
+      <div class="flip-card">
+        <a href="projects/looper.html" class="flip-inner">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
