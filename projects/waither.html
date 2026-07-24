@@ -45,9 +45,9 @@ a:hover { color: #115e59; text-decoration: underline; }
     <h2 style="font-size: 13px; font-weight: 800; color: #0f766e; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px">핵심 성과</h2>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px">
       <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px 26px">
-        <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">3</span>
-        <span style="font-size: 14px; color: #57534e; margin-top: 8px; display: block">독립 MSA 서비스</span>
-        <span style="font-size: 12px; color: #a8a29e; margin-top: 4px; display: block">User · Weather · Notification</span>
+        <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">알림 누락 0</span>
+        <span style="font-size: 14px; color: #57534e; margin-top: 8px; display: block">Kafka 비동기 전환 후 이벤트 누락 건수</span>
+        <span style="font-size: 12px; color: #a8a29e; margin-top: 4px; display: block">REST 동기 통신의 타임아웃·누락 문제 해소</span>
       </div>
       <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 24px 26px">
         <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">JWT</span>
@@ -105,7 +105,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <li><strong>MSA 분리</strong> — User · Weather · Notification 3개 서비스로 독립 분리. 각 서비스별 DB 스키마 분리로 결합도 최소화</li>
         <li><strong>Eureka 서비스 디스커버리</strong> — 서버 간 동적 라우팅 및 설정 통합 관리. 인스턴스 추가·제거 시 자동 반영</li>
         <li><strong>API Gateway + JWT 블랙리스트</strong> — 로그아웃 시 토큰을 Redis 블랙리스트에 등록, Gateway에서 모든 요청의 인증·인가 중앙 처리</li>
-        <li><strong>Kafka 메시지 큐 도입</strong> — 서비스 간 REST 동기 통신의 데이터 누락·병목을 비동기 이벤트 방식으로 전환해 데이터 일관성 확보</li>
+        <li><strong>Kafka 메시지 큐 도입</strong> — 서비스 간 REST 동기 통신에서 발생하던 타임아웃·알림 누락을 비동기 이벤트로 전환. Consumer Group 설정으로 메시지 전달 보장, 운영 중 알림 누락 0건 달성</li>
         <li><strong>날씨 API 캐싱</strong> — Redis TTL 기반 날씨 데이터 캐싱으로 외부 API 호출 빈도 감소 및 응답속도 개선</li>
       </ul>
     </div>

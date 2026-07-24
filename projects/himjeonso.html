@@ -74,7 +74,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <li><strong>동시 업로드 병목 해소</strong> — 50명 동시 업로드 시 서버 I/O 경합이 사라져 평균 응답 171초 → 1.3초 (약 130배 단축)</li>
         <li><strong>고아 이미지 자동 정리</strong> — CloudWatch Events + Lambda 스케줄러로 DB에 없는 S3 객체를 주기적으로 삭제, 스토리지 비용 낭비 방지</li>
         <li><strong>Cursor 페이지네이션 전환</strong> — Offset → Cursor 방식으로 무한 스크롤 성능 향상, 복합 커서(created_at + id)로 정렬 모호성 제거</li>
-        <li><strong>CQRS 패턴 적용</strong> — 조회/쓰기 책임 분리로 QueryDSL 기반 복잡 조회 최적화</li>
+        <li><strong>QueryDSL 조회 레이어 분리</strong> — Repository를 조회 전용(QueryDSL)과 커맨드 전용(JPA)으로 분리해 복잡 조회 로직을 캡슐화하고 유지보수성 향상</li>
         <li><strong>전역 예외 처리 통합</strong> — Enum 기반 에러 코드 체계 + @RestControllerAdvice로 일관된 에러 응답 보장</li>
       </ul>
     </div>

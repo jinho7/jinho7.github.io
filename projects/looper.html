@@ -50,6 +50,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <span style="font-size: 48px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1">-60%</span>
         <span style="font-size: 15px; color: #57534e; margin-top: 10px; display: block">장애 원인 분석 시간 단축</span>
         <span style="font-size: 13px; color: #a8a29e; margin-top: 4px; display: block">통합 APM: OTel + Prometheus + Loki + Tempo + Grafana</span>
+        <span style="font-size: 11px; color: #a8a29e; margin-top: 3px; display: block">로그 직접 탐색 대비 · 팀 장애 대응 회고 기준</span>
       </div>
       <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 14px; padding: 28px 30px">
         <span style="font-size: 32px; font-weight: 800; color: #0f766e; letter-spacing: -0.02em; display: block; line-height: 1.1">GCP + AWS</span>
@@ -106,7 +107,7 @@ a:hover { color: #115e59; text-decoration: underline; }
       </div>
       <div style="display: grid; grid-template-columns: 160px 1fr; gap: 12px 20px; align-items: start; font-size: 15px">
         <span style="font-weight: 700; color: #1c1917">Grafana</span>
-        <span style="color: #44403c; line-height: 1.6">통합 대시보드. 메트릭·로그·트레이스 한 화면에서 상관 분석 → 장애 분석 시간 60% 단축</span>
+        <span style="color: #44403c; line-height: 1.6">통합 대시보드. 메트릭·로그·트레이스 한 화면에서 상관 분석 → 장애 분석 시간 60% 단축 <span style="color: #a8a29e; font-size: 13px">(로그 파일 직접 탐색 대비, 팀 장애 대응 회고 기준)</span></span>
       </div>
     </div>
   </section>
@@ -130,7 +131,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <li><strong>FastAPI 비동기 처리</strong> — AI 추론 요청을 async/await로 처리해 I/O 대기시간 감소 및 처리량 향상</li>
         <li><strong>Terraform IaC</strong> — AWS·GCP 전체 인프라를 코드로 관리. 환경 재현성 보장 및 드리프트 감지</li>
         <li><strong>GitHub Actions CI/CD</strong> — 코드 Push → 이미지 빌드 → K8s 롤링 배포 자동화</li>
-        <li><strong>통합 APM 구축</strong> — OpenTelemetry + Prometheus + Loki + Tempo + Grafana 연동으로 메트릭·로그·트레이스 통합 분석. 장애 원인 분석 시간 약 60% 단축</li>
+        <li><strong>통합 APM 구축</strong> — OpenTelemetry + Prometheus + Loki + Tempo + Grafana 연동. Grafana 단일 대시보드에서 메트릭·로그·트레이스 상관 분석 가능. 기존 로그 파일 직접 탐색 대비 장애 위치 특정 시간 약 60% 단축 (팀 회고 측정)</li>
       </ul>
     </div>
   </section>

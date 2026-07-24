@@ -36,7 +36,7 @@ a:hover { color: #115e59; text-decoration: underline; }
     <div style="display: flex; flex-direction: column; gap: 22px">
       <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: #5eead4; text-transform: uppercase">Backend Developer Portfolio</span>
       <h1 style="font-size: 52px; font-weight: 800; margin: 0; letter-spacing: -0.02em; line-height: 1.15"><span>김진호</span></h1>
-      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답 속도를 <strong style="color: #5eead4">7.5초에서 1.2초로</strong> 줄였고, 타 개발자들과 활발히 소통하며 문제의 근본 원인을 함께 해결하는 데 보람을 느낍니다.</p>
+      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답을 <strong style="color: #5eead4">7.5초에서 1.2초로</strong> 단축했고, MSA 설계부터 멀티클라우드 인프라 구축까지 문제의 근본 원인을 코드와 구조로 해결합니다.</p>
       <nav style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
         <a href="https://github.com/jinho7" target="_blank" class="hero-btn-primary">GitHub</a>
         <a href="https://jinhos-devlog.tistory.com/" target="_blank" class="hero-btn-secondary">Tech Blog</a>
@@ -69,7 +69,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>펄어비스 (Pearl Abyss)</span> <span style="font-weight: 500; color: #78716c; font-size: 17px">Backend Developer Intern</span></h3>
         <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums">2026.01 – 2026.02</span>
       </div>
-      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0">고객지원(CS) 시스템 기능 개선 및 레거시 리팩토링</p>
+      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0">CS 티켓 처리·상태 이력 관리 기능 신규 구현, 레거시 코드 리팩토링</p>
       <div style="display: flex; gap: 8px; flex-wrap: wrap">
         <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">C# · .NET 8</span>
         <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">ASP.NET Core MVC</span>
@@ -77,10 +77,10 @@ a:hover { color: #115e59; text-decoration: underline; }
         <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">SignalR</span>
       </div>
       <ul style="margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #44403c">
-        <li>ORM 없는 환경에서 SP + Dapper 기반 CRUD 구현, 단일 SP 트랜잭션으로 상태 변경·이력 저장의 원자성 보장</li>
+        <li>CS 티켓 상태 전환(접수→처리중→완료) 및 이력 저장 기능 구현 — ORM 없는 환경에서 SP + Dapper 기반 CRUD, 단일 SP 트랜잭션으로 상태 변경·이력 저장의 원자성 보장</li>
         <li>SQL ROWVERSION 낙관적 락으로 동시 수정 충돌 감지, SignalR 실시간 화면 동기화 구현</li>
         <li>CultureCode별 다국어 User Site 구조 설계, Admin/User 권한 분리 인증·인가 구현</li>
-        <li>타 인턴 코드의 동시성 문제를 Cross Review로 개선 — 팀 코딩 컨벤션(계층 분리·SP 표준·로그 레벨) 준수</li>
+        <li>코드 리뷰에서 타 인턴 코드의 동시성 버그(락 없는 동시 수정 누락) 발견·수정 제안 — 팀 코딩 컨벤션(계층 분리·SP 표준·로그 레벨) 준수</li>
       </ul>
     </div>
   </section>
@@ -142,8 +142,8 @@ a:hover { color: #115e59; text-decoration: underline; }
             </div>
             <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">사용자 맞춤 날씨 알림 서비스, MSA 구조로 설계 및 구현</p>
             <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
-              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">3 MSA 서비스</span>
-              <span style="font-size: 12px; color: #57534e">User / Weather / Notification 독립 분리</span>
+              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">알림 누락 0건</span>
+              <span style="font-size: 12px; color: #57534e">Kafka 비동기 전환 후 서비스 간 이벤트 누락</span>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
               <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
@@ -226,11 +226,6 @@ a:hover { color: #115e59; text-decoration: underline; }
         <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 학우를 위한 택시 카풀 서비스. WebSocket / STOMP 기반 실시간 채팅 파트 구현</p>
         <span style="font-size: 13px; color: #a8a29e">Spring Boot · MySQL · Redis · WebSocket</span>
       </div>
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; display: flex; flex-direction: column; gap: 8px">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Your Protein</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">해커톤 1등</span></div>
-        <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">하루 단백질 섭취량 체크 서비스. SM@COSSTON 해커톤 최우수상 — UI·통신 파트 전체 담당</p>
-        <span style="font-size: 13px; color: #a8a29e">HTML · JavaScript · Bootstrap</span>
-      </div>
     </div>
   </section>
 
@@ -256,7 +251,7 @@ a:hover { color: #115e59; text-decoration: underline; }
         <span style="font-size: 15px; font-weight: 800; color: #0f766e">Data &amp; Messaging</span>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
           <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">MySQL 8.0</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">PostgreSQL · pgvector</span>
+          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">PostgreSQL</span>
           <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">MS SQL</span>
           <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Redis</span>
           <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Kafka</span>
