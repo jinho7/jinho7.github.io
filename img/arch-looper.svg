@@ -12,7 +12,7 @@
   </defs>
 
   <rect width="540" height="310" fill="#f8fffe" rx="10"/>
-  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Looper · MULTI-CLOUD ARCHITECTURE</text>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Looper / MULTI-CLOUD ARCHITECTURE</text>
 
   <!-- Users -->
   <rect x="216" y="22" width="108" height="28" rx="5" fill="white" stroke="#e7e5e4"/>
@@ -21,7 +21,7 @@
 
   <!-- Cloud DNS Failover -->
   <rect x="170" y="60" width="200" height="30" rx="5" fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5"/>
-  <text x="270" y="73" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">Cloud DNS · Failover Routing</text>
+  <text x="270" y="73" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0f766e">Cloud DNS / Failover Routing</text>
   <text x="270" y="84" text-anchor="middle" font-size="7.5" fill="#0f766e">Health Check 기반 자동 전환</text>
 
   <!-- Users → DNS -->
@@ -34,7 +34,7 @@
 
   <!-- ─── GCP Zone ─── -->
   <rect x="12" y="110" width="250" height="138" rx="8" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="22" y="126" font-size="8.5" font-weight="700" fill="#0369a1">GCP · AI Cluster</text>
+  <text x="22" y="126" font-size="8.5" font-weight="700" fill="#0369a1">GCP / AI Cluster</text>
   <text x="22" y="137" font-size="7.5" fill="#0369a1">34.54.115.33</text>
 
   <!-- K8s cluster box -->
@@ -60,17 +60,17 @@
   <!-- OTel collector in k8s -->
   <rect x="28" y="210" width="216" height="22" rx="4" fill="#fff7ed" stroke="#fed7aa"/>
   <text x="136" y="221" text-anchor="middle" font-size="7.5" font-weight="600" fill="#c2410c">OpenTelemetry Collector</text>
-  <text x="136" y="230" text-anchor="middle" font-size="7" fill="#ea580c">Traces · Metrics · Logs</text>
+  <text x="136" y="230" text-anchor="middle" font-size="7" fill="#ea580c">Traces / Metrics / Logs</text>
 
   <!-- ─── AWS Zone ─── -->
   <rect x="278" y="110" width="250" height="138" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="288" y="126" font-size="8.5" font-weight="700" fill="#c2410c">AWS · Web Tier</text>
+  <text x="288" y="126" font-size="8.5" font-weight="700" fill="#c2410c">AWS / Web Tier</text>
   <text x="288" y="137" font-size="7.5" fill="#c2410c">ap-northeast-2</text>
 
   <!-- ALB -->
   <rect x="286" y="142" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
   <text x="403" y="153" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Application Load Balancer</text>
-  <text x="403" y="163" text-anchor="middle" font-size="7.5" fill="#78716c">SSL 종료 · HTTPS 리다이렉션</text>
+  <text x="403" y="163" text-anchor="middle" font-size="7.5" fill="#78716c">SSL 종료 / HTTPS 리다이렉션</text>
 
   <!-- ALB → ASG -->
   <line x1="403" y1="169" x2="403" y2="181" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
@@ -78,7 +78,7 @@
   <!-- ASG -->
   <rect x="286" y="182" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
   <text x="403" y="193" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">Auto Scaling Group (EC2)</text>
-  <text x="403" y="204" text-anchor="middle" font-size="7.5" fill="#78716c">t3.small · 2~6대 · React + Nginx</text>
+  <text x="403" y="204" text-anchor="middle" font-size="7.5" fill="#78716c">t3.small / 2~6대 / React + Nginx</text>
 
   <!-- ASG → RDS -->
   <line x1="403" y1="209" x2="403" y2="221" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
@@ -86,7 +86,7 @@
   <!-- RDS -->
   <rect x="286" y="222" width="234" height="26" rx="5" fill="white" stroke="#fdba74"/>
   <text x="403" y="233" text-anchor="middle" font-size="8.5" font-weight="600" fill="#44403c">RDS PostgreSQL</text>
-  <text x="403" y="244" text-anchor="middle" font-size="7.5" fill="#78716c">Multi-AZ · 자동 백업</text>
+  <text x="403" y="244" text-anchor="middle" font-size="7.5" fill="#78716c">Multi-AZ / 자동 백업</text>
 
   <!-- ─── Bottom bar: IaC + Observability ─── -->
   <rect x="12" y="260" width="516" height="40" rx="6" fill="white" stroke="#e7e5e4"/>

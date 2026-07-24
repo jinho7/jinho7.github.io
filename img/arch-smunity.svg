@@ -9,7 +9,7 @@
   </defs>
 
   <rect width="520" height="200" fill="#f8fffe" rx="10"/>
-  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">SMUNITY · WEB ARCHITECTURE</text>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">SMUNITY / WEB ARCHITECTURE</text>
 
   <!-- AWS EC2 zone -->
   <rect x="12" y="22" width="496" height="116" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
@@ -35,10 +35,10 @@
   <!-- Django inner: 판정 로직 box -->
   <rect x="158" y="70" width="152" height="22" rx="4" fill="white" stroke="#99f6e4"/>
   <text x="234" y="81" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">졸업요건 판정 로직</text>
-  <text x="234" y="90" text-anchor="middle" font-size="7" fill="#78716c">학점 · 과목 · 영어인증</text>
+  <text x="234" y="90" text-anchor="middle" font-size="7" fill="#78716c">학점 / 과목 / 영어인증</text>
 
   <!-- Django annotation -->
-  <text x="240" y="110" text-anchor="middle" font-size="7" fill="#0f766e">학과 규정 코드화 · 이수 현황 조회</text>
+  <text x="240" y="110" text-anchor="middle" font-size="7" fill="#0f766e">학과 규정 코드화 / 이수 현황 조회</text>
 
   <!-- Django → PostgreSQL -->
   <line x1="334" y1="87" x2="348" y2="87" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>

@@ -9,7 +9,7 @@
   </defs>
 
   <rect width="520" height="210" fill="#f8fffe" rx="10"/>
-  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">상명대 청원 플랫폼 · WEB ARCHITECTURE</text>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">상명대 청원 플랫폼 / WEB ARCHITECTURE</text>
 
   <!-- AWS EC2 zone -->
   <rect x="12" y="22" width="496" height="118" rx="8" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="5,3"/>
@@ -36,16 +36,16 @@
   <!-- Django inner box 1 -->
   <rect x="158" y="70" width="90" height="20" rx="3" fill="white" stroke="#99f6e4"/>
   <text x="203" y="81" text-anchor="middle" font-size="7" font-weight="600" fill="#44403c">청원 CRUD</text>
-  <text x="203" y="89" text-anchor="middle" font-size="6.5" fill="#78716c">작성 · 수정 · 삭제</text>
+  <text x="203" y="89" text-anchor="middle" font-size="6.5" fill="#78716c">작성 / 수정 / 삭제</text>
 
   <!-- Django inner box 2 -->
   <rect x="258" y="70" width="90" height="20" rx="3" fill="white" stroke="#99f6e4"/>
-  <text x="303" y="81" text-anchor="middle" font-size="7" font-weight="600" fill="#44403c">동의 · 상태 관리</text>
+  <text x="303" y="81" text-anchor="middle" font-size="7" font-weight="600" fill="#44403c">동의 / 상태 관리</text>
   <text x="303" y="89" text-anchor="middle" font-size="6.5" fill="#78716c">임계값 자동 전환</text>
 
   <!-- Django annotation -->
-  <text x="253" y="107" text-anchor="middle" font-size="7" fill="#0f766e">정렬 (최신 · 동의순 · 만료임박) · 상태 필터링</text>
-  <text x="253" y="117" text-anchor="middle" font-size="7" fill="#78716c">상명대 학생 인증 · 총학생회 관리 기능</text>
+  <text x="253" y="107" text-anchor="middle" font-size="7" fill="#0f766e">정렬 (최신 / 동의순 / 만료임박) / 상태 필터링</text>
+  <text x="253" y="117" text-anchor="middle" font-size="7" fill="#78716c">상명대 학생 인증 / 총학생회 관리 기능</text>
 
   <!-- Django → PostgreSQL -->
   <line x1="359" y1="89" x2="377" y2="89" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>

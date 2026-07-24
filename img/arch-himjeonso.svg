@@ -12,7 +12,7 @@
   <rect width="520" height="240" fill="#f8fffe" rx="10"/>
 
   <!-- Section label -->
-  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">힘전소 · ARCHITECTURE</text>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">힘전소 / ARCHITECTURE</text>
 
   <!-- ── CI/CD bar (top) ── -->
   <rect x="12" y="24" width="496" height="36" rx="6" fill="white" stroke="#e7e5e4" stroke-width="1"/>
@@ -62,11 +62,11 @@
   <text x="164" y="120" text-anchor="middle" font-size="7" fill="#78716c">Station / Review</text>
 
   <rect x="208" y="98" width="72" height="22" rx="4" fill="white" stroke="#99f6e4"/>
-  <text x="244" y="110" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">CQRS · JWT</text>
+  <text x="244" y="110" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">CQRS / JWT</text>
   <text x="244" y="120" text-anchor="middle" font-size="7" fill="#78716c">Redis Cache</text>
 
-  <text x="205" y="144" text-anchor="middle" font-size="7" fill="#0f766e">@RestControllerAdvice · Enum ErrorCode</text>
-  <text x="205" y="154" text-anchor="middle" font-size="7" fill="#0f766e">CQRS · Cursor Paging</text>
+  <text x="205" y="144" text-anchor="middle" font-size="7" fill="#0f766e">@RestControllerAdvice / Enum ErrorCode</text>
+  <text x="205" y="154" text-anchor="middle" font-size="7" fill="#0f766e">CQRS / Cursor Paging</text>
 
   <!-- Spring Boot → MySQL -->
   <line x1="180" y1="159" x2="160" y2="190" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>

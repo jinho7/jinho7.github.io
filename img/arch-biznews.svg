@@ -12,7 +12,7 @@
   </defs>
 
   <rect width="520" height="235" fill="#f8fffe" rx="10"/>
-  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Biz_News · AI NEWS PIPELINE</text>
+  <text x="12" y="16" font-size="9" font-weight="700" fill="#0f766e" letter-spacing=".1em">Biz_News / AI NEWS PIPELINE</text>
 
   <!-- 뉴스 소스 (external) -->
   <rect x="12" y="26" width="88" height="44" rx="6" fill="#fef9c3" stroke="#fde047"/>
@@ -29,12 +29,12 @@
   <!-- inner: 뉴스 크롤러 -->
   <rect x="130" y="40" width="84" height="22" rx="4" fill="white" stroke="#99f6e4"/>
   <text x="172" y="51" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">뉴스 크롤러</text>
-  <text x="172" y="61" text-anchor="middle" font-size="7" fill="#78716c">수집 · 파싱</text>
+  <text x="172" y="61" text-anchor="middle" font-size="7" fill="#78716c">수집 / 파싱</text>
 
   <!-- inner: LangChain -->
   <rect x="226" y="40" width="84" height="22" rx="4" fill="white" stroke="#99f6e4"/>
   <text x="268" y="51" text-anchor="middle" font-size="7.5" font-weight="600" fill="#44403c">LangChain</text>
-  <text x="268" y="61" text-anchor="middle" font-size="7" fill="#78716c">요약 · 임베딩</text>
+  <text x="268" y="61" text-anchor="middle" font-size="7" fill="#78716c">요약 / 임베딩</text>
 
   <!-- pipeline annotation -->
   <text x="220" y="76" text-anchor="middle" font-size="7" fill="#0f766e">수집 → 요약 → 임베딩 → 추천</text>
@@ -46,7 +46,7 @@
   <!-- OpenAI API (external) -->
   <rect x="340" y="26" width="168" height="44" rx="6" fill="#fef9c3" stroke="#fde047"/>
   <text x="424" y="44" text-anchor="middle" font-size="8.5" font-weight="700" fill="#854d0e">OpenAI API</text>
-  <text x="424" y="57" text-anchor="middle" font-size="7.5" fill="#92400e">GPT-4o · text-embedding</text>
+  <text x="424" y="57" text-anchor="middle" font-size="7.5" fill="#92400e">GPT-4o / text-embedding</text>
 
   <!-- FastAPI → Spring Boot -->
   <line x1="220" y1="111" x2="220" y2="129" stroke="#5eead4" stroke-width="1.5" marker-end="url(#a)"/>
@@ -54,7 +54,7 @@
   <!-- Spring Boot REST API -->
   <rect x="120" y="130" width="200" height="46" rx="6" fill="white" stroke="#e7e5e4"/>
   <text x="220" y="148" text-anchor="middle" font-size="8.5" font-weight="700" fill="#44403c">Spring Boot REST API</text>
-  <text x="220" y="162" text-anchor="middle" font-size="7.5" fill="#78716c">뉴스 조회 · 추천 · 기업 그래프</text>
+  <text x="220" y="162" text-anchor="middle" font-size="7.5" fill="#78716c">뉴스 조회 / 추천 / 기업 그래프</text>
 
   <!-- Spring Boot → Client -->
   <line x1="321" y1="153" x2="339" y2="153" stroke="#c8c5c2" stroke-width="1.5" marker-end="url(#b)"/>
