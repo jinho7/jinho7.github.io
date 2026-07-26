@@ -13,19 +13,35 @@ a:hover { color: #115e59; text-decoration: underline; }
 </style>
 <style>
 * { box-sizing: border-box; }
+body { word-break: keep-all; overflow-wrap: break-word; }
 .hero-btn-primary { color: #134e4a; background: #5eead4; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
 .hero-btn-primary:hover { background: #99f6e4; text-decoration: none; color: #134e4a; }
 .hero-btn-secondary { color: #ccfbf1; border: 1px solid rgba(45,212,191,0.4); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
 .hero-btn-secondary:hover { border-color: #5eead4; text-decoration: none; color: #f0fdfa; }
-.flip-card { perspective: 1000px; }
-.flip-inner { display: block; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1); }
-.flip-card:hover .flip-inner { transform: rotateY(180deg); }
+/* Flip cards */
+.flip-card { perspective: 1600px; display: flex; }
+.flip-inner { flex: 1; display: flex; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(0.4,0.2,0.2,1); }
+.flip-inner > div:first-child { flex: 1; }
+.flip-card:hover .flip-inner, .flip-card:focus-within .flip-inner { transform: rotateY(180deg); }
+@media (hover: none) {
+  .flip-inner { transform: none !important; transition: none; }
+  .flip-inner > div:last-child { position: static; transform: none; height: 180px; margin-top: 16px; border-radius: 10px; overflow: hidden; }
+}
+@media (prefers-reduced-motion: reduce) { .flip-inner { transition: none; } }
+/* More Projects hover — CSS only */
+.proj-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; }
+.proj-card:hover, .proj-card:focus-visible { box-shadow: 0 4px 20px rgba(15,118,110,0.12); border-color: #5eead4; }
+/* Timeline grid */
+.tl-row { display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px; }
+/* Responsive */
 @media (max-width: 700px) {
   [style*="grid-template-columns: 1fr 180px"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns: repeat(4"] { grid-template-columns: 1fr 1fr !important; }
   [style*="grid-template-columns: 1fr 340px"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  .tl-row { grid-template-columns: 20px 1fr; }
+  .tl-date { grid-column: 2; text-align: left !important; order: -1; margin-bottom: 4px; padding-top: 0 !important; }
 }
 </style>
 </head>
@@ -38,20 +54,20 @@ a:hover { color: #115e59; text-decoration: underline; }
       <h1 style="font-size: 52px; font-weight: 800; margin: 0; letter-spacing: -0.02em; line-height: 1.15"><span>김진호</span></h1>
       <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답을 <strong style="color: #5eead4">7.5초에서 1.2초로</strong> 단축했고, MSA 설계부터 멀티클라우드 인프라 구축까지 문제의 근본 원인을 코드와 구조로 해결합니다.</p>
       <nav style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
-        <a href="https://github.com/jinho7" target="_blank" class="hero-btn-primary">GitHub</a>
-        <a href="https://jinhos-devlog.tistory.com/" target="_blank" class="hero-btn-secondary">Tech Blog</a>
+        <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer" class="hero-btn-primary">GitHub</a>
+        <a href="https://jinhos-devlog.tistory.com/" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">Tech Blog</a>
         <a href="mailto:jh7524jh7524@gmail.com" class="hero-btn-secondary">Email</a>
       </nav>
     </div>
-    <img id="profile" src="img/profile.jpg" style="width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center 15%;flex-shrink:0;" alt="김진호 프로필">
+    <img src="img/profile.jpg" style="width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center 15%;flex-shrink:0;" alt="김진호 프로필">
   </div>
   <!-- Stat band -->
   <div style="border-top: 1px solid #2dd4bf33">
     <div style="max-width: 960px; margin: 0 auto; padding: 28px 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px">
       <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">130배</span><span style="font-size: 14px; color: #99f6e4cc">동시 업로드 성능 개선</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">7+</span><span style="font-size: 14px; color: #99f6e4cc">프로젝트 (MSA / K8s / 멀티클라우드)</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">7+</span><span style="font-size: 14px; color: #99f6e4cc">주요 프로젝트</span></div>
       <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">3회</span><span style="font-size: 14px; color: #99f6e4cc">해커톤 / 캡스톤 수상</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">AWS SAA</span><span style="font-size: 14px; color: #99f6e4cc">정보처리기사 / SQLD / OPIc IH 보유</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">4개</span><span style="font-size: 14px; color: #99f6e4cc">보유 자격증 (AWS SAA 외)</span></div>
     </div>
   </div>
 </div>
@@ -61,13 +77,13 @@ a:hover { color: #115e59; text-decoration: underline; }
   <!-- ===== Experience ===== -->
   <section style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">01</span>
+      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">01</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Experience</h2>
     </div>
     <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 32px 36px; display: flex; flex-direction: column; gap: 12px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
         <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>펄어비스 (Pearl Abyss)</span> <span style="font-weight: 500; color: #78716c; font-size: 17px">Backend Developer Intern</span></h3>
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums">2026.01 - 2026.02</span>
+        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2026.01 - 2026.02</span>
       </div>
       <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0">CS 티켓 처리 / 상태 이력 관리 기능 신규 구현, 레거시 코드 리팩토링</p>
       <div style="display: flex; gap: 8px; flex-wrap: wrap">
@@ -88,43 +104,44 @@ a:hover { color: #115e59; text-decoration: underline; }
   <!-- ===== Featured Projects ===== -->
   <section style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">02</span>
+      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">02</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Featured Projects</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
 
       <!-- 힘전소 카드 -->
       <div class="flip-card">
-        <a href="projects/himjeonso.html" class="flip-inner">
+        <a href="projects/himjeonso.html" class="flip-inner" aria-label="힘전소 프로젝트 상세 보기">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">힘전소</h3>
-              <span style="font-size: 13px; color: #a8a29e">2024.07 - 2025.02</span>
+              <span style="font-size: 14px; color: #78716c">2024.07 - 2025.02</span>
             </div>
             <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">휠체어 사용자를 위한 전동보장구 충전소 정보 및 커뮤니티 서비스</p>
-            <div style="display: flex; flex-direction: column; gap: 6px">
-              <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
-                <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">7,545ms → 1,212ms</span>
-                <span style="font-size: 12px; color: #57534e">파일 업로드 응답 (6배 단축)</span>
+            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase">핵심 개선</span>
+              <div>
+                <span style="font-size: 15px; font-weight: 800; color: #0f766e; display: block; white-space: nowrap">7,545ms → 1,212ms (6배)</span>
+                <span style="font-size: 13px; color: #57534e">파일 업로드 응답</span>
               </div>
-              <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
-                <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">171초 → 1.3초</span>
-                <span style="font-size: 12px; color: #57534e">50명 동시 업로드 (130배 단축)</span>
+              <div>
+                <span style="font-size: 15px; font-weight: 800; color: #0f766e; display: block; white-space: nowrap">171초 → 1.3초 (130배)</span>
+                <span style="font-size: 13px; color: #57534e">50명 동시 업로드</span>
               </div>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Boot 3.2</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Redis</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS S3</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Docker</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Boot 3.2</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Redis</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS S3</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Docker</span>
             </div>
             <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
           <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
-            <img src="img/screenshots/himjeonso-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="힘전소 스크린샷">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+            <img src="img/screenshots/himjeonso-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="힘전소 앱 충전소 지도 및 상세 화면 스크린샷">
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
               <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
@@ -133,30 +150,31 @@ a:hover { color: #115e59; text-decoration: underline; }
 
       <!-- Waither 카드 -->
       <div class="flip-card">
-        <a href="projects/waither.html" class="flip-inner">
+        <a href="projects/waither.html" class="flip-inner" aria-label="Waither 프로젝트 상세 보기">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Waither</h3>
-              <span style="font-size: 13px; color: #a8a29e">2024.03 - 2024.11</span>
+              <span style="font-size: 14px; color: #78716c">2024.03 - 2024.11</span>
             </div>
             <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">사용자 맞춤 날씨 알림 서비스, MSA 구조로 설계 및 구현</p>
             <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
               <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">Kafka 비동기 전환</span>
-              <span style="font-size: 12px; color: #57534e">REST 동기 통신 제거, 서비스 간 결합도 최소화</span>
+              <span style="font-size: 13px; color: #57534e">REST 동기 통신 제거, 서비스 간 결합도 최소화</span>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kafka</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Security</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kafka</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Security</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS</span>
             </div>
             <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
           <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
-            <img src="img/screenshots/waither-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Waither 스크린샷">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+            <img src="img/screenshots/waither-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Waither 날씨 알림 앱 화면 스크린샷">
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
               <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
@@ -165,30 +183,31 @@ a:hover { color: #115e59; text-decoration: underline; }
 
       <!-- Looper 카드 -->
       <div class="flip-card">
-        <a href="projects/looper.html" class="flip-inner">
+        <a href="projects/looper.html" class="flip-inner" aria-label="Looper 프로젝트 상세 보기">
           <!-- Front -->
           <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Looper</h3>
-              <span style="font-size: 13px; color: #a8a29e">2025.04 - 2025.08</span>
+              <span style="font-size: 14px; color: #78716c">2025.04 - 2025.08</span>
             </div>
             <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">AI 기반 일정 관리 플랫폼, 멀티클라우드 인프라 담당</p>
             <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
               <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">Grafana 통합 대시보드</span>
-              <span style="font-size: 12px; color: #57534e">메트릭 / 로그 / 트레이스 단일 화면 상관 분석</span>
+              <span style="font-size: 13px; color: #57534e">메트릭 / 로그 / 트레이스 단일 화면 상관 분석</span>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kubernetes</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Terraform</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">GCP + AWS</span>
-              <span style="font-size: 12px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Grafana</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kubernetes</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Terraform</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">GCP + AWS</span>
+              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Grafana</span>
             </div>
             <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
           <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
-            <img src="img/screenshots/looper-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Looper 스크린샷">
-            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+            <img src="img/screenshots/looper-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Looper AI 일정 관리 앱 화면 스크린샷">
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
               <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
@@ -201,32 +220,32 @@ a:hover { color: #115e59; text-decoration: underline; }
   <!-- ===== More Projects ===== -->
   <section style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">03</span>
+      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">03</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">More Projects</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
-      <a href="projects/biznews.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+      <a href="projects/biznews.html" class="proj-card">
         <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Biz_News</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">해커톤 2등</span></div>
           <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">최신 뉴스 요약 서비스. FastAPI로 뉴스 수집 → 요약 → 추천 파이프라인 구성, LangChain + OpenAI 요약 / 벡터 임베딩, Neo4j 기업 연관도 그래프 시각화</p>
-          <span style="font-size: 13px; color: #a8a29e">Spring Boot / FastAPI / Neo4j / Redis / Docker</span>
+          <span style="font-size: 14px; color: #78716c">Spring Boot / FastAPI / Neo4j / Redis / Docker</span>
           <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
       </a>
-<a href="projects/smunity.html" style="display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s" onmouseover="this.style.boxShadow='0 4px 20px rgba(15,118,110,0.12)';this.style.borderColor='#5eead4'" onmouseout="this.style.boxShadow='none';this.style.borderColor='#e7e5e4'">
+<a href="projects/smunity.html" class="proj-card">
         <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SMUNITY</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">10만+ 방문</span></div>
           <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 졸업요건 검사 사이트. 컴퓨터과학과 19학번이 모여 만든 프로젝트로 누적 방문자 10만 명 이상 달성</p>
-          <span style="font-size: 13px; color: #a8a29e">Python / Django / NGINX / Docker / AWS</span>
+          <span style="font-size: 14px; color: #78716c">Python / Django / NGINX / Docker / AWS</span>
           <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
       </a>
       <div style="grid-column: 1 / -1; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <div style="display: flex; align-items: baseline; gap: 12px"><h3 style="font-size: 17px; font-weight: 700; margin: 0">SmuPool</h3><span style="font-size: 13px; color: #a8a29e">2024.05 - 06</span></div>
+          <div style="display: flex; align-items: baseline; gap: 12px"><h3 style="font-size: 17px; font-weight: 700; margin: 0">SmuPool</h3><span style="font-size: 14px; color: #78716c">2024.05 - 06</span></div>
           <p style="font-size: 14px; line-height: 1.6; color: #78716c; margin: 0">상명대 학우를 위한 택시 카풀 서비스. WebSocket / STOMP 기반 실시간 채팅 파트 구현</p>
         </div>
-        <span style="font-size: 13px; color: #a8a29e; white-space: nowrap">Spring Boot / MySQL / Redis / WebSocket</span>
+        <span style="font-size: 13px; color: #78716c; white-space: nowrap">Spring Boot / MySQL / Redis / WebSocket</span>
       </div>
     </div>
   </section>
@@ -234,7 +253,7 @@ a:hover { color: #115e59; text-decoration: underline; }
   <!-- ===== Skills ===== -->
   <section style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">04</span>
+      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">04</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Skills</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
@@ -285,32 +304,32 @@ a:hover { color: #115e59; text-decoration: underline; }
   <!-- ===== Timeline ===== -->
   <section style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">05</span>
+      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">05</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Timeline</h2>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0">
-      <div style="display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px">
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2026.01 - 02</span>
+      <div class="tl-row">
+        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2026.01 - 02</span>
         <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #0f766e; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
         <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">펄어비스 Backend Developer 인턴</span><span style="font-size: 15px; color: #78716c">CS 시스템 개선 / 레거시 리팩토링</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px">
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2025.02 - 08</span>
+      <div class="tl-row">
+        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2025.02 - 08</span>
         <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
         <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">카카오테크 부트캠프, 클라우드 네이티브 과정</span><span style="font-size: 15px; color: #78716c">Looper / Biz_News (해커톤 본상 2등)</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px">
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2024.03 - 08</span>
+      <div class="tl-row">
+        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2024.03 - 08</span>
         <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
         <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">UMC 6기</span><span style="font-size: 15px; color: #78716c">Waither / SmuPool, Spring 기반 서버 개발</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px">
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.09 - 2023.12</span>
+      <div class="tl-row">
+        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.09 - 2023.12</span>
         <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
         <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">SK Lookie, 사회 문제 해결 동아리</span><span style="font-size: 15px; color: #78716c">Wisefee 리유저블 텀블러 대여 서비스</span></div>
       </div>
-      <div style="display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px">
-        <span style="font-size: 15px; color: #a8a29e; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.03 - 2024.12</span>
+      <div class="tl-row">
+        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.03 - 2024.12</span>
         <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span></div>
         <div><span style="font-size: 17px; font-weight: 700; display: block">SMUNITY 운영</span><span style="font-size: 15px; color: #78716c">졸업요건 검사 사이트, 누적 방문 10만+</span></div>
       </div>
@@ -321,18 +340,18 @@ a:hover { color: #115e59; text-decoration: underline; }
   <section style="margin-bottom: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px">
     <div>
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">06</span>
+        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">06</span>
         <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Awards</h2>
       </div>
       <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #44403c">
-        <li>카카오테크 부트캠프 해커톤 본상 2등 <span style="color: #a8a29e">(2025.02)</span></li>
-        <li>캡스톤디자인 졸업 프로젝트 우수상 <span style="color: #a8a29e">(2024.11)</span></li>
-        <li>SM COSSTON 해커톤 최우수상 1등 <span style="color: #a8a29e">(2024.01)</span></li>
+        <li>카카오테크 부트캠프 해커톤 본상 2등 <span style="color: #78716c">(2025.02)</span></li>
+        <li>캡스톤디자인 졸업 프로젝트 우수상 <span style="color: #78716c">(2024.11)</span></li>
+        <li>SM COSSTON 해커톤 최우수상 1등 <span style="color: #78716c">(2024.01)</span></li>
       </ul>
     </div>
     <div>
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums">07</span>
+        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">07</span>
         <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Certificates</h2>
       </div>
       <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #44403c">
@@ -348,11 +367,11 @@ a:hover { color: #115e59; text-decoration: underline; }
   <footer style="border-top: 1px solid #e7e5e4; padding-top: 32px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
     <div style="display: flex; flex-direction: column; gap: 4px">
       <span style="font-size: 15px; font-weight: 700; color: #44403c">상명대학교 컴퓨터과학과</span>
-      <span style="font-size: 14px; color: #a8a29e">2019.03 - 2025.08 졸업, 전공 4.0 / 4.5, 전체 3.84 / 4.5</span>
+      <span style="font-size: 14px; color: #78716c">2019.03 - 2025.08 졸업, 전공 4.0 / 4.5, 전체 3.84 / 4.5</span>
     </div>
     <div style="display: flex; gap: 20px; font-size: 14px; font-weight: 600">
-      <a href="https://github.com/jinho7" target="_blank">GitHub</a>
-      <a href="https://jinhos-devlog.tistory.com/" target="_blank">Blog</a>
+      <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://jinhos-devlog.tistory.com/" target="_blank" rel="noopener noreferrer">Tech Blog</a>
       <a href="mailto:jh7524jh7524@gmail.com">Email</a>
     </div>
   </footer>
