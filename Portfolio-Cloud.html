@@ -74,6 +74,26 @@ section[id] { scroll-margin-top: 64px; }
 
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
 
+/* 진단 경로 박스 */
+.dx-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; align-self: start; }
+.dx-title { font-size: 12px; font-weight: 800; color: #0d9488; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+.dx-step { display: flex; flex-direction: column; gap: 3px; }
+.dx-what { font-size: 15px; font-weight: 700; color: #134e4a; line-height: 1.45; }
+.dx-note { font-size: 13px; color: #57534e; line-height: 1.5; }
+.dx-arrow { color: #14b8a6; font-size: 14px; font-weight: 800; line-height: 1; padding: 7px 0 7px 3px; }
+.dx-sum { font-size: 13px; color: #44403c; line-height: 1.55; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #99f6e4; }
+.dx-box code { background: #ffffff; border-color: #ccfbf1; font-size: 13px; }
+
+/* 근거 링크 */
+.os-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.os-links a { font-size: 14px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
+.os-links a:hover { background: #ccfbf1; text-decoration: none; }
+
+/* 클라우드 관점 강조 */
+.relevance { background: #134e4a; color: #ccfbf1; border-radius: 12px; padding: 20px 24px; margin-bottom: 26px; }
+.relevance strong { color: #5eead4; }
+.relevance-k { font-size: 12px; font-weight: 800; color: #5eead4; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+
 /* 그리드 */
 .hero-grid { display: grid; grid-template-columns: 1fr 180px; gap: 48px; align-items: center; }
 .stat-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -126,10 +146,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
 <nav class="sect-nav" aria-label="섹션 바로가기">
   <div class="sect-nav-inner">
     <a href="#looper"><span class="n" aria-hidden="true">01</span>Looper 인프라</a>
-    <a href="#aws"><span class="n" aria-hidden="true">02</span>AWS 운영</a>
-    <a href="#lessons"><span class="n" aria-hidden="true">03</span>판단과 회고</a>
-    <a href="#skills"><span class="n" aria-hidden="true">04</span>Skills</a>
-    <a href="#credentials"><span class="n" aria-hidden="true">05</span>Credentials</a>
+    <a href="#opensource"><span class="n" aria-hidden="true">02</span>Open Source</a>
+    <a href="#aws"><span class="n" aria-hidden="true">03</span>AWS 운영</a>
+    <a href="#lessons"><span class="n" aria-hidden="true">04</span>판단과 회고</a>
+    <a href="#skills"><span class="n" aria-hidden="true">05</span>Skills</a>
+    <a href="#credentials"><span class="n" aria-hidden="true">06</span>Credentials</a>
   </div>
 </nav>
 
@@ -265,10 +286,77 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
   </section>
 
-  <!-- ===== 02 AWS 운영 ===== -->
-  <section id="aws" style="margin-bottom: 96px">
+  <!-- ===== 02 Open Source ===== -->
+  <section id="opensource" style="margin-bottom: 96px">
     <div class="sect-head">
       <span class="sect-num" aria-hidden="true">02</span>
+      <h2>Open Source</h2>
+    </div>
+    <div class="card">
+      <div class="relevance">
+        <span class="relevance-k" aria-hidden="true">왜 클라우드 이력에 넣는가</span>
+        <p style="font-size: 16px; line-height: 1.7; margin: 0">01의 Phase 3는 <strong>AWS의 Spring Boot가 GCP의 FastAPI를 내부 API로 호출</strong>하는 구조입니다. 아래 버그는 정확히 그 조합에서 요청 본문이 사라지는 문제였고, Java HttpClient가 <code style="background:#0f3d3a;border-color:#2dd4bf55;color:#ccfbf1">Upgrade: h2c</code>를 기본 전송하는 조건이 <strong>TLS를 걷어낸 평문 내부 통신</strong>이라는 점에서 클라우드 내부 호출 구간의 실패 모드입니다. 프록시를 거치면 증상이 사라진다는 점도 게이트웨이와 로드밸런서의 업그레이드 헤더 처리 차이에서 나옵니다.</p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px">
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #78716c; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
+        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2025.05</span>
+      </div>
+      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0 0 18px; max-width: 740px">타 팀에서 겪던 원인 불명의 오류를 함께 추적해 업스트림 파서 버그로 규명하고 패치안을 제출했습니다.</p>
+      <div class="chip-row" style="margin-bottom: 26px">
+        <span class="chip">Uvicorn</span>
+        <span class="chip">httptools / llhttp</span>
+        <span class="chip">Spring Boot 3.2 RestClient</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">RFC 7230</span>
+      </div>
+
+      <div class="work" style="border-top: 0; padding-top: 0">
+        <div>
+          <ul>
+            <li><strong>증상</strong>: 타 팀에서 Spring Boot 3.2 <code>RestClient</code>로 FastAPI를 호출할 때 원인 불명의 <code>422 Unprocessable Entity</code>가 발생했습니다. 같은 요청을 ngrok으로 우회하면 정상 동작해 재현 조건부터 불명확했습니다.</li>
+            <li><strong>원인</strong>: Java 21 HttpClient는 평문 HTTP에서 <code>Upgrade: h2c</code>를 기본 전송합니다. Uvicorn은 이 업그레이드를 무시하지만 httptools 파서가 upgrade 상태에 머물러 <code>on_body</code> 콜백이 호출되지 않고 본문이 유실됐습니다. 서버가 업그레이드를 무시하고 진행하도록 허용한 <strong>RFC 7230 §6.7 위반</strong>입니다.</li>
+            <li><strong>기여</strong>: <code>llhttp_resume_after_upgrade()</code>로 HTTP/1.1 파싱을 재개하는 Cython 패치안과 재현 테스트를 첨부해 httptools에 이슈를 등록했습니다.</li>
+            <li><strong>결과</strong>: Uvicorn 디스커션에 리포트한 뒤 Java 17 HttpClient와 vLLM 등 <strong>서로 다른 환경의 개발자 3명이 동일 증상을 독립 확인</strong>, 메인테이너(Kludex)가 공식 이슈 <strong>#2722</strong>로 등록했습니다.</li>
+          </ul>
+          <div class="os-links">
+            <a href="https://github.com/MagicStack/httptools/issues/124" target="_blank" rel="noopener noreferrer">httptools #124 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/encode/uvicorn/discussions/2637" target="_blank" rel="noopener noreferrer">Uvicorn Discussion #2637 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Kludex/uvicorn/issues/2722" target="_blank" rel="noopener noreferrer">Uvicorn Issue #2722 <span aria-hidden="true">↗</span></a>
+            <a href="https://jinhos-devlog.tistory.com/entry/Spring-Boot-32-RestClient%EC%99%80-FastAPI-%EC%97%B0%EB%8F%99-%EC%8B%9C-HTTP2-%ED%86%B5%EC%8B%A0-%EB%AC%B8%EC%A0%9C" target="_blank" rel="noopener noreferrer">분석 과정 상세 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="dx-box">
+          <span class="dx-title">진단 경로</span>
+          <div class="dx-step">
+            <span class="dx-what"><code>422 Unprocessable Entity</code></span>
+            <span class="dx-note">증상. 검증 오류를 가리켜 직렬화 문제로 오인하게 만듭니다</span>
+          </div>
+          <span class="dx-arrow" aria-hidden="true">↓</span>
+          <div class="dx-step">
+            <span class="dx-what"><code>Upgrade: h2c</code> 기본 전송</span>
+            <span class="dx-note">Java 21 HttpClient, 평문 HTTP 구간에서만</span>
+          </div>
+          <span class="dx-arrow" aria-hidden="true">↓</span>
+          <div class="dx-step">
+            <span class="dx-what">파서가 upgrade 상태 유지</span>
+            <span class="dx-note">httptools (llhttp), <code>on_body</code> 미호출</span>
+          </div>
+          <span class="dx-arrow" aria-hidden="true">↓</span>
+          <div class="dx-step">
+            <span class="dx-what"><code>RFC 7230 §6.7</code> 위반</span>
+            <span class="dx-note">근본 원인. 설정 문제가 아닌 버그로 확정</span>
+          </div>
+          <p class="dx-sum">클라이언트에서 C 파서 바인딩까지 <strong>3개 계층</strong>을 내려가 상태머신 버그로 확정</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 AWS 운영 ===== -->
+  <section id="aws" style="margin-bottom: 96px">
+    <div class="sect-head">
+      <span class="sect-num" aria-hidden="true">03</span>
       <h2>AWS 운영 경험</h2>
     </div>
     <div class="grid-2">
@@ -322,10 +410,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
   </section>
 
-  <!-- ===== 03 판단과 회고 ===== -->
+  <!-- ===== 04 판단과 회고 ===== -->
   <section id="lessons" style="margin-bottom: 96px">
     <div class="sect-head">
-      <span class="sect-num" aria-hidden="true">03</span>
+      <span class="sect-num" aria-hidden="true">04</span>
       <h2>판단과 회고</h2>
     </div>
     <div class="grid-2">
@@ -348,10 +436,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
   </section>
 
-  <!-- ===== 04 Skills ===== -->
+  <!-- ===== 05 Skills ===== -->
   <section id="skills" style="margin-bottom: 96px">
     <div class="sect-head">
-      <span class="sect-num" aria-hidden="true">04</span>
+      <span class="sect-num" aria-hidden="true">05</span>
       <h2>Skills</h2>
     </div>
     <div class="grid-2">
@@ -401,10 +489,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     <p style="font-size: 14px; color: #78716c; line-height: 1.6; margin: 16px 0 0">진한 표시는 직접 설계하고 운영한 범위입니다. Kubernetes는 팀이 구성한 환경에서 운영과 복구를 담당한 수준입니다.</p>
   </section>
 
-  <!-- ===== 05 Credentials ===== -->
+  <!-- ===== 06 Credentials ===== -->
   <section id="credentials" style="margin-bottom: 96px">
     <div class="sect-head">
-      <span class="sect-num" aria-hidden="true">05</span>
+      <span class="sect-num" aria-hidden="true">06</span>
       <h2>Credentials</h2>
     </div>
     <div class="grid-2">
