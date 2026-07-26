@@ -89,10 +89,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
 .os-links a { font-size: 14px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
 .os-links a:hover { background: #ccfbf1; text-decoration: none; }
 
-/* 클라우드 관점 강조 */
-.relevance { background: #134e4a; color: #ccfbf1; border-radius: 12px; padding: 20px 24px; margin-bottom: 26px; }
-.relevance strong { color: #5eead4; }
-.relevance-k { font-size: 12px; font-weight: 800; color: #5eead4; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+/* 회고 박스 */
+.takeaway { background: #fafaf9; border: 1px solid #e7e5e4; border-left: 3px solid #0f766e; border-radius: 10px; padding: 20px 24px; margin-top: 26px; }
+.takeaway-k { font-size: 12px; font-weight: 800; color: #0f766e; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+.takeaway p { font-size: 15px; line-height: 1.7; color: #44403c; margin: 0; max-width: 780px; }
+.takeaway p + p { margin-top: 10px; }
 
 /* 그리드 */
 .hero-grid { display: grid; grid-template-columns: 1fr 180px; gap: 48px; align-items: center; }
@@ -293,11 +294,6 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
       <h2>Open Source</h2>
     </div>
     <div class="card">
-      <div class="relevance">
-        <span class="relevance-k" aria-hidden="true">왜 클라우드 이력에 넣는가</span>
-        <p style="font-size: 16px; line-height: 1.7; margin: 0">01의 Phase 3는 <strong>AWS의 Spring Boot가 GCP의 FastAPI를 내부 API로 호출</strong>하는 구조입니다. 아래 버그는 정확히 그 조합에서 요청 본문이 사라지는 문제였고, Java HttpClient가 <code style="background:#0f3d3a;border-color:#2dd4bf55;color:#ccfbf1">Upgrade: h2c</code>를 기본 전송하는 조건이 <strong>TLS를 걷어낸 평문 내부 통신</strong>이라는 점에서 클라우드 내부 호출 구간의 실패 모드입니다. 프록시를 거치면 증상이 사라진다는 점도 게이트웨이와 로드밸런서의 업그레이드 헤더 처리 차이에서 나옵니다.</p>
-      </div>
-
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px">
         <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #78716c; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
         <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2025.05</span>
@@ -349,6 +345,11 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
           </div>
           <p class="dx-sum">클라이언트에서 C 파서 바인딩까지 <strong>3개 계층</strong>을 내려가 상태머신 버그로 확정</p>
         </div>
+      </div>
+      <div class="takeaway">
+        <span class="takeaway-k" aria-hidden="true">운영에서 남은 것</span>
+        <p>Java HttpClient는 <strong>평문 HTTP에서만</strong> <code>Upgrade: h2c</code>를 보냅니다. TLS를 종료한 뒤 내부망에서 평문으로 서비스 간 호출을 주고받는 구성이 정확히 그 조건입니다. 같은 요청이 프록시를 거칠 때 정상 동작한 것도 게이트웨이가 업그레이드 헤더를 걷어내기 때문이고, 경로를 직접 호출로 단순화하는 순간 드러납니다.</p>
+        <p>내부 API 호출 구조를 택할 때 클라이언트의 프로토콜 협상 기본값까지 확인해야 한다는 것을 이 건으로 배웠습니다.</p>
       </div>
     </div>
   </section>
