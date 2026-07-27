@@ -51,6 +51,19 @@ body { word-break: keep-all; overflow-wrap: break-word; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
 /* Timeline grid */
 .tl-row { display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px; }
+/* Section nav */
+.sect-nav { position: sticky; top: 0; z-index: 50; background: #fafaf9f2; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid #e7e5e4; }
+.sect-nav-inner { max-width: 960px; margin: 0 auto; padding: 0 32px; height: 48px; display: flex; align-items: center; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.sect-nav-inner::-webkit-scrollbar { display: none; }
+.sect-nav a { font-size: 14px; font-weight: 600; color: #57534e; padding: 6px 10px; border-radius: 7px; white-space: nowrap; }
+.sect-nav a:hover { background: #f0fdfa; color: #0f766e; text-decoration: none; }
+.sect-nav .n { font-size: 12px; font-weight: 800; color: #78716c; margin-right: 5px; font-variant-numeric: tabular-nums; }
+.sect-nav a:hover .n { color: #0f766e; }
+section[id], div[id] { scroll-margin-top: 64px; }
+/* 8개 항목이라 960px 아래에서는 넘침, 스크롤 가능함을 우측 페이드로 알림 */
+@media (max-width: 1000px) {
+  .sect-nav-inner { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+}
 /* Responsive */
 @media (max-width: 700px) {
   [style*="grid-template-columns: 1fr 180px"] { grid-template-columns: 1fr !important; }
@@ -73,8 +86,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
       <h1 style="font-size: 52px; font-weight: 800; margin: 0; letter-spacing: -0.02em; line-height: 1.15"><span>김진호</span></h1>
       <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답을 <strong style="color: #5eead4">7.5초에서 1.2초로</strong> 단축했고, MSA 설계부터 멀티클라우드 인프라 구축까지 문제의 근본 원인을 코드와 구조로 해결합니다.</p>
       <nav style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
-        <a href="Portfolio-Cloud.html" class="hero-btn-primary">Cloud 포트폴리오</a>
-        <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">GitHub</a>
+        <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer" class="hero-btn-primary">GitHub</a>
         <a href="https://jinhos-devlog.tistory.com/" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">Tech Blog</a>
         <a href="mailto:jh7524jh7524@gmail.com" class="hero-btn-secondary">Email</a>
       </nav>
@@ -92,10 +104,24 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </div>
 </div>
 
-<div style="max-width: 960px; margin: 0 auto; padding: 88px 32px 96px">
+<!-- ===== Section nav ===== -->
+<nav class="sect-nav" aria-label="섹션 바로가기">
+  <div class="sect-nav-inner">
+    <a href="#experience"><span class="n" aria-hidden="true">01</span>Experience</a>
+    <a href="#opensource"><span class="n" aria-hidden="true">02</span>Open Source</a>
+    <a href="#projects"><span class="n" aria-hidden="true">03</span>Featured Projects</a>
+    <a href="#more-projects"><span class="n" aria-hidden="true">04</span>More Projects</a>
+    <a href="#skills"><span class="n" aria-hidden="true">05</span>Skills</a>
+    <a href="#timeline"><span class="n" aria-hidden="true">06</span>Timeline</a>
+    <a href="#awards"><span class="n" aria-hidden="true">07</span>Awards</a>
+    <a href="#certificates"><span class="n" aria-hidden="true">08</span>Certificates</a>
+  </div>
+</nav>
+
+<div style="max-width: 960px; margin: 0 auto; padding: 72px 32px 96px">
 
   <!-- ===== Experience ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="experience" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">01</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Experience</h2>
@@ -122,7 +148,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== Open Source ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="opensource" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">02</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Open Source</h2>
@@ -188,7 +214,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== Featured Projects ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="projects" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">03</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Featured Projects</h2>
@@ -304,7 +330,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== More Projects ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="more-projects" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">04</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">More Projects</h2>
@@ -337,7 +363,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== Skills ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="skills" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">05</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Skills</h2>
@@ -388,7 +414,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== Timeline ===== -->
-  <section style="margin-bottom: 96px">
+  <section id="timeline" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
       <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">06</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Timeline</h2>
@@ -423,7 +449,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
   </section>
 
   <!-- ===== Awards & Certificates ===== -->
-  <section style="margin-bottom: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px">
+  <section id="awards" style="margin-bottom: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px">
     <div>
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
         <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">07</span>
@@ -435,7 +461,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         <li>SM COSSTON 해커톤 최우수상 1등 <span style="color: #78716c">(2024.01)</span></li>
       </ul>
     </div>
-    <div>
+    <div id="certificates">
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
         <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">08</span>
         <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Certificates</h2>
