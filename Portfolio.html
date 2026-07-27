@@ -75,6 +75,18 @@ section[id], div[id] { scroll-margin-top: 64px; }
   .tl-date { grid-column: 2; text-align: left !important; order: -1; margin-bottom: 4px; padding-top: 0 !important; }
   .os-grid { grid-template-columns: 1fr; gap: 20px; }
 }
+/* Print / PDF */
+@media print {
+  /* 가로 스크롤이 동작하지 않아 뒤쪽 항목이 잘린 채 나온다 */
+  .sect-nav { display: none; }
+  /* 인쇄 렌더링은 backface-visibility를 무시해 뒷면이 거울상으로 겹친다.
+     정적 배치는 flex row에 끼어 앞면을 눌러버리므로 뒷면은 숨긴다. */
+  .flip-inner { transform: none !important; transition: none; }
+  .flip-inner > div:last-child { display: none !important; }
+  /* 2단 그리드는 페이지 경계를 못 넘어 통째로 밀리면서 빈 장을 만든다 */
+  .os-grid { grid-template-columns: 1fr; gap: 20px; }
+  .flip-card, .proj-card, .tl-row { break-inside: avoid; }
+}
 </style>
 </head>
 <body>
