@@ -22,92 +22,92 @@
 <meta name="twitter:image" content="https://jinho7.github.io/img/og-portfolio.jpg">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-body { margin: 0; background: #fafaf9; color: #1c1917; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: #0f766e; text-decoration: none; }
-a:hover { color: #115e59; text-decoration: underline; }
-::selection { background: #ccfbf1; }
+body { margin: 0; background: #f9fafb; color: #191f28; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #3182f6; text-decoration: none; }
+a:hover { color: #1b64da; text-decoration: underline; }
+::selection { background: #dbeafe; }
 </style>
 <style>
 * { box-sizing: border-box; }
 body { word-break: keep-all; overflow-wrap: break-word; }
-:focus-visible { outline: 2px solid #0f766e; outline-offset: 3px; border-radius: 4px; }
-.hero-band :focus-visible { outline-color: #5eead4; }
+:focus-visible { outline: 2px solid #3182f6; outline-offset: 3px; border-radius: 4px; }
+.hero-band :focus-visible { outline-color: #ffffff; }
 
-.hero-btn-primary { color: #134e4a; background: #5eead4; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
-.hero-btn-primary:hover { background: #99f6e4; text-decoration: none; color: #134e4a; }
-.hero-btn-secondary { color: #ccfbf1; border: 1px solid rgba(45,212,191,0.4); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
-.hero-btn-secondary:hover { border-color: #5eead4; text-decoration: none; color: #f0fdfa; }
+.hero-btn-primary { color: #1b64da; background: #ffffff; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
+.hero-btn-primary:hover { background: #eff6ff; text-decoration: none; color: #1b64da; }
+.hero-btn-secondary { color: #ffffff; border: 1px solid rgba(255,255,255,0.5); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
+.hero-btn-secondary:hover { border-color: #ffffff; text-decoration: none; color: #ffffff; }
 
 /* 섹션 내비게이션 */
-.sect-nav { position: sticky; top: 0; z-index: 50; background: #fafaf9f2; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid #e7e5e4; }
+.sect-nav { position: sticky; top: 0; z-index: 50; background: #f9fafbf2; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e8eb; }
 .sect-nav-inner { max-width: 960px; margin: 0 auto; padding: 0 32px; height: 48px; display: flex; align-items: center; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .sect-nav-inner::-webkit-scrollbar { display: none; }
-.sect-nav a { font-size: 14px; font-weight: 600; color: #57534e; padding: 6px 10px; border-radius: 7px; white-space: nowrap; }
-.sect-nav a:hover { background: #f0fdfa; color: #0f766e; text-decoration: none; }
-.sect-nav .n { font-size: 12px; font-weight: 800; color: #78716c; margin-right: 5px; font-variant-numeric: tabular-nums; }
-.sect-nav a:hover .n { color: #0f766e; }
+.sect-nav a { font-size: 14px; font-weight: 600; color: #4e5968; padding: 6px 10px; border-radius: 7px; white-space: nowrap; }
+.sect-nav a:hover { background: #eff6ff; color: #3182f6; text-decoration: none; }
+.sect-nav .n { font-size: 12px; font-weight: 800; color: #6b7684; margin-right: 5px; font-variant-numeric: tabular-nums; }
+.sect-nav a:hover .n { color: #3182f6; }
 section[id] { scroll-margin-top: 64px; }
 
 /* 섹션 제목 */
 .sect-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px; }
-.sect-num { font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums; }
+.sect-num { font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums; }
 .sect-head h2 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em; }
 
 /* 카드 */
-.card { background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 30px 34px; }
-.chip { font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px; }
+.card { background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 30px 34px; }
+.chip { font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px; }
 .chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
-.skill { font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px; }
-.skill-strong { border-color: #0f766e; color: #134e4a; background: #f0fdfa; font-weight: 700; }
+.skill { font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px; }
+.skill-strong { border-color: #3182f6; color: #0b2447; background: #eff6ff; font-weight: 700; }
 
 /* 검증 지표 */
-.slot { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 18px 22px 20px; display: flex; flex-direction: column; gap: 4px; }
-.slot-label { font-size: 12px; font-weight: 800; color: #0d9488; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
-.metric { font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; color: #0f766e; letter-spacing: -0.01em; white-space: nowrap; }
-.slot-note { font-size: 14px; color: #57534e; line-height: 1.5; }
+.slot { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 18px 22px 20px; display: flex; flex-direction: column; gap: 4px; }
+.slot-label { font-size: 12px; font-weight: 800; color: #1b64da; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.metric { font-size: clamp(20px, 2.4vw, 26px); font-weight: 800; color: #3182f6; letter-spacing: -0.01em; white-space: nowrap; }
+.slot-note { font-size: 14px; color: #4e5968; line-height: 1.5; }
 
 /* 작업 블록 */
-.work { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; padding: 28px 0; border-top: 1px solid #e7e5e4; }
+.work { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; padding: 28px 0; border-top: 1px solid #e5e8eb; }
 .work:first-of-type { border-top: 0; padding-top: 4px; }
 .work h4 { font-size: 19px; font-weight: 700; margin: 0 0 10px; letter-spacing: -0.01em; }
-.work ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.65; color: #44403c; }
+.work ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.65; color: #333d4b; }
 
 /* 전환 단계 */
 .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 8px; }
-.phase { background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 10px; padding: 14px 16px; }
-.phase-n { font-size: 12px; font-weight: 800; color: #0d9488; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 5px; }
-.phase-t { font-size: 15px; font-weight: 700; color: #1c1917; display: block; margin-bottom: 3px; }
-.phase-d { font-size: 13px; color: #57534e; line-height: 1.5; }
-.phase-cur { background: #f0fdfa; border-color: #99f6e4; }
+.phase { background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 10px; padding: 14px 16px; }
+.phase-n { font-size: 12px; font-weight: 800; color: #1b64da; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 5px; }
+.phase-t { font-size: 15px; font-weight: 700; color: #191f28; display: block; margin-bottom: 3px; }
+.phase-d { font-size: 13px; color: #4e5968; line-height: 1.5; }
+.phase-cur { background: #eff6ff; border-color: #bfdbfe; }
 
 /* 역할 구분 (팀 작업 명시) */
-.scope { background: #fafaf9; border: 1px solid #e7e5e4; border-left: 3px solid #a8a29e; border-radius: 10px; padding: 20px 24px; margin-top: 28px; }
-.scope-title { font-size: 13px; font-weight: 800; color: #57534e; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 12px; }
+.scope { background: #f9fafb; border: 1px solid #e5e8eb; border-left: 3px solid #b0b8c1; border-radius: 10px; padding: 20px 24px; margin-top: 28px; }
+.scope-title { font-size: 13px; font-weight: 800; color: #4e5968; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 12px; }
 .scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.scope-k { font-size: 13px; font-weight: 700; color: #78716c; display: block; margin-bottom: 4px; }
-.scope-v { font-size: 15px; line-height: 1.6; color: #44403c; }
+.scope-k { font-size: 13px; font-weight: 700; color: #6b7684; display: block; margin-bottom: 4px; }
+.scope-v { font-size: 15px; line-height: 1.6; color: #333d4b; }
 
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
 
 /* 진단 경로 박스 */
-.dx-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; align-self: start; }
-.dx-title { font-size: 12px; font-weight: 800; color: #0d9488; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+.dx-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; align-self: start; }
+.dx-title { font-size: 12px; font-weight: 800; color: #1b64da; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
 .dx-step { display: flex; flex-direction: column; gap: 3px; }
-.dx-what { font-size: 15px; font-weight: 700; color: #134e4a; line-height: 1.45; }
-.dx-note { font-size: 13px; color: #57534e; line-height: 1.5; }
-.dx-arrow { color: #14b8a6; font-size: 14px; font-weight: 800; line-height: 1; padding: 7px 0 7px 3px; }
-.dx-sum { font-size: 13px; color: #44403c; line-height: 1.55; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #99f6e4; }
-.dx-box code { background: #ffffff; border-color: #ccfbf1; font-size: 13px; }
+.dx-what { font-size: 15px; font-weight: 700; color: #0b2447; line-height: 1.45; }
+.dx-note { font-size: 13px; color: #4e5968; line-height: 1.5; }
+.dx-arrow { color: #3182f6; font-size: 14px; font-weight: 800; line-height: 1; padding: 7px 0 7px 3px; }
+.dx-sum { font-size: 13px; color: #333d4b; line-height: 1.55; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #bfdbfe; }
+.dx-box code { background: #ffffff; border-color: #dbeafe; font-size: 13px; }
 
 /* 근거 링크 */
 .os-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.os-links a { font-size: 14px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
-.os-links a:hover { background: #ccfbf1; text-decoration: none; }
+.os-links a { font-size: 14px; font-weight: 700; color: #3182f6; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
+.os-links a:hover { background: #dbeafe; text-decoration: none; }
 
 /* 회고 박스 */
-.takeaway { background: #fafaf9; border: 1px solid #e7e5e4; border-left: 3px solid #0f766e; border-radius: 10px; padding: 20px 24px; margin-top: 26px; }
-.takeaway-k { font-size: 12px; font-weight: 800; color: #0f766e; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; }
-.takeaway p { font-size: 15px; line-height: 1.7; color: #44403c; margin: 0; max-width: 780px; }
+.takeaway { background: #f9fafb; border: 1px solid #e5e8eb; border-left: 3px solid #3182f6; border-radius: 10px; padding: 20px 24px; margin-top: 26px; }
+.takeaway-k { font-size: 12px; font-weight: 800; color: #3182f6; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+.takeaway p { font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0; max-width: 780px; }
 .takeaway p + p { margin-top: 10px; }
 
 /* 그리드 */
@@ -141,12 +141,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
 <body>
 
 <!-- ===== Hero ===== -->
-<div class="hero-band" style="background: #134e4a; color: #f0fdfa">
+<div class="hero-band" style="background: linear-gradient(150deg, #4593fc 0%, #3182f6 42%, #1b64da 100%); color: #eff6ff">
   <div class="hero-grid" style="max-width: 960px; margin: 0 auto; padding: 88px 32px 72px">
     <div style="display: flex; flex-direction: column; gap: 22px">
-      <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: #5eead4; text-transform: uppercase">Cloud Infrastructure Portfolio</span>
+      <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: #ffffff; text-transform: uppercase">Cloud Infrastructure Portfolio</span>
       <h1 style="font-size: 52px; font-weight: 800; margin: 0; letter-spacing: -0.02em; line-height: 1.15">김진호</h1>
-      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 580px; text-wrap: pretty">고치기 전에 먼저 측정하는 클라우드 엔지니어입니다. 단일 VM에서 p95 응답이 17초까지 늘어난 서비스를 부하 테스트로 병목을 증명한 뒤 GCP 3-Tier로 전환해 <strong style="color: #5eead4">2.3초</strong>로 줄였고, 장애 시 접속이 끊기는 대신 안내 페이지가 뜨도록 DNS Failover를 구성했습니다.</p>
+      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #dbeafe; max-width: 580px; text-wrap: pretty">고치기 전에 먼저 측정하는 클라우드 엔지니어입니다. 단일 VM에서 p95 응답이 17초까지 늘어난 서비스를 부하 테스트로 병목을 증명한 뒤 GCP 3-Tier로 전환해 <strong style="color: #ffffff">2.3초</strong>로 줄였고, 장애 시 접속이 끊기는 대신 안내 페이지가 뜨도록 DNS Failover를 구성했습니다.</p>
       <nav style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
         <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer" class="hero-btn-primary">GitHub</a>
         <a href="https://jinhos-devlog.tistory.com/" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">Tech Blog</a>
@@ -155,12 +155,12 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
     <img class="hero-photo" src="img/profile.jpg" style="width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center 15%;flex-shrink:0;" alt="김진호 프로필 사진">
   </div>
-  <div style="border-top: 1px solid #2dd4bf33">
+  <div style="border-top: 1px solid rgba(255,255,255,0.2)">
     <div class="stat-band" style="max-width: 960px; margin: 0 auto; padding: 28px 32px">
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4; white-space: nowrap">17s → 2.3s</span><span style="font-size: 14px; color: #99f6e4cc">k6 p95 응답 시간</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">55%</span><span style="font-size: 14px; color: #99f6e4cc">1,000 VU 동시 부하 시 CPU</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">3단계</span><span style="font-size: 14px; color: #99f6e4cc">단일 VM에서 멀티클라우드까지</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">AWS SAA</span><span style="font-size: 14px; color: #99f6e4cc">Solutions Architect Associate</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff; white-space: nowrap">17s → 2.3s</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">k6 p95 응답 시간</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">55%</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">1,000 VU 동시 부하 시 CPU</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">3단계</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">단일 VM에서 멀티클라우드까지</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">AWS SAA</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">Solutions Architect Associate</span></div>
     </div>
   </div>
 </div>
@@ -187,10 +187,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px">
-        <h3 style="font-size: 23px; font-weight: 700; margin: 0">AI 기반 일정 관리 플랫폼 <span style="font-weight: 500; color: #78716c; font-size: 17px">클라우드 인프라 담당</span></h3>
-        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2025.04 - 2025.08</span>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0">AI 기반 일정 관리 플랫폼 <span style="font-weight: 500; color: #6b7684; font-size: 17px">클라우드 인프라 담당</span></h3>
+        <span style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums">2025.04 - 2025.08</span>
       </div>
-      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0 0 18px; max-width: 740px">AI 추론과 일반 API가 한 인스턴스에서 자원을 다투며 응답이 지연되던 구조를, 부하 테스트로 병목을 먼저 증명한 뒤 단계적으로 분리했습니다.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: #333d4b; margin: 0 0 18px; max-width: 740px">AI 추론과 일반 API가 한 인스턴스에서 자원을 다투며 응답이 지연되던 구조를, 부하 테스트로 병목을 먼저 증명한 뒤 단계적으로 분리했습니다.</p>
       <div class="chip-row" style="margin-bottom: 26px">
         <span class="chip">GCP</span>
         <span class="chip">AWS</span>
@@ -317,10 +317,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px">
-        <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #78716c; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
-        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2025.05</span>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #6b7684; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
+        <span style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums">2025.05</span>
       </div>
-      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0 0 18px; max-width: 740px">타 팀에서 겪던 원인 불명의 오류를 함께 추적해 업스트림 파서 버그로 규명하고 패치안을 제출했습니다.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: #333d4b; margin: 0 0 18px; max-width: 740px">타 팀에서 겪던 원인 불명의 오류를 함께 추적해 업스트림 파서 버그로 규명하고 패치안을 제출했습니다.</p>
       <div class="chip-row" style="margin-bottom: 26px">
         <span class="chip">Uvicorn</span>
         <span class="chip">httptools / llhttp</span>
@@ -386,14 +386,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
       <a href="projects/himjeonso.html" class="card" style="display: flex; flex-direction: column; gap: 12px; color: inherit">
         <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
           <h3 style="font-size: 20px; font-weight: 700; margin: 0">힘전소</h3>
-          <span style="font-size: 14px; color: #78716c; font-variant-numeric: tabular-nums">2024.07 - 2025.02</span>
+          <span style="font-size: 14px; color: #6b7684; font-variant-numeric: tabular-nums">2024.07 - 2025.02</span>
         </div>
         <div class="slot" style="padding: 14px 18px 16px">
           <span class="slot-label">검증된 지표</span>
           <span class="metric" style="font-size: 20px">171초 → 1.3초</span>
           <span class="slot-note" style="font-size: 13px">50명 동시 업로드 평균 응답, 약 130배 단축</span>
         </div>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; color: #44403c">
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; color: #333d4b">
           <li>업로드가 API 서버를 거쳐 S3로 가던 구조를 <strong>Presigned URL</strong>로 바꿔 클라이언트가 S3에 직접 올리게 하고, 서버는 메타데이터만 관리하도록 분리했습니다.</li>
           <li>게시글 작성과 이미지 업로드 API를 분리해 이미지가 실패해도 글은 정상 등록되게 실패를 격리했습니다.</li>
           <li><strong>CloudWatch Event와 Lambda</strong>로 1시간 넘게 참조되지 않은 임시 이미지를 자동 삭제해 스토리지 낭비와 정합성 문제를 막았습니다.</li>
@@ -404,20 +404,20 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
           <span class="chip">CloudWatch</span>
           <span class="chip">Docker</span>
         </div>
-        <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+        <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
       </a>
 
       <a href="projects/waither.html" class="card" style="display: flex; flex-direction: column; gap: 12px; color: inherit">
         <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
           <h3 style="font-size: 20px; font-weight: 700; margin: 0">Waither</h3>
-          <span style="font-size: 14px; color: #78716c; font-variant-numeric: tabular-nums">2024.03 - 2024.11</span>
+          <span style="font-size: 14px; color: #6b7684; font-variant-numeric: tabular-nums">2024.03 - 2024.11</span>
         </div>
         <div class="slot" style="padding: 14px 18px 16px">
           <span class="slot-label">운영에서 배운 것</span>
           <span class="metric" style="font-size: 20px">컨테이너 8개</span>
           <span class="slot-note" style="font-size: 13px">제한된 인스턴스에서 셧다운이 반복되며 구조 재검토</span>
         </div>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; color: #44403c">
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; color: #333d4b">
           <li>MSA 학습을 목표로 서비스를 나누고 각각 Docker로 독립 배포했지만, 제한된 AWS 인스턴스에서 <strong>컨테이너 8개가 동시에 뜨며 잦은 셧다운</strong>이 발생했습니다.</li>
           <li>서비스별 독립 빌드로 CI/CD 시간이 늘고 응답 포맷이 갈리면서, 인프라 규모에 맞지 않는 분리였다고 판단했습니다.</li>
           <li>Gateway 필터와 Redis 블랙리스트는 유지한 채 핵심 기능을 통합해 관리 포인트를 줄였습니다. <strong>기술 도입은 목적이 아니라 수단</strong>이라는 것을 인프라 비용으로 확인했습니다.</li>
@@ -428,7 +428,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
           <span class="chip">Spring Cloud Gateway</span>
           <span class="chip">Redis</span>
         </div>
-        <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+        <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
       </a>
     </div>
   </section>
@@ -442,19 +442,19 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     <div class="grid-2">
       <div class="card" style="padding: 26px 28px">
         <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 10px">측정이 없으면 전환을 설득할 수 없습니다</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #44403c; margin: 0">3-Tier 전환에서 가장 먼저 한 일은 아키텍처 그림이 아니라 k6 부하 테스트였습니다. 추론 부하가 일반 API를 끌어내리는 것을 숫자로 보여준 다음에야 구조를 바꿀 근거가 생겼습니다. 지금도 인프라를 건드리기 전에 무엇을 측정할지부터 정합니다.</p>
+        <p style="font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0">3-Tier 전환에서 가장 먼저 한 일은 아키텍처 그림이 아니라 k6 부하 테스트였습니다. 추론 부하가 일반 API를 끌어내리는 것을 숫자로 보여준 다음에야 구조를 바꿀 근거가 생겼습니다. 지금도 인프라를 건드리기 전에 무엇을 측정할지부터 정합니다.</p>
       </div>
       <div class="card" style="padding: 26px 28px">
         <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 10px">IaC는 인스턴스까지, 그 안은 별개입니다</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #44403c; margin: 0">Terraform으로 GPU VM을 만들어도 CUDA 커널 모듈이 올라오지 않으면 모델은 뜨지 않습니다. 프로비저닝과 실행 가능 상태는 다른 문제이고, 원격 세션이 끊기는 순간을 전제로 startup-script 같은 복구 경로를 미리 넣어두어야 합니다.</p>
+        <p style="font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0">Terraform으로 GPU VM을 만들어도 CUDA 커널 모듈이 올라오지 않으면 모델은 뜨지 않습니다. 프로비저닝과 실행 가능 상태는 다른 문제이고, 원격 세션이 끊기는 순간을 전제로 startup-script 같은 복구 경로를 미리 넣어두어야 합니다.</p>
       </div>
       <div class="card" style="padding: 26px 28px">
         <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 10px">유지보수할 수 있는 복잡도를 고릅니다</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #44403c; margin: 0">Cross-Cloud 연결에 VPN과 NAT, DNS Relay를 검토했지만 내부 API 호출로 단순화했습니다. Waither에서 인프라 규모에 맞지 않는 MSA 분리가 어떤 비용을 만드는지 겪은 뒤로, 동작하는 구조보다 감당할 수 있는 구조를 먼저 봅니다.</p>
+        <p style="font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0">Cross-Cloud 연결에 VPN과 NAT, DNS Relay를 검토했지만 내부 API 호출로 단순화했습니다. Waither에서 인프라 규모에 맞지 않는 MSA 분리가 어떤 비용을 만드는지 겪은 뒤로, 동작하는 구조보다 감당할 수 있는 구조를 먼저 봅니다.</p>
       </div>
       <div class="card" style="padding: 26px 28px">
         <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 10px">변경은 합의와 권한 설계가 먼저입니다</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #44403c; margin: 0">인프라 구조가 사전 논의 없이 변경되며 제 IAM 권한이 삭제된 일이 있었습니다. 프로젝트를 위해 새 구조를 빠르게 파악하고 운영과 복구를 맡았지만, 이후 기술 도입과 권한 분배 기준을 문서로 고정했습니다. 권한 관리는 기술이 아니라 합의의 문제였습니다.</p>
+        <p style="font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0">인프라 구조가 사전 논의 없이 변경되며 제 IAM 권한이 삭제된 일이 있었습니다. 프로젝트를 위해 새 구조를 빠르게 파악하고 운영과 복구를 맡았지만, 이후 기술 도입과 권한 분배 기준을 문서로 고정했습니다. 권한 관리는 기술이 아니라 합의의 문제였습니다.</p>
       </div>
     </div>
   </section>
@@ -467,7 +467,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
     <div class="grid-2">
       <div class="card" style="padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Cloud Platform</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Cloud Platform</span>
         <div class="chip-row">
           <span class="skill skill-strong">GCP</span>
           <span class="skill skill-strong">AWS</span>
@@ -478,7 +478,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         </div>
       </div>
       <div class="card" style="padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">IaC &amp; Delivery</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">IaC &amp; Delivery</span>
         <div class="chip-row">
           <span class="skill skill-strong">Terraform</span>
           <span class="skill skill-strong">Docker / Compose</span>
@@ -487,7 +487,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         </div>
       </div>
       <div class="card" style="padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Observability &amp; Testing</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Observability &amp; Testing</span>
         <div class="chip-row">
           <span class="skill skill-strong">k6</span>
           <span class="skill">Grafana</span>
@@ -498,7 +498,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         </div>
       </div>
       <div class="card" style="padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Backend</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Backend</span>
         <div class="chip-row">
           <span class="skill">Java 17 / 21</span>
           <span class="skill">Spring Boot 3.2</span>
@@ -509,7 +509,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         </div>
       </div>
     </div>
-    <p style="font-size: 14px; color: #78716c; line-height: 1.6; margin: 16px 0 0">진한 표시는 직접 설계하고 운영한 범위입니다. Kubernetes는 팀이 구성한 환경에서 운영과 복구를 담당한 수준입니다.</p>
+    <p style="font-size: 14px; color: #6b7684; line-height: 1.6; margin: 16px 0 0">진한 표시는 직접 설계하고 운영한 범위입니다. Kubernetes는 팀이 구성한 환경에서 운영과 복구를 담당한 수준입니다.</p>
   </section>
 
   <!-- ===== 06 Credentials ===== -->
@@ -520,8 +520,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
     </div>
     <div class="grid-2">
       <div class="card" style="padding: 26px 28px">
-        <h3 style="font-size: 17px; font-weight: 800; color: #0f766e; margin: 0 0 14px">Certificates</h3>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #44403c">
+        <h3 style="font-size: 17px; font-weight: 800; color: #3182f6; margin: 0 0 14px">Certificates</h3>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #333d4b">
           <li><strong>AWS Certified Solutions Architect - Associate</strong></li>
           <li>정보처리기사 (한국산업인력공단)</li>
           <li>SQL 개발자 SQLD (한국데이터산업진흥원)</li>
@@ -529,22 +529,22 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: 
         </ul>
       </div>
       <div class="card" style="padding: 26px 28px">
-        <h3 style="font-size: 17px; font-weight: 800; color: #0f766e; margin: 0 0 14px">Education &amp; Training</h3>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #44403c">
-          <li>카카오테크 부트캠프 클라우드 네이티브 과정 <span style="color: #78716c">(2025.02 - 08)</span></li>
-          <li>상명대학교 컴퓨터과학과 <span style="color: #78716c">(2019.03 - 2025.08 졸업)</span></li>
+        <h3 style="font-size: 17px; font-weight: 800; color: #3182f6; margin: 0 0 14px">Education &amp; Training</h3>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: #333d4b">
+          <li>카카오테크 부트캠프 클라우드 네이티브 과정 <span style="color: #6b7684">(2025.02 - 08)</span></li>
+          <li>상명대학교 컴퓨터과학과 <span style="color: #6b7684">(2019.03 - 2025.08 졸업)</span></li>
           <li>전공 4.0 / 4.5, 전체 3.84 / 4.5</li>
-          <li>펄어비스 Backend Developer 인턴 <span style="color: #78716c">(2026.01 - 02)</span></li>
+          <li>펄어비스 Backend Developer 인턴 <span style="color: #6b7684">(2026.01 - 02)</span></li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer style="border-top: 1px solid #e7e5e4; padding-top: 32px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
+  <footer style="border-top: 1px solid #e5e8eb; padding-top: 32px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
     <div style="display: flex; flex-direction: column; gap: 4px">
-      <span style="font-size: 15px; font-weight: 700; color: #44403c">김진호 Cloud Infrastructure Portfolio</span>
-      <span style="font-size: 14px; color: #78716c">백엔드 중심 이력은 <a href="Portfolio.html">Backend 포트폴리오</a>에 정리했습니다.</span>
+      <span style="font-size: 15px; font-weight: 700; color: #333d4b">김진호 Cloud Infrastructure Portfolio</span>
+      <span style="font-size: 14px; color: #6b7684">백엔드 중심 이력은 <a href="Portfolio.html">Backend 포트폴리오</a>에 정리했습니다.</span>
     </div>
     <div style="display: flex; gap: 20px; font-size: 14px; font-weight: 600">
       <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer">GitHub</a>

@@ -22,18 +22,18 @@
 <meta name="twitter:image" content="https://jinho7.github.io/img/og-portfolio.jpg">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-body { margin: 0; background: #fafaf9; color: #1c1917; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: #0f766e; text-decoration: none; }
-a:hover { color: #115e59; text-decoration: underline; }
-::selection { background: #ccfbf1; }
+body { margin: 0; background: #f9fafb; color: #191f28; font-family: 'Pretendard Variable', Pretendard, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #3182f6; text-decoration: none; }
+a:hover { color: #1b64da; text-decoration: underline; }
+::selection { background: #dbeafe; }
 </style>
 <style>
 * { box-sizing: border-box; }
 body { word-break: keep-all; overflow-wrap: break-word; }
-.hero-btn-primary { color: #134e4a; background: #5eead4; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
-.hero-btn-primary:hover { background: #99f6e4; text-decoration: none; color: #134e4a; }
-.hero-btn-secondary { color: #ccfbf1; border: 1px solid rgba(45,212,191,0.4); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
-.hero-btn-secondary:hover { border-color: #5eead4; text-decoration: none; color: #f0fdfa; }
+.hero-btn-primary { color: #1b64da; background: #ffffff; font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
+.hero-btn-primary:hover { background: #eff6ff; text-decoration: none; color: #1b64da; }
+.hero-btn-secondary { color: #ffffff; border: 1px solid rgba(255,255,255,0.5); font-size: 15px; font-weight: 700; padding: 10px 20px; border-radius: 8px; display: inline-block; }
+.hero-btn-secondary:hover { border-color: #ffffff; text-decoration: none; color: #ffffff; }
 /* Flip cards */
 .flip-card { perspective: 1600px; display: flex; }
 .flip-inner { flex: 1; display: flex; position: relative; text-decoration: none; color: inherit; transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(0.4,0.2,0.2,1); }
@@ -45,36 +45,36 @@ body { word-break: keep-all; overflow-wrap: break-word; }
 }
 @media (prefers-reduced-motion: reduce) { .flip-inner { transition: none; } }
 /* More Projects hover, CSS only */
-.proj-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; }
-.proj-card:hover, .proj-card:focus-visible { box-shadow: 0 4px 20px rgba(15,118,110,0.12); border-color: #5eead4; }
+.proj-card { display: flex; flex-direction: column; background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 24px 26px; text-decoration: none; color: inherit; transition: box-shadow 0.15s, border-color 0.15s; }
+.proj-card:hover, .proj-card:focus-visible { box-shadow: 0 4px 20px rgba(49,130,246,0.14); border-color: #4593fc; }
 /* Open Source 진단 경로 */
-.dx-box { background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; align-self: start; }
-.dx-title { font-size: 12px; font-weight: 800; color: #0d9488; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+.dx-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; align-self: start; }
+.dx-title { font-size: 12px; font-weight: 800; color: #1b64da; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
 .dx-step { display: flex; flex-direction: column; gap: 3px; }
-.dx-what { font-size: 15px; font-weight: 700; color: #134e4a; line-height: 1.45; }
-.dx-note { font-size: 13px; color: #57534e; line-height: 1.5; }
-.dx-arrow { color: #14b8a6; font-size: 14px; font-weight: 800; line-height: 1; padding: 7px 0 7px 3px; }
-.dx-sum { font-size: 13px; color: #44403c; line-height: 1.55; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #99f6e4; }
-.dx-box code { background: #ffffff; border-color: #ccfbf1; font-size: 13px; }
+.dx-what { font-size: 15px; font-weight: 700; color: #0b2447; line-height: 1.45; }
+.dx-note { font-size: 13px; color: #4e5968; line-height: 1.5; }
+.dx-arrow { color: #3182f6; font-size: 14px; font-weight: 800; line-height: 1; padding: 7px 0 7px 3px; }
+.dx-sum { font-size: 13px; color: #333d4b; line-height: 1.55; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #bfdbfe; }
+.dx-box code { background: #ffffff; border-color: #dbeafe; font-size: 13px; }
 .os-grid { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: start; }
 .os-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.os-links a { font-size: 14px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
-.os-links a:hover { background: #ccfbf1; text-decoration: none; }
-.takeaway { background: #fafaf9; border: 1px solid #e7e5e4; border-left: 3px solid #0f766e; border-radius: 10px; padding: 20px 24px; margin-top: 26px; }
-.takeaway-k { font-size: 12px; font-weight: 800; color: #0f766e; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; }
-.takeaway p { font-size: 15px; line-height: 1.7; color: #44403c; margin: 0; max-width: 780px; }
+.os-links a { font-size: 14px; font-weight: 700; color: #3182f6; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 7px 12px; white-space: nowrap; }
+.os-links a:hover { background: #dbeafe; text-decoration: none; }
+.takeaway { background: #f9fafb; border: 1px solid #e5e8eb; border-left: 3px solid #3182f6; border-radius: 10px; padding: 20px 24px; margin-top: 26px; }
+.takeaway-k { font-size: 12px; font-weight: 800; color: #3182f6; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 10px; }
+.takeaway p { font-size: 15px; line-height: 1.7; color: #333d4b; margin: 0; max-width: 780px; }
 .takeaway p + p { margin-top: 10px; }
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 5px; padding: 1px 5px; font-size: 14px; word-break: keep-all; overflow-wrap: break-word; }
 /* Timeline grid */
 .tl-row { display: grid; grid-template-columns: 150px 24px 1fr; gap: 0 16px; }
 /* Section nav */
-.sect-nav { position: sticky; top: 0; z-index: 50; background: #fafaf9f2; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid #e7e5e4; }
+.sect-nav { position: sticky; top: 0; z-index: 50; background: #f9fafbf2; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e8eb; }
 .sect-nav-inner { max-width: 960px; margin: 0 auto; padding: 0 32px; height: 48px; display: flex; align-items: center; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .sect-nav-inner::-webkit-scrollbar { display: none; }
-.sect-nav a { font-size: 14px; font-weight: 600; color: #57534e; padding: 6px 10px; border-radius: 7px; white-space: nowrap; }
-.sect-nav a:hover { background: #f0fdfa; color: #0f766e; text-decoration: none; }
-.sect-nav .n { font-size: 12px; font-weight: 800; color: #78716c; margin-right: 5px; font-variant-numeric: tabular-nums; }
-.sect-nav a:hover .n { color: #0f766e; }
+.sect-nav a { font-size: 14px; font-weight: 600; color: #4e5968; padding: 6px 10px; border-radius: 7px; white-space: nowrap; }
+.sect-nav a:hover { background: #eff6ff; color: #3182f6; text-decoration: none; }
+.sect-nav .n { font-size: 12px; font-weight: 800; color: #6b7684; margin-right: 5px; font-variant-numeric: tabular-nums; }
+.sect-nav a:hover .n { color: #3182f6; }
 section[id], div[id] { scroll-margin-top: 64px; }
 /* 8개 항목이라 960px 아래에서는 넘침, 스크롤 가능함을 우측 페이드로 알림 */
 @media (max-width: 1000px) {
@@ -107,12 +107,12 @@ section[id], div[id] { scroll-margin-top: 64px; }
 </head>
 <body>
 <!-- ===== Hero (dark band) ===== -->
-<div style="background: #134e4a; color: #f0fdfa">
+<div style="background: linear-gradient(150deg, #4593fc 0%, #3182f6 42%, #1b64da 100%); color: #eff6ff">
   <div style="max-width: 960px; margin: 0 auto; padding: 88px 32px 72px; display: grid; grid-template-columns: 1fr 180px; gap: 48px; align-items: center">
     <div style="display: flex; flex-direction: column; gap: 22px">
-      <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: #5eead4; text-transform: uppercase">Backend Developer Portfolio</span>
+      <span style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em; color: #ffffff; text-transform: uppercase">Backend Developer Portfolio</span>
       <h1 style="font-size: 52px; font-weight: 800; margin: 0; letter-spacing: -0.02em; line-height: 1.15"><span>김진호</span></h1>
-      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #ccfbf1; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답을 <strong style="color: #5eead4">7.5초에서 1.2초로</strong> 단축했고, MSA 설계부터 멀티클라우드 인프라 구축까지 문제의 근본 원인을 코드와 구조로 해결합니다.</p>
+      <p style="font-size: 19px; line-height: 1.75; margin: 0; color: #dbeafe; max-width: 560px; text-wrap: pretty">병목을 수치로 증명하고 개선하는 백엔드 개발자입니다. 파일 업로드 응답을 <strong style="color: #ffffff">7.5초에서 1.2초로</strong> 단축했고, MSA 설계부터 멀티클라우드 인프라 구축까지 문제의 근본 원인을 코드와 구조로 해결합니다.</p>
       <nav style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px">
         <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer" class="hero-btn-primary">GitHub</a>
         <a href="https://jinhos-devlog.tistory.com/" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary">Tech Blog</a>
@@ -122,12 +122,12 @@ section[id], div[id] { scroll-margin-top: 64px; }
     <img src="img/profile.jpg" style="width:180px;height:180px;border-radius:50%;object-fit:cover;object-position:center 15%;flex-shrink:0;" alt="김진호 프로필">
   </div>
   <!-- Stat band -->
-  <div style="border-top: 1px solid #2dd4bf33">
+  <div style="border-top: 1px solid rgba(255,255,255,0.2)">
     <div style="max-width: 960px; margin: 0 auto; padding: 28px 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px">
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">130배</span><span style="font-size: 14px; color: #99f6e4cc">동시 업로드 성능 개선</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">7+</span><span style="font-size: 14px; color: #99f6e4cc">주요 프로젝트</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">3회</span><span style="font-size: 14px; color: #99f6e4cc">해커톤 / 캡스톤 수상</span></div>
-      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #5eead4">4개</span><span style="font-size: 14px; color: #99f6e4cc">보유 자격증 (AWS SAA 외)</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">130배</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">동시 업로드 성능 개선</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">7+</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">주요 프로젝트</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">3회</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">해커톤 / 캡스톤 수상</span></div>
+      <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 30px; font-weight: 800; color: #ffffff">4개</span><span style="font-size: 14px; color: rgba(255,255,255,0.82)">보유 자격증 (AWS SAA 외)</span></div>
     </div>
   </div>
 </div>
@@ -151,22 +151,22 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== Experience ===== -->
   <section id="experience" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">01</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">01</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Experience</h2>
     </div>
-    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 32px 36px; display: flex; flex-direction: column; gap: 12px">
+    <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 32px 36px; display: flex; flex-direction: column; gap: 12px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
-        <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>펄어비스 (Pearl Abyss)</span> <span style="font-weight: 500; color: #78716c; font-size: 17px">Backend Developer Intern</span></h3>
-        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2026.01 - 2026.02</span>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0"><span>펄어비스 (Pearl Abyss)</span> <span style="font-weight: 500; color: #6b7684; font-size: 17px">Backend Developer Intern</span></h3>
+        <span style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums">2026.01 - 2026.02</span>
       </div>
-      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0">CS 티켓 처리 / 상태 이력 관리 기능 신규 구현, 레거시 코드 리팩토링</p>
+      <p style="font-size: 16px; line-height: 1.7; color: #333d4b; margin: 0">CS 티켓 처리 / 상태 이력 관리 기능 신규 구현, 레거시 코드 리팩토링</p>
       <div style="display: flex; gap: 8px; flex-wrap: wrap">
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">C# / .NET 8</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">ASP.NET Core MVC</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">MS SQL / Dapper</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">SignalR</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">C# / .NET 8</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">ASP.NET Core MVC</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">MS SQL / Dapper</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">SignalR</span>
       </div>
-      <ul style="margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #44403c">
+      <ul style="margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.65; color: #333d4b">
         <li>CS 티켓 상태 전환(접수→처리중→완료) 및 이력 저장 기능 구현, ORM 없는 환경에서 SP + Dapper 기반 CRUD, 단일 SP 트랜잭션으로 상태 변경 / 이력 저장의 원자성 보장</li>
         <li>SQL ROWVERSION 낙관적 락으로 동시 수정 충돌 감지, SignalR 실시간 화면 동기화 구현</li>
         <li>CultureCode별 다국어 User Site 구조 설계, Admin/User 권한 분리 인증 / 인가 구현</li>
@@ -178,25 +178,25 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== Open Source ===== -->
   <section id="opensource" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">02</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">02</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Open Source</h2>
     </div>
-    <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 30px 34px">
+    <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 30px 34px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 10px">
-        <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #78716c; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
-        <span style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums">2025.05</span>
+        <h3 style="font-size: 23px; font-weight: 700; margin: 0">Uvicorn / httptools <span style="font-weight: 500; color: #6b7684; font-size: 17px">HTTP/2 h2c 파서 버그</span></h3>
+        <span style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums">2025.05</span>
       </div>
-      <p style="font-size: 16px; line-height: 1.7; color: #44403c; margin: 0 0 18px; max-width: 740px">타 팀에서 겪던 원인 불명의 오류를 함께 추적해 업스트림 파서 버그로 규명하고 패치안을 제출했습니다.</p>
+      <p style="font-size: 16px; line-height: 1.7; color: #333d4b; margin: 0 0 18px; max-width: 740px">타 팀에서 겪던 원인 불명의 오류를 함께 추적해 업스트림 파서 버그로 규명하고 패치안을 제출했습니다.</p>
       <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 26px">
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Uvicorn</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">httptools / llhttp</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">Spring Boot 3.2 RestClient</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">FastAPI</span>
-        <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 3px 10px">RFC 7230</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">Uvicorn</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">httptools / llhttp</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">Spring Boot 3.2 RestClient</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">FastAPI</span>
+        <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 3px 10px">RFC 7230</span>
       </div>
       <div class="os-grid">
         <div>
-          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.65; color: #44403c">
+          <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.65; color: #333d4b">
             <li><strong>증상</strong>: 타 팀에서 Spring Boot 3.2 <code>RestClient</code>로 FastAPI를 호출할 때 원인 불명의 <code>422 Unprocessable Entity</code>가 발생했습니다. 같은 요청을 ngrok으로 우회하면 정상 동작해 재현 조건부터 불명확했습니다.</li>
             <li><strong>원인</strong>: Java 21 HttpClient는 평문 HTTP에서 <code>Upgrade: h2c</code>를 기본 전송합니다. Uvicorn은 이 업그레이드를 무시하지만 httptools 파서가 upgrade 상태에 머물러 <code>on_body</code> 콜백이 호출되지 않고 본문이 유실됐습니다. 서버가 업그레이드를 무시하고 진행하도록 허용한 <strong>RFC 7230 §6.7 위반</strong>입니다.</li>
             <li><strong>기여</strong>: <code>llhttp_resume_after_upgrade()</code>로 HTTP/1.1 파싱을 재개하는 Cython 패치안과 재현 테스트를 첨부해 httptools에 이슈를 등록했습니다.</li>
@@ -244,7 +244,7 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== Featured Projects ===== -->
   <section id="projects" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">03</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">03</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Featured Projects</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px">
@@ -253,36 +253,36 @@ section[id], div[id] { scroll-margin-top: 64px; }
       <div class="flip-card">
         <a href="projects/himjeonso.html" class="flip-inner" aria-label="힘전소 프로젝트 상세 보기">
           <!-- Front -->
-          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
+          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">힘전소</h3>
-              <span style="font-size: 14px; color: #78716c">2024.07 - 2025.02</span>
+              <span style="font-size: 14px; color: #6b7684">2024.07 - 2025.02</span>
             </div>
-            <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">휠체어 사용자를 위한 전동보장구 충전소 정보 및 커뮤니티 서비스</p>
-            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px">
-              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase">핵심 개선</span>
+            <p style="font-size: 15px; color: #6b7684; margin: 0; line-height: 1.6">휠체어 사용자를 위한 전동보장구 충전소 정보 및 커뮤니티 서비스</p>
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 14px; display: flex; flex-direction: column; gap: 6px">
+              <span style="font-size: 11px; font-weight: 700; color: #3182f6; letter-spacing: 0.06em; text-transform: uppercase">핵심 개선</span>
               <div>
-                <span style="font-size: 15px; font-weight: 800; color: #0f766e; display: block; white-space: nowrap">7,545ms → 1,212ms (6배)</span>
-                <span style="font-size: 13px; color: #57534e">파일 업로드 응답</span>
+                <span style="font-size: 15px; font-weight: 800; color: #3182f6; display: block; white-space: nowrap">7,545ms → 1,212ms (6배)</span>
+                <span style="font-size: 13px; color: #4e5968">파일 업로드 응답</span>
               </div>
               <div>
-                <span style="font-size: 15px; font-weight: 800; color: #0f766e; display: block; white-space: nowrap">171초 → 1.3초 (130배)</span>
-                <span style="font-size: 13px; color: #57534e">50명 동시 업로드</span>
+                <span style="font-size: 15px; font-weight: 800; color: #3182f6; display: block; white-space: nowrap">171초 → 1.3초 (130배)</span>
+                <span style="font-size: 13px; color: #4e5968">50명 동시 업로드</span>
               </div>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Boot 3.2</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Redis</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS S3</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Docker</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Spring Boot 3.2</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Redis</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">AWS S3</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Docker</span>
             </div>
-            <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+            <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
-          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
+          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #4593fc">
             <img src="img/screenshots/himjeonso-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="힘전소 앱 충전소 지도 및 상세 화면 스크린샷">
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
-              <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(11,36,71,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+              <span style="color: #eff6ff; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
         </a>
@@ -292,30 +292,30 @@ section[id], div[id] { scroll-margin-top: 64px; }
       <div class="flip-card">
         <a href="projects/waither.html" class="flip-inner" aria-label="Waither 프로젝트 상세 보기">
           <!-- Front -->
-          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
+          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Waither</h3>
-              <span style="font-size: 14px; color: #78716c">2024.03 - 2024.11</span>
+              <span style="font-size: 14px; color: #6b7684">2024.03 - 2024.11</span>
             </div>
-            <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">사용자 맞춤 날씨 알림 서비스, MSA 구조로 설계 및 구현</p>
-            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
-              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
-              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">Kafka 비동기 전환</span>
-              <span style="font-size: 13px; color: #57534e">REST 동기 통신 제거, 서비스 간 결합도 최소화</span>
+            <p style="font-size: 15px; color: #6b7684; margin: 0; line-height: 1.6">사용자 맞춤 날씨 알림 서비스, MSA 구조로 설계 및 구현</p>
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 11px; font-weight: 700; color: #3182f6; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
+              <span style="font-size: 17px; font-weight: 800; color: #3182f6; display: block">Kafka 비동기 전환</span>
+              <span style="font-size: 13px; color: #4e5968">REST 동기 통신 제거, 서비스 간 결합도 최소화</span>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kafka</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Spring Security</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">AWS</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Spring Cloud</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Kafka</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Spring Security</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">AWS</span>
             </div>
-            <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+            <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
-          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
+          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #4593fc">
             <img src="img/screenshots/waither-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Waither 날씨 알림 앱 화면 스크린샷">
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
-              <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(11,36,71,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+              <span style="color: #eff6ff; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
         </a>
@@ -325,30 +325,30 @@ section[id], div[id] { scroll-margin-top: 64px; }
       <div class="flip-card">
         <a href="projects/looper.html" class="flip-inner" aria-label="Looper 프로젝트 상세 보기">
           <!-- Front -->
-          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
+          <div style="-webkit-backface-visibility: hidden; backface-visibility: hidden; background: #ffffff; border: 1px solid #e5e8eb; border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 14px">
             <div>
               <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 4px">Looper</h3>
-              <span style="font-size: 14px; color: #78716c">2025.04 - 2025.08</span>
+              <span style="font-size: 14px; color: #6b7684">2025.04 - 2025.08</span>
             </div>
-            <p style="font-size: 15px; color: #78716c; margin: 0; line-height: 1.6">AI 기반 일정 관리 플랫폼, 멀티클라우드 인프라 담당</p>
-            <div style="background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 8px; padding: 10px 14px">
-              <span style="font-size: 11px; font-weight: 700; color: #0f766e; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
-              <span style="font-size: 17px; font-weight: 800; color: #0f766e; display: block">Grafana 통합 대시보드</span>
-              <span style="font-size: 13px; color: #57534e">메트릭 / 로그 / 트레이스 단일 화면 상관 분석</span>
+            <p style="font-size: 15px; color: #6b7684; margin: 0; line-height: 1.6">AI 기반 일정 관리 플랫폼, 멀티클라우드 인프라 담당</p>
+            <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 14px">
+              <span style="font-size: 11px; font-weight: 700; color: #3182f6; letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 4px">핵심 설계</span>
+              <span style="font-size: 17px; font-weight: 800; color: #3182f6; display: block">Grafana 통합 대시보드</span>
+              <span style="font-size: 13px; color: #4e5968">메트릭 / 로그 / 트레이스 단일 화면 상관 분석</span>
             </div>
             <div style="display: flex; gap: 6px; flex-wrap: wrap">
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Kubernetes</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Terraform</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">GCP + AWS</span>
-              <span style="font-size: 13px; font-weight: 600; color: #57534e; background: #f5f5f4; border: 1px solid #e7e5e4; border-radius: 999px; padding: 2px 9px">Grafana</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Kubernetes</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Terraform</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">GCP + AWS</span>
+              <span style="font-size: 13px; font-weight: 600; color: #4e5968; background: #f2f4f6; border: 1px solid #e5e8eb; border-radius: 999px; padding: 2px 9px">Grafana</span>
             </div>
-            <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+            <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
           </div>
           <!-- Back -->
-          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #5eead4">
+          <div style="position: absolute; inset: 0; -webkit-backface-visibility: hidden; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 14px; overflow: hidden; border: 1px solid #4593fc">
             <img src="img/screenshots/looper-card.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block" alt="Looper AI 일정 관리 앱 화면 스크린샷">
-            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(19,78,74,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
-              <span style="color: #f0fdfa; font-size: 16px; font-weight: 700">자세히 보기 →</span>
+            <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(11,36,71,0.82) 100%); display: flex; align-items: flex-end; padding: 22px">
+              <span style="color: #eff6ff; font-size: 16px; font-weight: 700">자세히 보기 →</span>
             </div>
           </div>
         </a>
@@ -360,32 +360,32 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== More Projects ===== -->
   <section id="more-projects" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">04</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">04</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">More Projects</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
       <a href="projects/biznews.html" class="proj-card">
         <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Biz_News</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">해커톤 2등</span></div>
-          <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">최신 뉴스 요약 서비스. FastAPI로 뉴스 수집 → 요약 → 추천 파이프라인 구성, LangChain + OpenAI 요약 / 벡터 임베딩, Neo4j 기업 연관도 그래프 시각화</p>
-          <span style="font-size: 14px; color: #78716c">Spring Boot / FastAPI / Neo4j / Redis / Docker</span>
-          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">Biz_News</h3><span style="font-size: 13px; font-weight: 700; color: #3182f6; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 999px; padding: 2px 10px">해커톤 2등</span></div>
+          <p style="font-size: 15px; line-height: 1.65; color: #333d4b; margin: 0">최신 뉴스 요약 서비스. FastAPI로 뉴스 수집 → 요약 → 추천 파이프라인 구성, LangChain + OpenAI 요약 / 벡터 임베딩, Neo4j 기업 연관도 그래프 시각화</p>
+          <span style="font-size: 14px; color: #6b7684">Spring Boot / FastAPI / Neo4j / Redis / Docker</span>
+          <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
       </a>
 <a href="projects/smunity.html" class="proj-card">
         <div style="display: flex; flex-direction: column; gap: 8px; flex: 1">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SMUNITY</h3><span style="font-size: 13px; font-weight: 700; color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4; border-radius: 999px; padding: 2px 10px">10만+ 방문</span></div>
-          <p style="font-size: 15px; line-height: 1.65; color: #44403c; margin: 0">상명대 졸업요건 검사 사이트. 컴퓨터과학과 19학번이 모여 만든 프로젝트로 누적 방문자 10만 명 이상 달성</p>
-          <span style="font-size: 14px; color: #78716c">Python / Django / NGINX / Docker / AWS</span>
-          <span style="font-size: 14px; font-weight: 700; color: #0f766e; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h3 style="font-size: 18px; font-weight: 700; margin: 0">SMUNITY</h3><span style="font-size: 13px; font-weight: 700; color: #3182f6; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 999px; padding: 2px 10px">10만+ 방문</span></div>
+          <p style="font-size: 15px; line-height: 1.65; color: #333d4b; margin: 0">상명대 졸업요건 검사 사이트. 컴퓨터과학과 19학번이 모여 만든 프로젝트로 누적 방문자 10만 명 이상 달성</p>
+          <span style="font-size: 14px; color: #6b7684">Python / Django / NGINX / Docker / AWS</span>
+          <span style="font-size: 14px; font-weight: 700; color: #3182f6; margin-top: auto; align-self: flex-end">자세히 보기 →</span>
         </div>
       </a>
-      <div style="grid-column: 1 / -1; background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
+      <div style="grid-column: 1 / -1; background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 20px 26px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap">
         <div style="display: flex; flex-direction: column; gap: 4px">
-          <div style="display: flex; align-items: baseline; gap: 12px"><h3 style="font-size: 17px; font-weight: 700; margin: 0">SmuPool</h3><span style="font-size: 14px; color: #78716c">2024.05 - 06</span></div>
-          <p style="font-size: 14px; line-height: 1.6; color: #78716c; margin: 0">상명대 학우를 위한 택시 카풀 서비스. WebSocket / STOMP 기반 실시간 채팅 파트 구현</p>
+          <div style="display: flex; align-items: baseline; gap: 12px"><h3 style="font-size: 17px; font-weight: 700; margin: 0">SmuPool</h3><span style="font-size: 14px; color: #6b7684">2024.05 - 06</span></div>
+          <p style="font-size: 14px; line-height: 1.6; color: #6b7684; margin: 0">상명대 학우를 위한 택시 카풀 서비스. WebSocket / STOMP 기반 실시간 채팅 파트 구현</p>
         </div>
-        <span style="font-size: 13px; color: #78716c; white-space: nowrap">Spring Boot / MySQL / Redis / WebSocket</span>
+        <span style="font-size: 13px; color: #6b7684; white-space: nowrap">Spring Boot / MySQL / Redis / WebSocket</span>
       </div>
     </div>
   </section>
@@ -393,49 +393,49 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== Skills ===== -->
   <section id="skills" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">05</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">05</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Skills</h2>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Language &amp; Backend</span>
+      <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Language &amp; Backend</span>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Java 17 / 21</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Spring Boot 3.2</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Spring Cloud</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Spring Security</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">FastAPI</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">C# / ASP.NET Core</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Java 17 / 21</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Spring Boot 3.2</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Spring Cloud</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Spring Security</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">FastAPI</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">C# / ASP.NET Core</span>
         </div>
       </div>
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Data &amp; Messaging</span>
+      <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Data &amp; Messaging</span>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">MySQL 8.0</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">PostgreSQL</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">MS SQL</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Redis</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Kafka</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">MySQL 8.0</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">PostgreSQL</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">MS SQL</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Redis</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Kafka</span>
         </div>
       </div>
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Cloud &amp; Infra</span>
+      <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Cloud &amp; Infra</span>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">AWS</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">GCP</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Docker</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Kubernetes</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Terraform</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">GitHub Actions</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">AWS</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">GCP</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Docker</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Kubernetes</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Terraform</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">GitHub Actions</span>
         </div>
       </div>
-      <div style="background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e">Observability</span>
+      <div style="background: #ffffff; border: 1px solid #e5e8eb; border-radius: 12px; padding: 22px 26px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6">Observability</span>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">OpenTelemetry</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Prometheus</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Grafana</span>
-          <span style="font-size: 14px; font-weight: 600; color: #44403c; background: #fafaf9; border: 1px solid #e7e5e4; border-radius: 8px; padding: 6px 12px">Loki / Tempo</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">OpenTelemetry</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Prometheus</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Grafana</span>
+          <span style="font-size: 14px; font-weight: 600; color: #333d4b; background: #f9fafb; border: 1px solid #e5e8eb; border-radius: 8px; padding: 6px 12px">Loki / Tempo</span>
         </div>
       </div>
     </div>
@@ -444,34 +444,34 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <!-- ===== Timeline ===== -->
   <section id="timeline" style="margin-bottom: 96px">
     <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px">
-      <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">06</span>
+      <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">06</span>
       <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Timeline</h2>
     </div>
     <div style="display: flex; flex-direction: column; gap: 0">
       <div class="tl-row">
-        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2026.01 - 02</span>
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #0f766e; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
-        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">펄어비스 Backend Developer 인턴</span><span style="font-size: 15px; color: #78716c">CS 시스템 개선 / 레거시 리팩토링</span></div>
+        <span class="tl-date" style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2026.01 - 02</span>
+        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #3182f6; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e5e8eb"></span></div>
+        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">펄어비스 Backend Developer 인턴</span><span style="font-size: 15px; color: #6b7684">CS 시스템 개선 / 레거시 리팩토링</span></div>
       </div>
       <div class="tl-row">
-        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2025.02 - 08</span>
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
-        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">카카오테크 부트캠프, 클라우드 네이티브 과정</span><span style="font-size: 15px; color: #78716c">Looper / Biz_News (해커톤 본상 2등)</span></div>
+        <span class="tl-date" style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2025.02 - 08</span>
+        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #4593fc; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e5e8eb"></span></div>
+        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">카카오테크 부트캠프, 클라우드 네이티브 과정</span><span style="font-size: 15px; color: #6b7684">Looper / Biz_News (해커톤 본상 2등)</span></div>
       </div>
       <div class="tl-row">
-        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2024.03 - 08</span>
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
-        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">UMC 6기</span><span style="font-size: 15px; color: #78716c">Waither / SmuPool, Spring 기반 서버 개발</span></div>
+        <span class="tl-date" style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2024.03 - 08</span>
+        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #4593fc; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e5e8eb"></span></div>
+        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">UMC 6기</span><span style="font-size: 15px; color: #6b7684">Waither / SmuPool, Spring 기반 서버 개발</span></div>
       </div>
       <div class="tl-row">
-        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.09 - 2023.12</span>
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e7e5e4"></span></div>
-        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">SK Lookie, 사회 문제 해결 동아리</span><span style="font-size: 15px; color: #78716c">Wisefee 리유저블 텀블러 대여 서비스</span></div>
+        <span class="tl-date" style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.09 - 2023.12</span>
+        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #4593fc; margin-top: 6px"></span><span style="width: 2px; flex: 1; background: #e5e8eb"></span></div>
+        <div style="padding-bottom: 32px"><span style="font-size: 17px; font-weight: 700; display: block">SK Lookie, 사회 문제 해결 동아리</span><span style="font-size: 15px; color: #6b7684">Wisefee 리유저블 텀블러 대여 서비스</span></div>
       </div>
       <div class="tl-row">
-        <span class="tl-date" style="font-size: 15px; color: #78716c; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.03 - 2024.12</span>
-        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #5eead4; margin-top: 6px"></span></div>
-        <div><span style="font-size: 17px; font-weight: 700; display: block">SMUNITY 운영</span><span style="font-size: 15px; color: #78716c">졸업요건 검사 사이트, 누적 방문 10만+</span></div>
+        <span class="tl-date" style="font-size: 15px; color: #6b7684; font-variant-numeric: tabular-nums; text-align: right; padding-top: 2px">2022.03 - 2024.12</span>
+        <div style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #4593fc; margin-top: 6px"></span></div>
+        <div><span style="font-size: 17px; font-weight: 700; display: block">SMUNITY 운영</span><span style="font-size: 15px; color: #6b7684">졸업요건 검사 사이트, 누적 방문 10만+</span></div>
       </div>
     </div>
   </section>
@@ -480,21 +480,21 @@ section[id], div[id] { scroll-margin-top: 64px; }
   <section id="awards" style="margin-bottom: 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px">
     <div>
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">07</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">07</span>
         <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Awards</h2>
       </div>
-      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #44403c">
-        <li>카카오테크 부트캠프 해커톤 본상 2등 <span style="color: #78716c">(2025.02)</span></li>
-        <li>캡스톤디자인 졸업 프로젝트 우수상 <span style="color: #78716c">(2024.11)</span></li>
-        <li>SM COSSTON 해커톤 최우수상 1등 <span style="color: #78716c">(2024.01)</span></li>
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #333d4b">
+        <li>카카오테크 부트캠프 해커톤 본상 2등 <span style="color: #6b7684">(2025.02)</span></li>
+        <li>캡스톤디자인 졸업 프로젝트 우수상 <span style="color: #6b7684">(2024.11)</span></li>
+        <li>SM COSSTON 해커톤 최우수상 1등 <span style="color: #6b7684">(2024.01)</span></li>
       </ul>
     </div>
     <div id="certificates">
       <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px">
-        <span style="font-size: 15px; font-weight: 800; color: #0f766e; font-variant-numeric: tabular-nums" aria-hidden="true">08</span>
+        <span style="font-size: 15px; font-weight: 800; color: #3182f6; font-variant-numeric: tabular-nums" aria-hidden="true">08</span>
         <h2 style="font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.01em">Certificates</h2>
       </div>
-      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #44403c">
+      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.6; color: #333d4b">
         <li>AWS Certified Solutions Architect - Associate</li>
         <li>정보처리기사 (한국산업인력공단)</li>
         <li>SQL 개발자 SQLD (한국데이터산업진흥원)</li>
@@ -504,11 +504,11 @@ section[id], div[id] { scroll-margin-top: 64px; }
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer style="border-top: 1px solid #e7e5e4; padding-top: 32px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
+  <footer style="border-top: 1px solid #e5e8eb; padding-top: 32px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap">
     <div style="display: flex; flex-direction: column; gap: 4px">
-      <span style="font-size: 15px; font-weight: 700; color: #44403c">상명대학교 컴퓨터과학과</span>
-      <span style="font-size: 14px; color: #78716c">2019.03 - 2025.08 졸업, 전공 4.0 / 4.5, 전체 3.84 / 4.5</span>
-      <span style="font-size: 14px; color: #78716c">클라우드 인프라 이력은 <a href="Portfolio-Cloud.html">Cloud 포트폴리오</a>에 정리했습니다.</span>
+      <span style="font-size: 15px; font-weight: 700; color: #333d4b">상명대학교 컴퓨터과학과</span>
+      <span style="font-size: 14px; color: #6b7684">2019.03 - 2025.08 졸업, 전공 4.0 / 4.5, 전체 3.84 / 4.5</span>
+      <span style="font-size: 14px; color: #6b7684">클라우드 인프라 이력은 <a href="Portfolio-Cloud.html">Cloud 포트폴리오</a>에 정리했습니다.</span>
     </div>
     <div style="display: flex; gap: 20px; font-size: 14px; font-weight: 600">
       <a href="https://github.com/jinho7" target="_blank" rel="noopener noreferrer">GitHub</a>
